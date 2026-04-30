@@ -1,162 +1,1782 @@
 [
   {
-    "record_id": "demo-0001",
-    "name": "Northwind Transmission Constructors",
-    "domain": "northwind-transmission.example",
-    "official_website_url": "https://www.northwind-transmission.example",
-    "categories": ["T", "S"],
-    "confidence": "high",
-    "master_status": "qualified",
-    "source_origin": "demo_seed",
-    "owner_names": "Patricia Holt (CEO); Mark Holt (COO); family ownership",
-    "ownership": "Family-owned, second generation",
-    "company_size": "180 employees",
-    "hq_state": "Idaho",
-    "reasoning": "Northwind Transmission Constructors is an Idaho-based EPC contractor specializing in 69kV–500kV overhead transmission line construction and substation builds for investor-owned utilities and cooperatives across the Pacific Northwest. Services page lists transmission line construction, substation construction, foundation drilling, and emergency storm response. Project portfolio shows multiple completed 230kV and 345kV transmission projects. Family-owned with no PE backing, ESOP, or public-company affiliation. Strong fit for T (transmission) and S (substation) categories. See https://www.northwind-transmission.example/services for full scope.",
-    "review_resolution_notes": "Confirmed via FERC project list and state contractor licensing database."
+    "record_id": "q-0852",
+    "name": "Big D's Electric LLC",
+    "domain": "bigdselectric.com",
+    "official_website_url": "https://www.bigdselectric.com",
+    "categories": [
+      "CI"
+    ],
+    "confidence": "low",
+    "master_status": "not_qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Cody Donaldson",
+    "ownership": "Cody Donaldson (founder/owner)",
+    "reasoning": "Big D's Electric LLC is a Cushing, Oklahoma-based electrical contractor owned by Cody Donaldson (BBB-accredited, A+ rating, operating since 2018). However, after thorough review of the official website at bigdselectric.com, the Pass 1 qualification for the D (Distribution) category is not supported. The website describes generic electrical repair, installation, and inspection services for residential and commercial clients with language like 'reliable electrical services' and 'wiring repairs' and 'smart home system installations.' There is no mention of utility power pole line construction, high-voltage distribution work, transformer or switchgear services, cable splicing, or any other high-voltage utility field capability. The Pass 1 rationale incorrectly claimed the official website describes 'utility power pole line construction and maintenance as core services' — this language does not appear on the site. Yahoo and MapQuest directory listings mention 'utility line work' but these are Tier 3 (Discovery Only) sources and cannot carry a qualification when the official site is weak and generic. The site is essentially a building/residential electrician with commercial work, not a high-voltage utility contractor. This company does not meet the hard requirement of demonstrating real high-voltage utility self-perform field work capability.",
+    "review_resolution_notes": "Pass 1 QA failed: website does not describe utility HV work. Pass 1 reasoning contains factual inaccuracies about website content. Directory-only utility language is insufficient. Name unchanged from Pass 1. Website confirmed active.",
+    "comparison_summary": ""
   },
   {
-    "record_id": "demo-0002",
-    "name": "Cascade Distribution Services, Inc.",
-    "domain": "cascadedistribution.example",
-    "official_website_url": "https://cascadedistribution.example",
-    "categories": ["D"],
-    "confidence": "high",
-    "master_status": "qualified",
-    "source_origin": "demo_seed",
-    "owner_names": "Robert Kim (President); Lin Kim (VP Operations)",
-    "ownership": "Independent, founder-owned",
-    "company_size": "55 employees",
-    "hq_state": "Oregon",
-    "reasoning": "Cascade Distribution Services is a founder-owned overhead and underground distribution contractor (4kV–35kV) serving regional electric cooperatives. Services include pole setting, conductor stringing, URD installation, and storm restoration. No transmission or substation work in portfolio. Confirmed independent — no PE, no platform affiliation.",
-    "review_resolution_notes": ""
+    "record_id": "20260407T072420Z-69c3127d",
+    "name": "Murdock Electric Inc.",
+    "domain": "murdockelectricsd.com",
+    "official_website_url": "https://www.murdockelectricsd.com",
+    "categories": [
+      "CI"
+    ],
+    "confidence": "low",
+    "master_status": "not_qualified",
+    "source_origin": "pass2_quickclean_partial_20260407",
+    "owner_names": "Frank Murdock Sr.; Brennon Murdock; Marjorie Murdock",
+    "ownership": "Family-owned; Frank Murdock Sr. founded; Brennon Murdock currently operates",
+    "reasoning": "Pass 1 qualification cannot be verified and appears to rely on directory evidence (D&B) rather than official company sources. The official website (murdockelectricsd.com) does not confirm high-voltage utility capability - its services page lists commercial buildings, generators, motels, schools, hospitals, and similar building electrical work. BlueBook ProView directly contradicts the HV utility claim, listing 'Alarm Systems, Electrical Contractors, Television--Closed-Circuit/Security' as the main lines of business. The BBB page cited in Pass 1 is now a 404 error and could not be verified. D&B directory claims 'high voltage utility projects' but D&B is Tier 3 evidence and cannot carry qualification. The company appears to be a small building/residential electrical contractor (LinkedIn shows ~1 employee) rather than a real HV utility operator.",
+    "review_resolution_notes": "",
+    "comparison_summary": ""
   },
   {
-    "record_id": "demo-0003",
-    "name": "Summit Substation Builders LLC",
-    "domain": "summitsubstation.example",
-    "official_website_url": "https://www.summitsubstation.example",
-    "categories": ["S"],
+    "record_id": "q-0557",
+    "name": "CIR Electrical Construction Corporation",
+    "domain": "cirelectric.com",
+    "official_website_url": "https://cirelectric.com",
+    "categories": [
+      "S",
+      "CI"
+    ],
     "confidence": "medium",
     "master_status": "qualified",
-    "source_origin": "demo_seed",
-    "owner_names": "Daniel Greer (Managing Member)",
-    "ownership": "Independent LLC",
-    "company_size": "32 employees",
-    "hq_state": "Colorado",
-    "reasoning": "Summit Substation Builders is a Colorado-based pure-play substation contractor handling greenfield substation builds, transformer installations, and switchgear retrofits up to 230kV. Project list shows utility and IPP customers. Confidence medium because revenue scale and crew count are not publicly disclosed. No evidence of outside ownership.",
-    "review_resolution_notes": "Need follow-up on revenue scale before delivery."
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "CIR Electrical Construction Corporation (cirelectric.com) is a Buffalo, NY-based independent electrical contractor founded in 1976 by Thomas Jachimowicz as a privately held company, confirmed via the [LinkedIn profile of Thomas Jachimowicz](https://www.linkedin.com/in/thomas-jachimowicz-81b06395) and the company's [official about page](https://cirelectric.com/about-us/). The company is affiliated with NECA and signatory to IBEW Local 41 according to its [union strength page](https://cirelectric.com/about-us/union-strong/), employs approximately 51 staff members per its [contact page](https://cirelectric.com/contact-us/), and maintains BBB A+ accreditation. Service capabilities include commercial and industrial electrical work, power distribution systems, and substations as described on its [services page](https://cirelectric.com/services/), with project experience including NFTA electrical upgrades and Niagara Falls Bridge Commission work on its [case studies page](https://cirelectric.com/case-studies/). The NECA award previously attributed to this company for Big Tree Substation was actually awarded to O'Connell Electric, not CIR Electrical. Confidence is medium because while substation and distribution capabilities are mentioned on the company website, third-party project verification for utility-scale substation work is limited, and the data/comm service offering describes inside-plant structured cabling for buildings rather than telecom outside-plant work.",
+    "review_resolution_notes": "",
+    "comparison_summary": "name normalized from Commerial & Industrial Electrician in Buffalo, NY to CIR Electrical Construction Corporation"
   },
   {
-    "record_id": "demo-0004",
-    "name": "Beacon Vegetation Management Co.",
-    "domain": "beaconvm.example",
-    "official_website_url": "https://beaconvm.example",
-    "categories": ["V"],
+    "record_id": "q-0251",
+    "name": "Doss & Horky, Inc.",
+    "domain": "dosshorky.com",
+    "official_website_url": "https://dosshorky.com",
+    "categories": [
+      "T",
+      "D",
+      "S"
+    ],
     "confidence": "high",
     "master_status": "qualified",
-    "source_origin": "demo_seed",
-    "owner_names": "Theresa Olin (Owner)",
-    "ownership": "Sole proprietor / S-corp",
-    "company_size": "70 employees",
-    "hq_state": "Tennessee",
-    "reasoning": "Beacon Vegetation Management performs utility-rights-of-way clearing, integrated vegetation management, and storm response trimming for distribution and transmission corridors. Equipment list includes bucket trucks, mulchers, and tracked carriers. ISA-certified arborists on staff. Independently owned.",
-    "review_resolution_notes": ""
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "Doss & Horky, Inc. is a family-owned Kentucky electrical utility contractor specializing in transmission, distribution, and substation construction because its [official website](https://dosshorky.com/) explicitly describes these services including high-voltage transmission line construction, distribution system installation, and substation development, its [About page](https://dosshorky.com/about-us/) confirms family ownership under President Rhonda Doss with roots dating to 1985 founder Earl Doss, and its [LinkedIn company profile](https://www.linkedin.com/company/doss-and-horky-inc) shows 11-50 employees and active operations supporting continued viability.",
+    "review_resolution_notes": "",
+    "comparison_summary": ""
   },
   {
-    "record_id": "demo-0005",
-    "name": "Apex Power Holdings, Inc.",
-    "domain": "apexpower.example",
-    "official_website_url": "https://www.apexpower.example",
-    "categories": ["T", "D", "S"],
+    "record_id": "v6-pass1-01000",
+    "name": "Zemar Transformer Company",
+    "domain": "zemartransformer.com",
+    "official_website_url": "https://zemartransformer.com",
+    "categories": [
+      "S"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Unknown -- no official source confirms ownership",
+    "ownership": "Likely independent, ownership structure not officially confirmed",
+    "reasoning": "Zemar Transformer Company operates a functional website (zemartransformer.com) demonstrating clear high-voltage utility substation and transformer field service capability. The field-service page explicitly lists Substation Equipment Testing, Maintenance & Repair, Power Transformers (LTC tap changers, DGA sampling, bushing replacement), Oil & Vacuum Circuit Reclosers & Controls, and On Site Repair and Testing of Padmount Transformers, alongside specialized test equipment (Hipotronics high voltage test set, AEMC TTR set, high voltage oil test set). The company clearly performs utility-grade transformer and substation field service work qualifying under Category S. However, ownership evidence is weak -- no official leadership page, no founder named on site, and only a D&B listing for a separate Zemar Inc (janitorial, different entity) showing Joseph Robb. The mailing address (PO Box 127 Dunn, NC 28335) does not match the Ohio operating address, creating some identity ambiguity. The website title defaults to \"My WordPress\" suggesting possible neglect. Overall a legitimate HV utility contractor but with ownership and size gaps warranting medium confidence rather than high.",
+    "review_resolution_notes": "Service fit is strong and explicit. Ownership is likely independent but not confirmed from official sources. Company appears small/regional. The NC mailing address for an Ohio company is notable but could be a billing artifact. Maps source lists type as Recreation which appears incorrect -- this is a utility equipment service company.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0238",
+    "name": "MB Haynes Corporation",
+    "domain": "mbhaynes.com",
+    "official_website_url": "https://mbhaynes.com",
+    "categories": [
+      "T",
+      "D"
+    ],
     "confidence": "high",
-    "master_status": "not_qualified",
-    "source_origin": "demo_seed",
-    "owner_names": "Sterling Equity Partners (majority); management rollover",
-    "ownership": "Private-equity backed (Sterling Equity Partners, 2024 platform investment)",
-    "company_size": "1,200 employees",
-    "hq_state": "Texas",
-    "reasoning": "Apex Power Holdings is a multi-state T&D and substation contractor with full service scope. Disqualified because Sterling Equity Partners acquired a controlling interest in 2024 — falls outside the bootstrapped / independent ownership filter. Operationally a strong fit; ownership disqualifies.",
-    "review_resolution_notes": "Move to exclusion list. Re-check if Sterling exits."
+    "master_status": "qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "MB Haynes Corporation is a North Carolina-based utility line contractor and electrical services provider serving Western North Carolina and Upstate South Carolina for over 100 years, as described on its official [website](https://www.mbhaynes.com) and [About page](https://www.mbhaynes.com/about-us/), with its Haynes Electric Utility division specifically providing distribution power line construction, pole climbing, splicing, and termination work confirmed by the [careers page](https://www.mbhaynes.com/careers/lineman-1st-class/). The company is 100% employee-owned through an ESOP established in April 2012, with approximately 700 employee shareowners noted on the [ESOPB2B directory](https://esopb2b.com/esop/mb-haynes-corporation), and the [official About page](https://www.mbhaynes.com/about-us/) confirms this ownership structure. Duke Energy relationship is confirmed through the official website listing MB Haynes as a [Duke Energy Home Energy Improvement Program preferred contractor](https://www.mbhaynes.com/haynes-electric/) and [Duke Energy Progress Distribution Power Line Service contractor](https://www.mbhaynes.com/haynes-electric-commercial-industrial/), supporting utility sector focus. The [LinkedIn company profile](https://www.linkedin.com/company/mb-haynes-corporation) with 1,087 followers shows active operations and current staffing, with recent posts in April 2026 confirming ongoing business activity.",
+    "review_resolution_notes": "",
+    "comparison_summary": "name normalized from Lineman to MB Haynes Corporation; merged duplicate rows: q-0238|q-0809; adjudicated from manual_review to qualified: Official utility pages and lineman postings show construction and repair of transmission and distribution power lines."
   },
   {
-    "record_id": "demo-0006",
-    "name": "Riverbend Electric Contractors",
-    "domain": "riverbendec.example",
-    "official_website_url": "https://riverbendec.example",
-    "categories": ["CI"],
+    "record_id": "v6-next-maps-v12-03533",
+    "name": "Electrical Construction & Service, LLC",
+    "domain": "electrical-mn.com",
+    "official_website_url": "https://www.electrical-mn.com/",
+    "categories": [
+      "CI"
+    ],
+    "confidence": "low",
+    "master_status": "maybe",
+    "source_origin": "pass2_recovery_plus_v13_20260408",
+    "owner_names": "Neil (likely owner/principal)",
+    "ownership": "Unknown - Neil associated via neil@electrical-mn.com; likely family-owned based on small size and 2018 founding",
+    "reasoning": "Electrical Construction & Service LLC is a small, family-owned IBEW Local 292 union contractor founded in 2018 and based in St. Augusta, MN. The official site (electrical-mn.com) shows generic commercial, residential, and industrial electrical services without explicit high-voltage utility language or padmount transformer specialization. The services page mentions transformers in an industrial context alongside motors, controls, and VFDs - consistent with building electrical rather than utility-scale HV work. Trade association memberships (Twin Cities NECA, Power Partner MN Premier Partner) and IBEW affiliation are noted but do not confirm HV utility specialization. Pass 1 cited high-voltage utility and padmount transformer specialization, but this is not supported by the actual official site content or trade association pages - the Pass 1 rationale appears overstated. Without explicit primary distribution, substation, or transformer utility signals on the official site, this company cannot be qualified on directory evidence alone. Neil (neil@electrical-mn.com) appears associated with the company but formal ownership is unconfirmed. Manual review recommended to verify whether the company has undisclosed HV utility capability beyond what the weak official site demonstrates.",
+    "review_resolution_notes": "Pass 1 rationale claimed self-described HV utility specialization not supported by official site. Website lacks HV utility signals. Company may have undisclosed HV capability warranting manual verification.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "v6-pass1-11414",
+    "name": "Northern Power Solutions LLC",
+    "domain": "northernpower.us",
+    "official_website_url": "https://www.northernpower.us",
+    "categories": [
+      "T",
+      "D",
+      "S"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Jared Cormier; Carolyn Cormier",
+    "ownership": "Family-owned; Jared Cormier (Founder, President, Journeyman Lineman); Carolyn Cormier (Co-Founder, Chief Administrative Officer)",
+    "reasoning": "Northern Power Solutions LLC (northernpower.us) is a family-owned, woman-led utility contractor based in southern New Hampshire founded by Journeyman Lineman Jared Cormier in 2021. The official website explicitly confirms specialization across transmission, distribution, substation, and renewables, with services including energized distribution maintenance up to 34.5kV, underground cable installation and splicing, transmission line maintenance and structure replacement, substation work, and emergency restoration for electric utilities. The company is an IBEW signatory and USOLN member, with leadership including co-founder Carolyn Cormier (CAO) and superintendent Justin Cormier, a Journeyman Lineman with live-line barehand certification and over 20 years of IBEW utility experience. Categories T, D, and S are all explicitly supported by service language on the official site.",
+    "review_resolution_notes": "Pass 1 rationale confirmed. Company is clearly a small, independent, family-owned HV utility contractor. No evidence of ESOP, public ownership, PE backing, or large platform affiliation. Website confirms IBEW signatory status and USOLN membership. LinkedIn shows active company page.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0347",
+    "name": "Jerry Pybus Electric Inc",
+    "domain": "jerrypybuselectric.com",
+    "official_website_url": "https://www.jerrypybuselectric.com",
+    "categories": [
+      "T",
+      "D",
+      "S"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Jerry M. Pybus",
+    "ownership": "Jerry M. Pybus (founder/owner)",
+    "reasoning": "Jerry Pybus Electric Inc is a Florida-based electrical contractor founded in 1985 by licensed Master Electrician Jerry M. Pybus (license EC0000510), headquartered at 1327 North Tyndall Parkway, Panama City, FL 32404. Procore lists the company with 51-100 employees and $1-10M average contract size, with 4 total projects and 3 active projects since June 2023 ($2.2M avg). Multiple sources confirm specialization in utility transmission, distribution, and substation projects, with Procore specifically listing \"Electrical Utilities High and Medium Voltage Distribution\" as a specialty. The company is BBB-accredited since 2001 and shows active staffing via LinkedIn. However, the official website's service pages use generic electrical language without explicit high-voltage terminology, and the Florida DBPR license verification link is currently broken, making it difficult to confirm license details directly. Employee count shows discrepancy between Procore (51-100) and LinkedIn (2, likely incomplete). The evidence supports high-voltage utility capability but official site language is less explicit than expected.",
+    "review_resolution_notes": "Procore confirms \"Electrical Utilities High and Medium Voltage Distribution\" specialty. Website content is heavily JavaScript-rendered, limiting content analysis. Employee count discrepancy between sources. Florida license verification page returns error.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "v6-pass1-01688",
+    "name": "CDL Electric Company Inc.",
+    "domain": "cdlelectric.com",
+    "official_website_url": "https://cdlelectric.com",
+    "categories": [
+      "T",
+      "D",
+      "S"
+    ],
     "confidence": "high",
-    "master_status": "not_qualified",
-    "source_origin": "demo_seed",
-    "owner_names": "Joseph Riverbend (President)",
-    "ownership": "Family-owned",
-    "company_size": "85 employees",
-    "hq_state": "Ohio",
-    "reasoning": "Riverbend Electric is a commercial & industrial electrical contractor focused on warehouse, retail, and light-industrial fit-out work. No transmission, distribution, or substation services advertised. Misclassified by an upstream source. Ownership profile would qualify, but service scope does not match.",
-    "review_resolution_notes": "Common false positive — keyword 'electric contractor' without T/D/S service line."
+    "master_status": "qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Larry Seward Jr.",
+    "ownership": "Family-owned; Larry Seward Jr. (CEO/Owner); Larry Seward Sr. (Founder, 1964)",
+    "reasoning": "CDL Electric Company Inc. explicitly identifies as a high-voltage utility contractor on their official website (https://cdlelectric.com/high-voltage-services/) and confirms performing electrical distribution, transmission, and substation projects. Founded 1964 in Pittsburg, KS, the company is led by Larry Seward Jr. as CEO/owner. No institutional ownership indicators (PE, ESOP, public). The site confirms 24-hour operations and active project work including wind mill projects with trucks. Company operates across Kansas, Missouri, Oklahoma, and Arkansas with multiple office locations including Joplin, MO. Revenue estimates of $254-286M and employee counts of 149-620+ suggest regional-to-large scale. Official site supports T/D/S category fit for HV utility work.",
+    "review_resolution_notes": "The candidate context listed website cdl-electric.com which redirects to a CDL Group of Companies site. The correct official website for CDL Electric Company Inc. is cdlelectric.com. The candidate also listed address 602 S Michigan Ave, Joplin, MO but the official HQ is 1308 N Walnut St, Pittsburg, KS. Multiple service lines include HV utility, underground/HDD, railroad, commercial, municipal, and residential.",
+    "comparison_summary": ""
   },
   {
-    "record_id": "demo-0007",
-    "name": "Pinegrove Powerline Services",
-    "domain": "pinegroveps.example",
-    "official_website_url": "https://www.pinegroveps.example",
-    "categories": ["T", "D"],
+    "record_id": "v6-next-maps-v12-01126",
+    "name": "Underground Systems",
+    "domain": "undergroundsys.net",
+    "official_website_url": "https://www.undergroundsys.net/",
+    "categories": [
+      "D",
+      "S"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "pass2_recovery_plus_v13_20260408",
+    "owner_names": "Dana Hood (founder, president, CEO)",
+    "ownership": "Family-owned (Dana Hood, founder/president/CEO; Michael Hood, operations manager; Keith McEntire, general manager)",
+    "reasoning": "Underground Systems LLC is a family-owned utility contractor (founded 1991, CEO Dana Hood) in Suwanee, GA with approximately $5M annual revenue serving Metro Atlanta. The official site and Equipment World article confirm a dedicated power division doing underground power installation and repairs, with operations manager Michael Hood specializing in the power division and stating 'we install, maintain and repair underground residential distribution lines' taking over 'as soon as it leaves the top of the pole.' Procore lists the specialty as 'Electrical Utilities High and Medium Voltage Distribution' along with cutting and boring. The company fleet includes bucket trucks, digger trucks, and directional drills, and works directly with Georgia Power. The company also performs hydro excavation and private locating alongside the electrical utility work. Site: https://www.undergroundsys.net/ | https://www.equipmentworld.com/contractor-of-the-year/article/15752815/dana-hood-builds-5m-underground-utility-firm | https://www.procore.com/network/p/underground-systems-llc-suwanee",
+    "review_resolution_notes": "Company has a clear power division with underground distribution and some transformer/cable-splicing scope tied to utility work. Procore confirms high and medium voltage distribution specialty. Fleet includes utility equipment. Works with Georgia Power.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "legacy-valiant-group",
+    "name": "Valiant Group",
+    "domain": "valiantgrouplink.com",
+    "official_website_url": "https://valiantgrouplink.com",
+    "categories": [
+      "T",
+      "D",
+      "S"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "legacy_old_tds_carryforward",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "Valiant Group is U.S.-based and appears to be an independent, founder-led contractor. Its website explicitly markets utility transmission line construction, utility distribution line construction, and utility substation construction ([valiantgrouplink.com transmission](https://www.valiantgrouplink.com/markets/transmission-line-construction/), [distribution](https://www.valiantgrouplink.com/markets/distribution-line-construction/), [substations](https://www.valiantgrouplink.com/markets/substations/)). The leadership page names Brian Zickefoose as Founder & President and describes the company as a husband-and-wife-led business ([leadership](https://www.valiantgrouplink.com/about/leadership/)). The Blue Book profile lists Est. 2016, 5-9 employees, and $10M-$20M annual volume, which fits the target size range and supports acquirability ([Blue Book ProView](https://www.thebluebook.com/iProView/1726311/valiant-group/general-contractors/locations-contacts/)). I found no evidence in the sources checked that it is PE-owned, public, acquired, or defunct.",
+    "review_resolution_notes": "",
+    "comparison_summary": "legacy old T/D/S row carried forward for manual review; categories changed from blank to T|D|S; legacy_225_bucket=unmatched_old_tds_needs_review; adjudicated from manual_review to qualified: Official utility market pages directly describe transmission line construction, distribution construction, and substation construction services."
+  },
+  {
+    "record_id": "q-0664",
+    "name": "C.A. Senecal Electrical Services, Inc.",
+    "domain": "senecalelectric.com",
+    "official_website_url": "https://senecalelectric.com",
+    "categories": [
+      "T",
+      "D",
+      "S",
+      "CI"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "C.A. Senecal Electrical Services, Inc. is a Massachusetts corporation founded in 1999 and based in Worcester, MA, owned by Christopher A. Senecal, as confirmed by its [LinkedIn profile](https://www.linkedin.com/in/chris-senecal-03977a12), [BBB listing](https://www.bbb.org/us/ma/worcester/profile/commercial-electrician/ca-senecal-electrical-services-inc), [RocketReach](https://rocketreach.co/chris-senecal-email_21461912), and [Worcester Regional Chamber of Commerce listing](https://business.worcesterchamber.org/list/member/c-a-senecal-electrical-serv). The company's [official website](https://senecalelectric.com) and [projects page](https://senecalelectric.com/projects/) describe utility transmission, distribution, and substation work for electrical infrastructure, supported by [case studies](https://senecalelectric.com/case-studies/) showing completed utility projects. With over 120 employees and active operations confirmed via the company's current website and BBB profile, the company meets size and viability requirements for T, D, S, and CI categories.",
+    "review_resolution_notes": "",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "v6-pass1-00011",
+    "name": "Sequoyah Electric",
+    "domain": "sequoyah.com",
+    "official_website_url": "https://www.sequoyah.com",
+    "categories": [
+      "D",
+      "S"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Mahmood Ghassemi",
+    "ownership": "Private; CEO/founder Mahmood Ghassemi leads the company; no PE, ESOP, or public indicators",
+    "reasoning": "Sequoyah Electric (sequoyah.com) is a licensed high-voltage electrical contractor headquartered in Redmond, WA with 37+ years of operation since 1988. The official website explicitly confirms medium voltage distribution work with 5KV and 15KV systems, new unit substation switchgear installation, certified 15KV termination team, and cable splicing services for industrial and manufacturing facilities in the Pacific Northwest. CEO Mahmood Ghassemi is confirmed as the private company founder with no PE, public, or ESOP indicators. Categories D and S are supported by Tier 1 service page evidence at sequoyah.com/service/electrical-construction/medium-voltage-distribution/.",
+    "review_resolution_notes": "Original candidate name was generic \"Electrical Construction\" - corrected to official name \"Sequoyah Electric\". Company also operates as \"Sequoyah Electric & Network Services\". Employee count varies by source (114-435); most recent authoritative source shows ~347 employees per Puget Sound Business Journal 2024, placing it within preferred size range.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "v6-pass1-04973",
+    "name": "Panhandle Line Service, LLC",
+    "domain": "panhandlelineservice.com",
+    "official_website_url": "https://panhandlelineservice.com/",
+    "categories": [
+      "T",
+      "S"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Unknown",
+    "ownership": "Unknown - no named principals found on official website",
+    "reasoning": "Panhandle Line Service, LLC is a Texas Panhandle powerline contractor with an official website (panhandlelineservice.com) explicitly listing 'Substations' and 'Transmission & Distribution' as core services. The company self-identifies as an 'electric utility contractor' and 'powerline contractor' serving Electric Cooperatives, Investor-Owned Utilities, and Municipalities. The official site directly supports high-voltage utility capability in transmission and substation work, meeting the T and S qualification thresholds. Ownership is not publicly named on the website and LinkedIn indicates only 2 employees, suggesting a micro-contractor operation. Website confidence is high given the explicit service language and utility customer self-identification.",
+    "review_resolution_notes": "Address shows 101 Broadmoor St in schema data vs 107 in Pass 1 - minor discrepancy. Very small size (2 employees) is noted but acceptable per size criteria 1.8 for specialty HV tuck-ins. No ownership names found on website.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0053",
+    "name": "Pajaro Valley Electric Inc",
+    "domain": "pveinc.com",
+    "official_website_url": "https://pveinc.com",
+    "categories": [
+      "D",
+      "S"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "Pajaro Valley Electric Inc is a California electrical contractor based in Watsonville at 220 Pine Street, confirmed as an active IBEW Local 1245 signatory employer under the CA Outside Line Construction Agreement according to the union's official signatory employers page, and holds California contractor license #246744 with active status and no disciplinary actions per the contractor license lookup, with the company's official website listing high voltage distribution and industrial/commercial electrical services and staff including certified journeyman wiremen, though ownership evidence shows a discrepancy between the official staff page listing Will Clough as Owner and President and third-party business records attributing the business to Mark Clough.",
+    "review_resolution_notes": "",
+    "comparison_summary": "legacy_225_bucket=matched_manual_review; adjudicated from manual_review to qualified: IBEW 1245 lists the company under the CA Outside Line Construction Agreement and specifically references substation relay test tech work."
+  },
+  {
+    "record_id": "v6-next-expand-v6-00169",
+    "name": "Pearl Street Utilities Services",
+    "domain": "pearlstreet.us",
+    "official_website_url": "https://pearlstreet.us/",
+    "categories": [
+      "D"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "pass2_20260407",
+    "owner_names": "Brian Gray",
+    "ownership": "Founder-owned - Brian Gray is confirmed as owner",
+    "reasoning": "Pearl Street Utilities Services is a small, owner-operated utility contractor based in Moultrie, Georgia. The official website explicitly identifies the company as a 'utility contractor specializing in high-voltage electrical infrastructure' providing high-voltage power line installation, maintenance, troubleshooting, emergency response, and system upgrades for electric cooperatives and municipalities. Brian Gray is confirmed as founder/owner via LinkedIn and company website. Services include lineman services (overhead distribution), distribution line design/engineering, and utility infrastructure inspections across Alabama, Florida, Georgia, Tennessee, North Carolina, and South Carolina. The company clearly meets Category D (distribution) criteria with high-voltage capability. No evidence of ESOP, PE backing, platform company status, or institutional scale.",
+    "review_resolution_notes": "{\"issues_found\": [\"ownership_unclear\"], \"name_changed\": false, \"reasoning_rewritten\": true, \"website_added\": false}",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "v6-pass1-09627",
+    "name": "McWilliams Electric Company",
+    "domain": "mcwilliamselectric.com",
+    "official_website_url": "http://www.mcwilliamselectric.com/",
+    "categories": [
+      "D",
+      "T"
+    ],
     "confidence": "medium",
     "master_status": "maybe",
-    "source_origin": "demo_seed",
-    "owner_names": "Unknown — no leadership page",
-    "ownership": "Unknown",
-    "company_size": "Unknown",
-    "hq_state": "Georgia",
-    "reasoning": "Pinegrove Powerline Services has a thin website that mentions 'powerline construction and maintenance' but does not specify voltage class, customer type, or ownership. No leadership page, no project portfolio. Plausible distribution contractor but insufficient evidence to qualify. Recommend phone outreach to confirm scope and ownership.",
-    "review_resolution_notes": "Hold for outreach."
+    "source_origin": "pass2_20260406",
+    "owner_names": "James J. McGlynn Sr.",
+    "ownership": "Family-owned, James J. McGlynn Sr. President/CEO",
+    "reasoning": "McWilliams Electric Co., founded 1922 and headquartered at 1401 Rodenburg Rd, Schaumburg, IL, is a family-owned (James J. McGlynn Sr., President/CEO), IBEW union contractor and NECA member. Multiple credible sources including EVITP, PowerForward DuPage, and the official site explicitly confirm specialization in high-voltage transmission and distribution. The company's engineering division page states 'high voltage transmission and distribution system design' capability and the experience page references 'Service Feeders, High Voltage.' However, all visible project examples are commercial/institutional (Shedd Aquarium, universities, stadiums) with no documented utility infrastructure projects such as substations, transmission lines, or primary distribution visible on the official site. Revenue of ~$8-10M and 85 employees fit the preferred size range. The explicit HV T&D language across multiple sources supports the Pass 1 D|T categories, but the lack of concrete utility project examples creates ambiguity about whether the HV focus is truly central to operations or represents marketing language applied to building electrical work.",
+    "review_resolution_notes": "Pass 1 decision is borderline supported. Third-party sources explicitly confirm HV T&D specialization but no utility infrastructure projects are visible. Consider for manual review if stricter evidence standard required.",
+    "comparison_summary": ""
   },
   {
-    "record_id": "demo-0008",
-    "name": "Lakeshore T&D Constructors",
-    "domain": "lakeshoretd.example",
-    "official_website_url": "https://www.lakeshoretd.example",
-    "categories": ["T", "D", "S"],
-    "confidence": "high",
-    "master_status": "qualified",
-    "source_origin": "demo_seed",
-    "owner_names": "Ann Whitcomb (CEO); employee shareholders",
-    "ownership": "ESOP — employee-owned (100%)",
-    "company_size": "340 employees",
-    "hq_state": "Wisconsin",
-    "reasoning": "Lakeshore T&D Constructors is a 100% ESOP self-perform T&D contractor working across Midwest investor-owned utilities. Services span 12kV–345kV overhead and underground, plus substation work to 230kV. Strong fit on services. ESOP status flagged for partner review — depending on PE thesis, ESOPs may or may not be in scope.",
-    "review_resolution_notes": "Flag ESOP for partner discussion."
-  },
-  {
-    "record_id": "demo-0009",
-    "name": "Granite Ridge Underground Utilities",
-    "domain": "graniteridgeuu.example",
-    "official_website_url": "https://graniteridgeuu.example",
-    "categories": ["D"],
+    "record_id": "v6-next-maps-v11-00989",
+    "name": "Schetter Electric, Inc.",
+    "domain": "schetter.com",
+    "official_website_url": "https://www.schetter.com/",
+    "categories": [
+      "D",
+      "S"
+    ],
     "confidence": "medium",
     "master_status": "qualified",
-    "source_origin": "demo_seed",
-    "owner_names": "Marco Reyes (Owner)",
-    "ownership": "Independent",
-    "company_size": "45 employees",
-    "hq_state": "New Hampshire",
-    "reasoning": "Granite Ridge specializes in underground residential distribution (URD), directional boring, and conduit installation for distribution utilities. Smaller crew but consistent project flow with regional utility. Owner-operated. Confidence medium pending revenue confirmation.",
-    "review_resolution_notes": ""
+    "source_origin": "pass2_recovery_plus_v13_20260408",
+    "owner_names": "Frank Schetter (CEO); Vince Bernacchi (President); Marlin Cole (VP); Brett Nogleberg (VP Preconstruction)",
+    "ownership": "Family-owned independent; CEO Frank Schetter, President Vince Bernacchi; founded 1958 by Howard F. Schetter; current leadership includes third-generation management",
+    "reasoning": "Schetter Electric Inc (schetter.com) is a family-owned electrical contractor founded in 1958 in Sacramento, CA, with 51-111 employees. The company's official site explicitly states it specializes in high-voltage utility services, and project evidence including the Telegis Networks collocation facility (2008) shows 21kV primary distribution and substation work. Procore lists the company as specializing in high voltage, substations, transformers, distribution, and utility services. Ownership is confirmed via CEO Frank Schetter (founder's son, joined 1970) and President Vince Bernacchi on the official leadership page. The company is independent, family-owned, and appropriately sized for the acquisition profile. Categories D and S are supported by the explicit high-voltage utility language and documented primary distribution and substation projects.",
+    "review_resolution_notes": "Pass 1 name was 'Schetter Electric, LLC' but official site and multiple listings use 'Schetter Electric, Inc.' - no entity change, likely variation in how the name appears across filings. Site content is consistent and confirms HV utility capability.",
+    "comparison_summary": ""
   },
   {
-    "record_id": "demo-0010",
-    "name": "Sentinel Storm Response Group",
-    "domain": "sentinelstorm.example",
-    "official_website_url": "https://www.sentinelstorm.example",
-    "categories": ["D", "V"],
+    "record_id": "v6-pass1-00017",
+    "name": "Southern Power Systems, Inc.",
+    "domain": "sopower.com",
+    "official_website_url": "https://sopower.com",
+    "categories": [
+      "S",
+      "D"
+    ],
     "confidence": "high",
     "master_status": "qualified",
-    "source_origin": "demo_seed",
-    "owner_names": "Karen Voss (Founder & CEO)",
-    "ownership": "Founder-owned",
-    "company_size": "210 employees (peak storm season)",
-    "hq_state": "Florida",
-    "reasoning": "Sentinel Storm Response Group is a Florida-based mutual-assistance contractor providing distribution restoration crews, line clearance, and damage assessment during hurricane season. Maintains long-term mutual aid agreements with multiple Southeast utilities. Founder-owned, no outside capital. Dual-fit D + V categories.",
-    "review_resolution_notes": "Seasonal headcount swings — confirm steady-state revenue."
+    "source_origin": "pass2_20260406",
+    "owner_names": "Troy Rispone (President & CEO)",
+    "ownership": "private; founder-led; Troy Rispone President & CEO since founding in 1994",
+    "reasoning": "Southern Power Systems (sopower.com) is a Baton Rouge-based private utility electrical contractor founded in 1994. The official site explicitly describes the company as an 'Industrial Utility Contractor' serving the Gulf Coast with services including substation construction, transformer repair and maintenance, switchgear and breaker work, protective relay services, testing and commissioning, and medium/high voltage electrical work. Meta descriptions confirm 'Transformer Utility Substation Breaker Generator Solutions' and 'high-voltage electrical services.' Revenue of approximately $10.6M with 32–100 employees indicates a regional operator in the preferred acquirable range. Ownership is led by President & CEO Troy Rispone (LinkedIn, 2026), founded in 1994 and privately held with no ESOP, public, or PE-backedness found. The site shows recent updates through November 2023 and no viability contradictions. The evidence aligns with S (substation/transformer/relay/switchgear) and D (distribution equipment servicing) categories per Qualification Criteria v6.",
+    "review_resolution_notes": "Pass 1 decision confirmed. Pass 1 current name was generic 'Services' — official name is Southern Power Systems, Inc. Site is active and confirmed. No ownership contradictions found.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0537",
+    "name": "East Coast Access LLC",
+    "domain": "eastcoastaccess.com",
+    "official_website_url": "https://eastcoastaccess.com",
+    "categories": [
+      "T",
+      "S"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "East Coast Access LLC is a Pennsylvania-registered heavy construction company serving the high voltage transmission line and substation industries per its [official website](https://eastcoastaccess.com/), which confirms substation construction, transmission line civil work, distribution projects, drilled shaft foundations, grounding, blasting, and restoration services through its [services page](https://eastcoastaccess.com/services/). The company's official [About page](https://eastcoastaccess.com/about/) establishes its operational status, woman-owned status, and leadership under owner Heidi Shuster. Additional verification from its [ContactOut profile](https://contactout.com/company/East-Coast-Access-ECA-LLC-70671) and [FMCSA records](https://www.usdotscore.com/carrier/3214381/east-coast-access-llc) confirms active LLC status and interstate operating authority. However, the company's very small size of 2-5 employees per LinkedIn raises questions about viability as a qualified contractor for Heritage's desired acquisition target size range.",
+    "review_resolution_notes": "",
+    "comparison_summary": "adjudicated from manual_review to qualified: Official site and project pages show field construction services for high-voltage transmission lines and substation construction."
+  },
+  {
+    "record_id": "q-0612",
+    "name": "JC Lentine Electric Service, Inc.",
+    "domain": "lentineelectric.com",
+    "official_website_url": "https://lentineelectric.com",
+    "categories": [],
+    "confidence": "high",
+    "master_status": "not_qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "JC Lentine Electric Service, Inc. is an active Massachusetts electrical contractor based in Hyde Park, Boston, with over 28 years in business since 1998, confirmed as President-led by John Lentine via his [LinkedIn profile](https://www.linkedin.com/in/john-lentine-09bb1b196) and [RocketReach](https://rocketreach.co/john-lentine-email_365592839), and operating from 54R Walter St Ste 6 per [FMCSA carrier records](https://otrucking.com/carrier/jc-lentine-electric-service-inc-dot-3180084/), but the company's service scope is commercial and industrial electrical wiring installation according to the [BBB profile](https://www.bbb.org/us/ma/hyde-park/profile/electrician/jc-lentine-electric-s...) and [BuildZoom listing](https://www.buildzoom.com/contractor/jc-lentine-electric-service-inc), not power line or utility distribution infrastructure work, meaning it does not qualify for the D category as originally claimed.",
+    "review_resolution_notes": "",
+    "comparison_summary": "categories changed from D to blank; adjudicated from not_qualified to not_qualified: Available evidence supports an electrical contractor, not utility T/D/S field work."
+  },
+  {
+    "record_id": "q-0575",
+    "name": "Weinstein Electric Co.",
+    "domain": "weinsteinelec.com",
+    "official_website_url": "https://weinsteinelec.com",
+    "categories": [
+      "T",
+      "D",
+      "S"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "Weinstein Electric Co. is a third-generation, family-owned electrical contractor founded in 1946 in Flint, Michigan, specializing in transmission, distribution, and substation work for utility companies, as described on its official [website](https://weinsteinelec.com/) and confirmed by its [BuildZoom profile](https://www.buildzoom.com/contractor/weinstein-electric-company) identifying owner Dominic Tremain, its [Blue Book ProView listing](https://www.thebluebook.com/iProView/317949/weinstein-electric-co/subcontract) describing utility-focused electrical services, and its [AND Magazine profile](https://and.flintandgenesee.org/weinstein-electric-powering-flint-for-nearly-80-years) highlighting nearly 80 years of service to the Flint community with NECA membership and active operations.",
+    "review_resolution_notes": "",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0259",
+    "name": "Appalachian Sitework, Inc.",
+    "domain": "appsiteinc.com",
+    "official_website_url": "https://appsiteinc.com",
+    "categories": [
+      "D",
+      "S"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "Appalachian Sitework, Inc. is a family-owned utility and civil construction contractor based in Waynesville, NC, founded in 2014 and led by President Jason Ball and Vice President Brandy Ball per its [official website](https://appsiteinc.com/) and [BBB profile](https://www.bbb.org/us/nc/waynesville/profile/utility-contractors/appalachian-sitework-inc-0473-92018622). The company offers energy site construction including substation builds, underground utilities, and commercial site development per its [services page](https://appsiteinc.com/services/), supporting its fit for substation (S) and distribution (D) categories, though transmission (T) work remains less explicitly documented. The [LinkedIn profile](https://www.linkedin.com/company/appsiteinc) indicates 11-50 employees and the BBB lists 14 employees, supporting the company size. Active operations are confirmed by current hiring, BBB accreditation since 2021, and an A+ rating.",
+    "review_resolution_notes": "",
+    "comparison_summary": "categories changed from T|D|S to D|S"
+  },
+  {
+    "record_id": "q-0727",
+    "name": "Diamond F Electric Contracting LLC",
+    "domain": "diamondfelectricservices.com",
+    "official_website_url": "https://diamondfelectricservices.com",
+    "categories": [],
+    "confidence": "medium",
+    "master_status": "not_qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "Diamond F Electric Contracting LLC is a Paris, Texas-based electrical contractor with CAGE Code 8FD80 confirmed as an active commercial supplier via the [NSN Lookup CAGE record](https://www.nsnlookup.com/cage/8fd80), and the [Procore contractor profile](https://www.procore.com/network/p/diamond-f-electric-contracting-paris) supports company identity and active operations in the Paris TX area. The [company website](https://diamondfelectricservices.com) confirms the business has operated since 2007 and identifies Aaron Beshirs as owner. However, [BBB business profile](https://www.bbb.org/us/tx/paris/profile/electrician/diamond-f-electric-contra) lists David Farmer as owner, creating contradictory ownership evidence. Service fit is mixed because the [company website](https://diamondfelectricservices.com) describes primarily residential and commercial electrical services, while [Procore](https://www.procore.com/network/p/diamond-f-electric-contracting-paris) and [Levelset](https://www.levelset.com/subcontractors/texas/paris/electricians/diamond-f-electric-contra) references include utility power line work including transmission and distribution. Company size is small (approximately 3-11 employees per BuildZoom score of 94), and no federal contract history was found despite active CAGE registration, so manual review is recommended before outreach.",
+    "review_resolution_notes": "",
+    "comparison_summary": "adjudicated from manual_review to not_qualified: Official site is primarily residential and commercial; transmission/distribution support appears only in secondary contractor directories."
+  },
+  {
+    "record_id": "q-0391",
+    "name": "Wade Electric Co., Inc.",
+    "domain": "wadeelect.com",
+    "official_website_url": "https://www.wadeelect.com",
+    "categories": [
+      "T",
+      "D"
+    ],
+    "confidence": "medium",
+    "master_status": "maybe",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Jerry W. Barrix",
+    "ownership": "Privately owned by Jerry W. Barrix, founder-led with 50+ years industry experience",
+    "reasoning": "Wade Electric Co., Inc. is a Jackson, Tennessee-based electrical contractor confirmed at 503 Airways Blvd by the [Greater Jackson Chamber of Commerce](https://member.jacksontn.com/list/member/wade-electric-co-inc-jackson-1843), [BBB profile](https://www.bbb.org/us/tn/jackson/profile/electric-companies/wade-electric-co...), and [D&B listing](https://www.dandb.com/businessdirectory/wadeelectriccompanyinc.-jackson-tn-13). The company has operated since approximately 1970 with roughly 45 employees according to D&B, and is led by Jerry W. Barrix as owner per his [LinkedIn profile](https://www.linkedin.com/in/jerry-w-barrix-1846973). External sources including the [Go Build Tennessee workforce program](https://www.gobuildtennessee.com/training-program/wade-electric/) list the company for an apprenticeship program for Electrical Power-Line Installers and Repairers, and multiple directories describe power line specialization. However, the company's own [official website](https://www.wadeelect.com/our-services/) only advertises residential, commercial, and generator services without mentioning utility power line work, and OSHA records classify the company under SIC 238210 \"Low voltage electrical work,\" creating material discrepancy between external claims and self-description.",
+    "review_resolution_notes": "Company identity and ownership are confirmed. Service fit is MIXED because the official website does not confirm T&D work, contradicting external sources that claim power line specialization. OSHA classification as low-voltage further undermines T&D claims. Manual review recommended to verify actual utility work scope.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "v6-pass1-00515",
+    "name": "Splicing, Terminating & Testing, Inc.",
+    "domain": "stthighvoltage.com",
+    "official_website_url": "http://www.stthighvoltage.com",
+    "categories": [
+      "D",
+      "S"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Andy Schai; Guy Dake",
+    "ownership": "Andy Schai (owner per ProView/The Blue Book); Guy Dake (President per MapQuest). Exact relationship between owners unclear. Small private family/owner-operated business.",
+    "reasoning": "STT is an established (1981) high voltage electrical contracting firm based in San Jose, CA specializing in medium voltage cable (5, 15, 25KV class MV-105) splicing, terminating, and testing. The SCVNECA contractor page and multiple directory listings confirm explicit high-voltage utility capability with services in cable installation, maintenance, and troubleshooting for utility and industrial customers. The company explicitly serves the Silicon Valley and Greater Bay Area with 24/7 emergency HV service. Category D (distribution - underground/mixed primary) and S (cable splicing/terminating tied to substation/utility HV systems) both apply. Website [stthighvoltage.com](http://www.stthighvoltage.com) and SCVNECA profile confirm identity. Ownership shows Andy Schai as owner per ProView and Guy Dake as President per MapQuest; appears to be small private operator but exact relationship unclear. Not ESOP, public, PE-backed, or part of any known platform.",
+    "review_resolution_notes": "Pass 1 qualification confirmed. Ownership evidence shows two different names (Andy Schai and Guy Dake) which creates minor ambiguity. Company has been in business since 1981 and appears genuinely independent. SCVNECA membership is strong Tier 1 evidence. No red flags for institutional scale or platform ownership.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0860",
+    "name": "Cutting Edge Electric, Inc.",
+    "domain": "cuttingedgeelectric.net",
+    "official_website_url": "https://cuttingedgeelectric.net",
+    "categories": [
+      "T",
+      "D",
+      "S"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "Cutting Edge Electric, Inc. is a qualified acquisition target because its [official website](https://cuttingedgeelectric.net) confirms the company performs medium voltage electrical distribution, transmission, and substation work, its [Idaho AGC contractor listing](https://web.idahoagc.org/Division-26-Electrical/Cutting-Edge-Electric,-Inc-1629) describes utility-scale projects and specialization in T, D, and S categories, and its [LinkedIn company profile](https://www.linkedin.com/company/cutting-edge-electric-inc) shows 11-50 employees and active operations in Idaho Falls, ID, with [BBB A+ rating](https://www.mapquest.com/us/idaho/cutting-edge-electric-286121191) and Brad Whitehead identified as owner on the [company contact page](https://www.cuttingedgeelectric.net/contact-us/).",
+    "review_resolution_notes": "",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "v6-pass1-03060",
+    "name": "Goheen Electric LLC",
+    "domain": "goheenelectric.com",
+    "official_website_url": "https://goheenelectric.com/",
+    "categories": [
+      "D"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Bud O. Goheen",
+    "ownership": "Founder/Owner: Bud O. Goheen (Bud Goheen). Family-run independent electrical contractor.",
+    "reasoning": "Goheen Electric LLC (Farmington, MO) operates a functional official website at goheenelectric.com with an active 2026 copyright. The services page explicitly lists Medium & High Voltage, Underground, and Electrical Distribution as core capabilities. The IEC of Greater St. Louis confirms High Voltage as a market served. Multiple search results surface consistent high-voltage electrical contractor language across directories. Owner Bud O. Goheen is confirmed via IEC listing and BBB references, suggesting founder-led independent operation. No evidence of platform company affiliation, ESOP, public ownership, or PE backing. Company size is inferred from web presence rather than confirmed employee counts. Website explicitly claims over 32 years of experience and MSHA training for employees, indicating real field crews. Pass 1 qualification of qualified with category D is appropriate and supported.",
+    "review_resolution_notes": "Small regional HV contractor in Southeast Missouri. Website services page lists: Medium & High Voltage, Underground, Electrical Distribution. Projects page shows underground conduit work. Size inferred but not confirmed. No evidence of platform affiliation.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0342",
+    "name": "Arrington Electric Contracting, LLC",
+    "domain": "arrington-electric.com",
+    "official_website_url": "https://arrington-electric.com",
+    "categories": [
+      "D",
+      "S",
+      "CI"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "Arrington Electric Contracting, LLC is a Georgia-based electrical contractor founded in 1995 by Paul Arrington according to [Dun & Bradstreet](https://b.assets.dandb.com/businessdirectory/arringtonelectriccontractingllc-), operating from offices in Matthews and Wrens, GA per [MapQuest](https://www.mapquest.com/us/georgia/arrington-electric-contracting-404684431) and the [IEC Atlanta & Georgia Chapters contractor listing](https://iecatlantaga.org/contractors/georgia/), with approximately 5 employees and $300K annual revenue per [D&B records](https://b.assets.dandb.com/businessdirectory/arringtonelectriccontractingllc-), and [LinkedIn](https://www.linkedin.com/in/paul-arrington-86830143) confirms Paul Arrington as owner with nearly 39 years of experience describing power line distribution, substation, and commercial/industrial electrical work.",
+    "review_resolution_notes": "",
+    "comparison_summary": "name normalized from Arrington Electric, LLC to Arrington Electric Contracting, LLC"
+  },
+  {
+    "record_id": "v6-pass1-09425",
+    "name": "DL Smith Electric",
+    "domain": "dlsmith.com",
+    "official_website_url": "https://dlsmith.com/",
+    "categories": [
+      "T",
+      "D",
+      "S"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Shawn Smith (CEO & President); Donald 'DL' Smith (Founder)",
+    "ownership": "Family-owned (Smith family); privately held; founded 1972 by Donald 'DL' Smith; currently led by CEO Shawn Smith since 2005",
+    "reasoning": "DL Smith Electric is a family-owned, Kansas-based NECA contractor founded in 1972 by Donald 'DL' Smith and now led by CEO Shawn Smith (son). Multiple Tier 1 sources including the official website, Kansas NECA directory, and Procore explicitly confirm specialization in high-voltage utility transmission, distribution, and substation work up to 15kV. The construction page specifically mentions 15kV high-voltage distribution systems. Company operates regionally in Kansas with 51-200 employees and offers 24/7 emergency response. The TK Business Magazine (November 2025) profiles the company as a specialist in transmission and distribution. Not ESOP, public, PE-backed, or part of any platform. One data discrepancy exists: BuildZoom lists ownership by 'John R. Robben' while official sources and multiple independent profiles confirm Shawn Smith as CEO and family ownership since 2005. This is a directory data quality issue rather than a true ownership contradiction. Company is actively operating with recent project activity and NECA membership in good standing.",
+    "review_resolution_notes": "BuildZoom ownership claim (John R. Robben) contradicts official site, LinkedIn, and TK Magazine sources. This appears to be stale or erroneous directory data. Given multiple consistent Tier 1 sources confirming Shawn Smith as CEO and family ownership, the BuildZoom discrepancy is noted but does not override the clear ownership evidence. No evidence of ESOP, public status, PE backing, or platform affiliation.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0071",
+    "name": "Vaughn Industries, LLC",
+    "domain": "vaughnindustries.com",
+    "official_website_url": "https://vaughnindustries.com",
+    "categories": [
+      "T",
+      "S"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "Vaughn Industries LLC is a family-owned electrical and high voltage utility contractor based in Carey, Ohio, founded in 1963 by Ronald Vaughn and currently led by CEO Tim Vaughn and Executive Board member Gregg Vaughn, as documented on its official [website](https://vaughnindustries.com) and [company overview page](https://vaughnindustries.com/company/), which also confirms specialized services in high voltage transmission, distribution, and substation construction up to 345KV; the company's presence on [Duke Energy's Midwest Transmission Construction contractor list](https://www.ferc.duke-energy.com/DEW/MidwestConstructVendors.pdf) validates the entity notes and utility service fit, and its [LinkedIn company profile](https://www.linkedin.com/company/vaughn-industries-llc) and recent expansion announcements (2025 new 120,000 SF manufacturing facility) confirm active operating status and substantial workforce of 800+ employees.",
+    "review_resolution_notes": "",
+    "comparison_summary": "legacy_225_bucket=matched_qualified"
+  },
+  {
+    "record_id": "q-0355",
+    "name": "Boyd Electric LLC",
+    "domain": "boydelectric.net",
+    "official_website_url": "https://www.boydelectric.net",
+    "categories": [
+      "T",
+      "D",
+      "S"
+    ],
+    "confidence": "low",
+    "master_status": "not_qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Kathy Boyd",
+    "ownership": "Kathy Boyd, founder, president and CEO",
+    "reasoning": "Boyd Electric LLC is a women-owned, founder-led electrical contractor based at 6040 Maxwell Ave in Evansville, Indiana, founded in 2009 by Kathy Boyd, confirmed as active via Indiana business entity listing and SIBA membership. However, the company's official website at boydelectric.net describes primarily residential electrical services (wiring, lighting, panel upgrades, generators) and commercial electrical work (new construction, remodeling, maintenance for medical offices, churches, retail) without any explicit high-voltage utility language. The Blue Book ProView listing shows 'communication systems' specialization, which is a telecom/low-voltage signal, not high-voltage transmission, distribution, or substation work. The contact page was found to contain no visible utility-specific service descriptions in page content. No evidence of bucket trucks, digger derricks, line crews, journeyman linemen, cable splicers, substation electricians, or relay technicians. No utility approved contractor lists, procurement records, or project pages naming substations, feeders, transformers, switchgear, or primary distribution work. This is a general residential/commercial electrical contractor that fails V6 Criteria Section 1.5 exclusion rules and has not demonstrated the high-voltage utility self-perform capability required in Section 1.2.",
+    "review_resolution_notes": "Pass 1 claimed contact page listed 'utility power line transmission, distribution, and substation work' but actual page fetch showed no such utility-specific language. Blue Book shows 'communication systems' not utility HV work. This appears to be a building electrician with telecom low-voltage work, not a utility infrastructure contractor.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0100",
+    "name": "Queue Electrical Contractors Inc.",
+    "domain": "queueelectrical.com",
+    "official_website_url": "https://queueelectrical.com",
+    "categories": [],
+    "confidence": "medium",
+    "master_status": "not_qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "Queue Electrical Contractors Inc. is a Queens-based electrical contractor led by President and Owner Anthony Quinones per its [LinkedIn profile](https://www.linkedin.com/in/anthony-quinones-847a0871) and [ZoomInfo listing](https://www.zoominfo.com/pic/queue-electrical-contractors-inc/358166329), operating since 2003 with approximately 20 employees. The company holds DBE and MBE certifications, participates in the [MTA Small Business Development Program](https://www.mta.info/document/117676), and performs overhead distribution and high-voltage wiring according to [Blue Book ProView](https://www.thebluebook.com/iProView/803243/queue-electrical-contractors-inc/subcontractors/) while maintaining an official website at [queueelectrical.com](https://queueelectrical.com/). Service fit for Distribution (D) category is mixed because while the company lists overhead distribution work, its demonstrated specialty is transit power and MTA infrastructure rather than explicit utility grid contracts with ConEd, PSEG, or similar power companies.",
+    "review_resolution_notes": "",
+    "comparison_summary": "legacy_225_bucket=matched_manual_review; adjudicated from manual_review to not_qualified: Official site and MTA-related references do not clearly establish T/D/S utility field work."
+  },
+  {
+    "record_id": "q-0521",
+    "name": "Industrial Power Systems",
+    "domain": "ipscontractor.com",
+    "official_website_url": "https://www.ipscontractor.com",
+    "categories": [
+      "T",
+      "D",
+      "S"
+    ],
+    "confidence": "medium",
+    "master_status": "not_qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Kevin J. Gray (founder/CEO); ESOP employee ownership structure",
+    "ownership": "ESOP (Employee Stock Ownership Plan) - employee-owned",
+    "reasoning": "Industrial Power Systems (IPS) is an ESOP-owned company based in Rossford, Ohio, founded by Kevin J. Gray in 1985, which operates as an employee-owned business per company history page and local news reports. While the official website and LinkedIn profile confirm active HV utility work including transmission, distribution, and substation services for utility companies, the ESOP structure is a hard disqualification under Section 1.7 ownership criteria. Additionally, IPS presents as a broad multi-discipline industrial contractor serving manufacturing, healthcare, institutional, power, food, and refining industries, with electrical capabilities spanning process controls, high/medium/low voltage cabling, transformers, and building electrical, making the utility HV scope ambiguous and mixed.",
+    "review_resolution_notes": "ESOP status is a hard disqualification per criteria 1.7 - company must be founder-led, family-owned, or owner-operated. ESOP companies are explicitly excluded. Pass 1 failed to identify this disqualifying factor.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "v6-next-maps-v12-04137",
+    "name": "B&D Industries, Inc.",
+    "domain": "banddindustries.com",
+    "official_website_url": "https://banddindustries.com/",
+    "categories": [
+      "S",
+      "D"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "pass2_recovery_plus_v13_20260408",
+    "owner_names": "Troy Beall (CEO/Owner); Clinton Beall (President/Owner)",
+    "ownership": "Family-owned (Beall family) — Troy Beall (CEO/Owner) and Clinton Beall (President/Owner)",
+    "reasoning": "B&D Industries is a family-owned electrical contractor (founded 1955) based in Albuquerque, NM with explicit claims of medium and high-voltage electrical work capability on their official site. Their portfolio includes a US Air Force project (KUMMSC) with full Unit Substation 40 replacement, new 15kV underground feeder installation, 1000 kVA transformers, and padmounted switchgear — clear utility-grade substation work qualifying for S and D categories. Their clients page explicitly states capability for low, medium, and high-voltage electrical work. However, their primary website identity is a mixed electrical/HVAC/plumbing contractor serving commercial/industrial buildings, and the SunZia project (despite being a transmissionadjacent project) involved only 480V low-voltage site work. HV utility work appears to be a real but secondary portion of their business. Ownership (Troy and Clinton Beall family) is confirmed fit via official About page. Medium confidence due to mixed signals — explicit HV claims backed by real substation/15kV project evidence, but primary identity is building electrical.",
+    "review_resolution_notes": "Pass 1 QA: Pass 1 recommendation of qualified S/D with medium confidence is confirmed. The KUMMSC project is legitimate substation/distribution evidence with 15kV, transformers, and switchgear. SunZia was 480V only per official site — not transmission work. Primary identity remains building electrical/HVAC/plumbing but HV capability is real and documented.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0486",
+    "name": "Charan Electrical Enterprises Inc",
+    "domain": "charanelectrical.com",
+    "official_website_url": "http://charanelectrical.com",
+    "categories": [
+      "D"
+    ],
+    "confidence": "medium",
+    "master_status": "not_qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "Charan Electrical Enterprises Inc is a founder-led private electrical contractor based in Long Island City, NY, founded in 1997, with Kulwant Deol as president and owner per the [LinkedIn company profile](https://www.linkedin.com/company/charan-electrical-enterprises-inc-) and his [personal LinkedIn profile](https://www.linkedin.com/in/kulwant-deol-5631a93a). The company operates an active [official website](http://charanelectrical.com/) showing current 2026 business, and multiple third-party directories including [BlueBook](https://www.thebluebook.com/iProView/1523865/charan-electrical/subcontractors/), [nripage.com](https://nripage.com/yellowpages/business-services/12471-charan-electrical-ent), and [SignalHire](https://www.signalhire.com/companies/charan-electrical-enterprises) all list power distribution and utility transmission as core services, with SignalHire specifically noting specialization in power distribution up to 11kV. Company size is listed at 100-200 employees per SignalHire. Note: the company was barred from NYC public works contracts for five years by the NYC Comptroller in 2023 due to wage theft violations on public school projects, per [NYC Comptroller news release](https://comptroller.nyc.gov/newsroom/nyc-comptroller-lander-bars-charan-electrical-from-public-works), suggesting scope may be limited to private sector work.",
+    "review_resolution_notes": "",
+    "comparison_summary": "adjudicated from manual_review to not_qualified: The public evidence supports a mixed C&I and distribution profile, but the utility field-work case is not strong enough to qualify under a strict T/D/S standard."
+  },
+  {
+    "record_id": "v6-pass1-00038",
+    "name": "JB Contracting Corporation",
+    "domain": "jbcontracting.com",
+    "official_website_url": "https://www.jbcontracting.com",
+    "categories": [
+      "D",
+      "S"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Jim Brady Sr.; Jim Brady Jr.; Tom Brady; Patrick Brady; James Brady",
+    "ownership": "Family-owned Brady family (Jim Brady Sr., Jim Brady Jr., Tom Brady, Patrick Brady, James Brady)",
+    "reasoning": "JB Contracting Corporation (jbcontracting.com) in LaSalle, IL demonstrates high-voltage utility capability per their official services page which explicitly states 'High Voltage, Medium Voltage, and Low Voltage work' and 'We install and terminate all cable from 35,000 Volts down to 24 Volt.' Equipment page confirms utility-relevant fleet including Line Truck, Bucket Truck, Cable Pullers (6), Switchgear Dollees (2), and Transformer Powerpacks (9). Family Brady-owned since 1993, 51-100 employees per Procore, union shop (IBEW locals), Illinois-based, no ESOP/public/PE backing confirmed. Website at https://www.jbcontracting.com",
+    "review_resolution_notes": "Pass 1 QA: Claims 'overhead and underground distribution line work' and 'substation projects' are not explicitly on the website; these appear to come from third-party sources (Procore, PowerForward DuPage). Website itself confirms HV/MV capability at 35kV, cable termination, duct banks, and utility fleet. Original qualified decision stands but with tightened evidence sourcing.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "v6-pass1-00612",
+    "name": "Matthews Power LLC",
+    "domain": "matthewspower.com",
+    "official_website_url": "https://matthewspower.com",
+    "categories": [
+      "D"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Unknown",
+    "ownership": "Unknown - no specific owner name found on official site or in state corporate filings available through search",
+    "reasoning": "Matthews Power LLC is a Virginia-based electrical utility contractor with a professional website (matthewspower.com) that explicitly describes specialization in high-voltage power distribution including both overhead and underground work. The services page lists 'Overhead Power Distribution' and 'Underground Power Distribution' with installation, repair, and testing capabilities. The careers page actively recruits 'Experienced Underground Splicers and Terminators specializing in high-voltage (medium-voltage) cable work' confirming real HV field crew capability. DOT records show an active interstate carrier with 8 trucks and 10 trailers transporting utility cargo (USDOT 3423585). OSHA records confirm activity under NAICS 237130 (Utility System Construction) in Virginia with a Program Related inspection in July 2025. No evidence of platform affiliation, ESOP, public ownership, or institutional scale. The company is registered with the Virginia SCC and appears to be a small private regional operator. Ownership principals are not named on the official site or in available state filing summaries, which prevents a confirmed ownership determination. Confidence is medium due to strong service fit but gaps in ownership verification. Categories recommended: D (Distribution).",
+    "review_resolution_notes": "Virginia SCC shows entity registered but principal officer names not visible in public records. DOT fleet (8 trucks, 10 trailers) suggests small regional operator. OSHA NAICS 237130 confirms utility scope. No platform affiliation detected.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0490",
+    "name": "2G Construction, Inc.",
+    "domain": "2gconstruction.com",
+    "official_website_url": "https://2gconstruction.com",
+    "categories": [
+      "T",
+      "D"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "2G Construction, Inc. is a qualified powerline contractor based in Eugene, Oregon, that specializes in transmission and distribution work because its [official website](https://www.2gconstruction.com) describes power line transmission and distribution services, its [Who We Are page](https://www.2gconstruction.com/who-we-are) confirms employee ownership via ESOP established in 1983, its [contact page](https://www.2gconstruction.com/contact) lists phone 541-689-3850 and describes transmission and distribution projects, and its [Blue Book profile](https://www.thebluebook.com/iProView/357870/2g-construction-inc/general-contr) confirms 20-49 employees and operation since 1983 with no acquisition announcements found.",
+    "review_resolution_notes": "",
+    "comparison_summary": "name normalized from 2 G Construction to 2G Construction, Inc."
+  },
+  {
+    "record_id": "q-0121",
+    "name": "Fred Clark Electrical Contractors",
+    "domain": "fredclarkelectric.com",
+    "official_website_url": "https://fredclarkelectric.com",
+    "categories": [
+      "D"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "Fred Clark Electrical Contractors, operating as Zachman Enterprises Inc., is a San Antonio-based electrical contractor serving commercial, healthcare, industrial, energy, infrastructure, and institutional sectors with utility distribution and high-voltage capabilities per its Procore network profile, IBEW Local 60 contractor listing, and BuildZoom profile, while Maricel Zachman is confirmed as owner via her LinkedIn profile, BBB business profile, and federal court case records showing Zachman Enterprises Inc. d/b/a Fred Clark Electrical Contractor, and the company maintains active operating status evidenced by a 2025 San Antonio city council contract approval and BBB profile since 2010, though the official website at fredclarkelectric.com is currently inactive and company size signals remain unverified.",
+    "review_resolution_notes": "",
+    "comparison_summary": "name normalized from Fred Clark Electrical Contractor San Antonio to Fred Clark Electrical Contractors"
+  },
+  {
+    "record_id": "v6-next-maps-v12-02921",
+    "name": "United Power Group Inc",
+    "domain": "unitedpowergrpinc.com",
+    "official_website_url": "https://www.unitedpowergrpinc.com/",
+    "categories": [
+      "S"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "pass2_recovery_plus_v13_20260408",
+    "owner_names": "Al Marrocco (CEO/President)",
+    "ownership": "Private; Founder/owner-operated; CEO Al Marrocco",
+    "reasoning": "United Power Group Inc (Stoughton, MA) is an IBEW Local 103 signatory firm operating since 1985, specializing in substation acceptance testing, commissioning, relay calibration/testing, transformer testing, breaker testing, and cable testing for Low/Medium/High Voltage Substations up to 345kV. The official site explicitly confirms high-voltage substation capability including protective relay, switchgear, and breaker work tied to utility and power plant systems. Qualifies under S-category per criteria which includes commissioning, maintenance, and relay/protective relaying work. Service fit is clear but the company is testing/commissioning oriented rather than a traditional construction contractor, which explains the medium confidence. No public, PE, or ESOP signals; appears founder/owner-operated with Al Marrocco as CEO. Evidence: https://www.unitedpowergrpinc.com/ https://www.linkedin.com/in/al-marrocco-81491182 https://www.thebluebook.com/iProView/865447/united-power-group-inc/subcontrac...",
+    "review_resolution_notes": "Company is primarily a testing and commissioning firm rather than construction. This is a borderline case under criteria 1.5 which excludes testing-only shops, but the explicit inclusion of commissioning and acceptance testing in positive signals (1.4) and the inclusion of substation maintenance in 1.2 suggests they qualify. Fleet is small (13 trucks per trucking data) suggesting a smaller operation. There is some confusion with unrelated similarly-named entities (United Power Group Inc in Texas, United Power Corp in Peabody MA) but the Stoughton MA company is clearly distinct.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "v6-authority-iec_member_directory-00585",
+    "name": "Absolute Power LLC",
+    "domain": "absolutepower.co",
+    "official_website_url": "https://www.absolutepower.co",
+    "categories": [
+      "D",
+      "T"
+    ],
+    "confidence": "medium",
+    "master_status": "maybe",
+    "source_origin": "pass2_20260407",
+    "owner_names": "Second-generation lineman founder (Iowa company); Bobbie Taylor (Ohio company)",
+    "ownership": "family-owned (Iowa company); Bobbie Taylor (Ohio company)",
+    "reasoning": "Absolute Power LLC at absolutepower.co is a family-owned utility contractor in Panora IA, explicitly describing overhead and underground power distribution and transmission services with a second-generation lineman founder. The website language confirms high-voltage utility capability with strong service fit for categories D|T. However, this Iowa company's website appears to have been found by Pass 1 in place of a different Absolute Power LLC listed in the IEC Central Ohio member directory at 11455 Darby Creek Rd., Orient OH (Bobbie Taylor, since 2010). The Ohio entity shows transmission/distribution and utility high voltage work in directory listings but has no confirmed official website, making ownership and size verification difficult. The identity mismatch between the IEC source trigger (Ohio company) and the Pass 1 website (Iowa company) is a significant quality issue requiring manual resolution.",
+    "review_resolution_notes": "{\"issues_found\": [\"identity_ambiguous\", \"directory_heavy_evidence\", \"name_changed\"], \"name_changed\": true, \"reasoning_rewritten\": false, \"website_added\": true}",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "v6-pass1-04533",
+    "name": "Premium Utility Contractor",
+    "domain": "premiumutilitycontractor.com",
+    "official_website_url": "https://premiumutilitycontractor.com",
+    "categories": [],
+    "confidence": "low",
+    "master_status": "not_qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Jake Meeks (Founder/Leader per About page); PowerGrid (parent company since 2023 acquisition)",
+    "ownership": "Acquired by PowerGrid in 2023",
+    "reasoning": "The company at premiumutilitycontractor.com is Premium Utility Contractor (PUC), a high-voltage utility contractor with explicit transmission (up to 500KV), distribution, and storm restoration capability, which would normally qualify under T|D|V categories. However, the company's own About page explicitly states 'In 2023, we were acquired by PowerGrid, a leader in the utility industry,' confirming this entity is now part of a larger platform. The company_id 46282287150 appears in the active exclusion list, further confirming it should not be qualified. Per Section 1.7 (Ownership/Independence), companies acquired by PE-backed platforms or part of large national platforms are hard fails. Pass 1's 'qualified' recommendation is overturned — the entity fails on ownership grounds and should be suppressed as already excluded.",
+    "review_resolution_notes": "Critical finding: Source data name 'Prefix Solutions LLC' does not match official operating brand 'Premium Utility Contractor Inc.' The company was acquired by PowerGrid in 2023 per official site. This is a platform-owned company that should be excluded. Pass 1 incorrectly qualified this entity without checking ownership status against exclusion lists or verifying PowerGrid acquisition. Recommend excluding from pipeline.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0285",
+    "name": "Owl Creek Contracting LLC",
+    "domain": "owlcreekcontracting.com",
+    "official_website_url": "https://owlcreekcontracting.com",
+    "categories": [],
+    "confidence": "high",
+    "master_status": "not_qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "Owl Creek Contracting LLC is a West Virginia LLC based at 3132 Owl Creek Rd, Morgantown, WV 26508, registered as a utility contractor per its [WV SOS business filing](https://apps.sos.wv.gov/business/corporations/organization.aspx?org=454930) which lists business purpose 2389 (Other Specialty Trade Contractors) and shows Joshua Fleming as Manager and Organizer, a [Birdeye reviews profile](https://reviews.birdeye.com/owl-creek-contracting-167012799205645) describing a family-run operation with 3.7 stars from 9 reviews and services including excavation, site prep, utilities, emergency sewer repair and concrete work, and its official [website](https://www.owlcreekcontracting.com) claiming utility contracting services including power line installation and maintenance, though the actual site content is sparse with generic messaging and the classification may include broader specialty trade work beyond pure T/D utility line construction, so service fit remains mixed.",
+    "review_resolution_notes": "",
+    "comparison_summary": "adjudicated from manual_review to not_qualified: Official website is sparse and incomplete, and it does not provide defensible proof of transmission or distribution utility field work."
+  },
+  {
+    "record_id": "q-0604",
+    "name": "St. Francis Electric, LLC",
+    "domain": "stfranciselectric.com",
+    "official_website_url": "https://stfranciselectric.com",
+    "categories": [
+      "T",
+      "D",
+      "S"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "St. Francis Electric, LLC is a family-owned electrical contractor founded in 1946, based in San Leandro, CA, that specializes in underground electrical construction, traffic signals, street lighting, and power distribution work according to its [official website](https://www.stfranciselectric.com), [LinkedIn company profile](https://www.linkedin.com/company/st-francis-electric), and [United Contractors membership listing](https://www.unitedcontractors.org/membership/member-directory/st-francis-elec). The company maintains active operations with current project work and an updated web presence, and its [about page](https://www.stfranciselectric.com/about) confirms its focus on underground utilities and transportation infrastructure services. Ownership appears to be family-based but current leadership details are inconsistent across sources, with the official website listing Guy Smith as President while some business databases list Robert Spinardi, so the ownership evidence remains unclear.",
+    "review_resolution_notes": "",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0869",
+    "name": "I&C Power LLC",
+    "domain": "i-cpower.com",
+    "official_website_url": "https://i-cpower.com",
+    "categories": [
+      "T",
+      "D",
+      "S"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "I&C Power LLC is a family-owned electrical contractor based in Pueblo West, Colorado, specializing in transmission, distribution, and substation work as confirmed by its [official website](https://www.i-cpower.com/), [Colorado license record](https://opengovco.com/license/1335839), and [BBB profile](https://www.bbb.org/us/co/pueblo/profile/electrical-contractors/ic-power-llc-0785-1000008895), with Lisa Moran identified as owner via the BBB structured data and the company holding an active electrical contractor license (EC.101905) since October 2020.",
+    "review_resolution_notes": "",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0614",
+    "name": "Ranlin Electric Service, Inc.",
+    "domain": "ranlinelectric.com",
+    "official_website_url": "https://ranlinelectric.com",
+    "categories": [
+      "T",
+      "D",
+      "S"
+    ],
+    "confidence": "low",
+    "master_status": "not_qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Randy Hankins; Linda Hankins",
+    "ownership": "Randy and Linda Hankins (family-owned)",
+    "reasoning": "Ranlin Electric Service, Inc. is a small (2-3 employee) River Grove, Illinois-based electrical contractor whose Blue Book profile explicitly describes its services as commercial, industrial, and residential electrical work including interior build-outs, plant relocation, lighting retrofits, and retail construction. The Illinois Commerce Commission 2025 filings show only Energy Efficiency Installer and Distributed Generation Installer (solar/PV) certifications, not transmission, distribution, or substation credentials. No evidence of high-voltage utility transmission, distribution, or substation capability was found on official sources. The company's stated scope is building-electrical work, not utility-grade high-voltage field work. This company does not meet the high-voltage utility capability threshold and does not qualify for the T, D, or S categories.",
+    "review_resolution_notes": "Pass 1 decision overruled. Company is a small commercial/industrial electrical contractor, not a high-voltage utility contractor. ICC filings are for energy efficiency and distributed generation (solar), not utility T|D|S work.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0344",
+    "name": "Hire Electric Inc.",
+    "domain": "hireelectric.com",
+    "official_website_url": "https://hireelectric.com (currently showing WordPress critical error)",
+    "categories": [
+      "D",
+      "S"
+    ],
+    "confidence": "low",
+    "master_status": "maybe",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Dan McHale; Mindy McHale",
+    "ownership": "Family-owned; Dan McHale (President); Mindy McHale (Corporate Secretary)",
+    "reasoning": "Hire Electric Inc. is a family-owned IBEW Local 48 signatory contractor based in The Dalles, Oregon, with Dan McHale as President since 1981 and Mindy McHale as Corporate Secretary confirmed via multiple sources, and the company appears to have operated since the 1930s with active project bidding on ConstructConnect; however, the official website (hireelectric.com) currently displays a WordPress critical error preventing primary source verification of its claimed high-voltage utility capabilities, and the LinkedIn profile lists generic electrical specializations (commercial/residential solar, security systems) rather than explicit transmission, distribution, or substation work, making the T|D|S categorization from Pass 1 difficult to verify with high confidence.",
+    "review_resolution_notes": "Official website down - cannot verify utility claims from primary source. NAICS code 238210 is generic electrical. LinkedIn industry classification is incorrect (Renewable Energy Semiconductor Manufacturing). Pass 1 rationale relies heavily on cached web content and third-party directory listings rather than accessible primary sources.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0378",
+    "name": "United Industrial Services, LLC",
+    "domain": "uis-ky.com",
+    "official_website_url": "https://uis-ky.com",
+    "categories": [
+      "T",
+      "D"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Carol Reynolds",
+    "ownership": "Carol Reynolds (CEO, Founder)",
+    "reasoning": "United Industrial Services LLC is a Kentucky-based electrical contractor whose official website and multiple business directories confirm specialization in transmission and distribution powerline services, with the company explicitly describing itself as a utility contractor serving the utility industry per its official site meta descriptions and project portfolio page. The company is led by CEO Carol Reynolds, confirmed as founder via RocketReach and ZoomInfo with 28-40 employees, operates from 2187 Watterson Trail in Louisville, and is described as a women-owned business with over 20 years of experience per the BBB profile. The Jefferson County Chamber listing corroborates powerline specialization, and the company maintains active web presence with (502) 457-8864 listed as the main office. Categories T and D are supported by explicit transmission and distribution service claims on the company website and verified chamber and directory listings.",
+    "review_resolution_notes": "Website services page content was garbled in fetch but meta descriptions and directory listings consistently confirm T&D specialization. Copyright shows 2021, suggesting limited recent updates but company appears actively operating.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0139",
+    "name": "ACT Electrical Contracting LLC",
+    "domain": "actelectricalnj.com",
+    "official_website_url": "https://actelectricalnj.com",
+    "categories": [
+      "T",
+      "D",
+      "CI"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "ACT Electrical Contracting LLC is an Ocean Township, NJ-based electrical contractor offering nearly 30 years of experience in industrial, commercial, environmental, and residential electrical services according to its [official website](https://www.actelectricalnj.com), which explicitly lists high and medium voltage utility distribution among its core capabilities as confirmed by the [Procore profile](https://network.procore.com/p/act-electrical-contracting-ocean-township), and Chad Bacek is identified as the owner and principal based on his [LinkedIn profile](https://www.linkedin.com/in/chad-bacek-62018920) and the company's [BuildZoom profile](https://www.buildzoom.com/contractor/act-electrical-contracting-llc) showing a score of 91 (top 37% of NJ contractors).",
+    "review_resolution_notes": "",
+    "comparison_summary": "name normalized from Act Electrical Contracting Ocean Township to ACT Electrical Contracting LLC"
+  },
+  {
+    "record_id": "v6-pass1-03412",
+    "name": "Synergy Electric Solutions",
+    "domain": "sesid.us",
+    "official_website_url": "https://www.sesid.us/",
+    "categories": [
+      "CI"
+    ],
+    "confidence": "low",
+    "master_status": "not_qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Thomas Causey, Nathan Gallup",
+    "ownership": "Family-owned, likely independent based on website description and owner names (Thomas Causey, Nathan Gallup). No evidence of ESOP, public ownership, or PE backing.",
+    "reasoning": "Synergy Electric Solutions (sesid.us) is a family-owned Idaho electrical contractor that appears to operate as a standard residential and commercial building electrician. The official website and all service pages describe only general electrical work: residential services, commercial electric, lighting, wiring, repairs, and solar installations. There is no transmission, distribution, substation, transformer, switchgear, relay, cable splicing, or any other high-voltage utility capability claimed on the site. The careers page explicitly distinguishes between 'electricians' and 'linemen,' acknowledging these are different career paths — directly contradicting any utility line work claims. Pass 1 rationale incorrectly claimed the site 'explicitly claims specialization in utility projects including transmission, distribution, and substation work,' which is not supported by actual site content. This is a building electrician, not a utility HV contractor. [Source: sesid.us, sesid.us/services, sesid.us/about, sesid.us/careers]",
+    "review_resolution_notes": "Pass 1 QA Override - The Pass 1 qualification was incorrect. The official website does not claim any utility high-voltage capability. The site explicitly describes building electrical work only. The careers page video explicitly distinguishes between electricians and linemen as different roles.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0014",
+    "name": "KWZ Contracting LLC",
+    "domain": "kwzcontracting.com",
+    "official_website_url": "https://kwzcontracting.com",
+    "categories": [
+      "S"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "KWZ Contracting LLC is a Service Disabled Veteran Owned Small Business based in Montgomery, Alabama that provides utility construction and substation services according to its [official website](https://www.kwzcontracting.com) and [LinkedIn company profile](https://www.linkedin.com/company/kwz-contracting), its [Blue Book profile](https://thebluebook.com/iProView/1308046/kwz-contracting-llc/general-contractors) lists substation construction among its core offerings, and [William E. Rumph III](https://www.linkedin.com/in/william-e-rumph-iii-mpa-9313a7a0) is confirmed as President and CEO via his LinkedIn profile and the company's Blue Book listing.",
+    "review_resolution_notes": "",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "v6-pass1-04205",
+    "name": "TD4 Electrical, LLC",
+    "domain": "td4llc.com",
+    "official_website_url": "https://www.td4llc.com/",
+    "categories": [
+      "D",
+      "S"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Tommy L. Davis Jr.; Tommy L. Davis III",
+    "ownership": "Tommy L. Davis Jr. (Founder, CEO); Tommy L. Davis III (President); 100% minority-owned family business",
+    "reasoning": "TD4 Electrical LLC is a founder-led, independently owned Missouri electrical contractor (founded 2006 by Tommy L. Davis Jr., now 100% minority-owned after buying back equity from Guarantee Electrical in 2022). The company's official capabilities statement PDF at td4llc.com explicitly describes services including \"high voltage systems, substations, transformers, and cable splicing for utility projects,\" directly satisfying the core HV utility capability requirement. Website confirms active operations and recent expansion to Decatur IL in 2023. No public, PE-backed, ESOP, or platform company indicators found. Company qualifies on distribution (D) and substation/transformer/cable-splicing (S) categories based on explicit high-voltage utility service language.",
+    "review_resolution_notes": "The main homepage presents generic commercial/industrial electrical language which could be misleading. The explicit high-voltage utility capability is on the dedicated capabilities statement page/PDF. Employee count varies across sources (16 on LinkedIn vs 75+ in capabilities statement and news articles). The higher count from the official capabilities statement and multiple third-party sources is more credible.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "recent-pass2-20260408T091741Z-f06535f0",
+    "name": "E.G. Middleton, Inc.",
+    "domain": "egmiddleton.com",
+    "official_website_url": "http://www.egmiddleton.com/",
+    "categories": [
+      "D",
+      "S"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "v6-pass2-from-recent-pass1-combined-20260408",
+    "owner_names": "E.G. \"Rudy\" Middleton III; Brian K. Martin; Helene Basham; E.G. \"Erby\" Middleton IV",
+    "ownership": "Family-owned (third-generation Middleton family); privately held Subchapter S corporation",
+    "reasoning": "E.G. Middleton is a third-generation family-owned electrical contractor founded in 1920, headquartered in Norfolk, VA. The official site [egmiddleton.com/services](http://www.egmiddleton.com/services/) explicitly confirms utility distribution work (overhead and underground at 15kV and 35kV), substation transformer installation (multiple 20MVA units at Naval Station Norfolk and Newport News Shipbuilding), medium-voltage cable splicing and terminations, SF6 switchgear installation at Joint Expeditionary Base Little Creek main substation, and re-conducting work for Dominion Virginia Power at Fort Eustis, Fort Monroe, and Fort Story. The site states they employ overhead linemen and nationally certified cable splicers capable of working up to 35kV, with projects at Naval Station Norfolk, Newport News Shipbuilding, BAE Systems, and Fort Eustis. Categories: D (distribution) and S (substation/transformer). Confidence: high.",
+    "review_resolution_notes": "",
+    "comparison_summary": "Pass 1 QA confirmed. Company name varies between E G Middleton, Inc. and E.G. Middleton, Inc. on official site. Both are same entity. Third-generation family-owned, independently operated. Subchapter S corporation per HigherGov. No ESOP, no PE backing, no platform affiliation. Company has explicitly confirmed HV utility capability including Dominion Virginia Power distribution contracts. Pass 1 recommendation of qualified is upheld."
+  },
+  {
+    "record_id": "v6-pass1-07349",
+    "name": "L.U. Electric, Inc.",
+    "domain": "luelectricinc.com",
+    "official_website_url": "https://www.luelectricinc.com",
+    "categories": [
+      "D",
+      "S"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Luis Urrego; Vilma Rocio Urrego",
+    "ownership": "family-owned; Luis Urrego (President, founder); Vilma Rocio Urrego (co-owner)",
+    "reasoning": "L.U. Electric, Inc. (Irvine, CA) is a family-owned electrical contractor founded in 1990 by President Luis Urrego (co-owned with Vilma Rocio Urrego). Multiple credible third-party sources (Procore with 47 projects since 2022, Blue Book/ProView, PegBo) confirm the company specializes in high-voltage utility transmission, distribution, and substation projects. The official careers page explicitly claims 'high-voltage utility transmission, distribution, and substation services' and the contact page states 'underground primary distribution systems.' Procore notes 'expertise in high and medium voltage electrical power distribution.' The main visible services page is generic (residential, commercial, upgrades, EV chargers) but secondary pages and third-party sources corroborate real HV utility capability. No evidence of ESOP, PE backing, or public ownership. At ~12 employees and $1-10M revenue, the company is a small regional tuck-in appropriate for acquisition. Service fit is 'mixed' because the primary website marketing is generic while HV utility claims appear on secondary pages and verified third-party sources.",
+    "review_resolution_notes": "The main visible services page does not explicitly list HV utility work - the generic services (residential, commercial, electrical upgrades, EV chargers, safety inspections) dominate the website. However, the careers page, contact page, and multiple third-party sources (Procore, Blue Book) confirm genuine high-voltage utility capability including underground primary distribution and substation work. This is sufficient to maintain the qualified recommendation but the mixed official-site evidence keeps confidence at medium.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0706",
+    "name": "Atkins & Stang, Inc.",
+    "domain": "atkinsandstang.com",
+    "official_website_url": "https://atkinsandstang.com",
+    "categories": [
+      "D"
+    ],
+    "confidence": "medium",
+    "master_status": "not_qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Fred Stang (President), Susan Ochs (CFO); ESOP trust owns company since 2017",
+    "ownership": "ESOP - employee-owned since 2017",
+    "reasoning": "Atkins & Stang, Inc. is an Ohio-based electrical contractor offering pole line work, underground installation, high voltage terminations, and underground fault locating per its IEC membership listing, and its official website confirms it specializes in electrical installations for high voltage utilities. However, the company is ESOP-owned since 2017 per CertifiedEO and multiple other sources, which is a hard fail under criteria 1.7. Additionally, the company heavily emphasizes commercial design build, industrial work, and security systems alongside its utility services, making service fit mixed rather than clearly utility-focused. The Pass 1 decision to qualify is overturned due to ESOP ownership being disqualifying.",
+    "review_resolution_notes": "ESOP ownership confirmed via multiple sources. Pass 1 failed to account for ESOP hard fail. Company appears to be a mixed commercial/industrial/utility electrical contractor.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "v6-authority-iec_member_directory-00657",
+    "name": "Settle Muter Electric",
+    "domain": "settlemuter.com",
+    "official_website_url": "https://settlemuter.com",
+    "categories": [
+      "T",
+      "D",
+      "S"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "pass2_20260407",
+    "owner_names": "Mark Muter; Charlie Settle",
+    "ownership": "Family-owned partnership (Settle and Muter families); Mark Muter - President; Charlie Settle - co-founder",
+    "reasoning": "Settle Muter Electric (SME) is a family-owned, independent electrical contractor founded in 1995 by Charlie Settle and Mark Muter, headquartered in Columbus, OH with a second office in Raleigh, NC. The company's official website explicitly markets high-voltage utility transmission, distribution, and substation projects, and specifically mentions substations, transformers, and switchgear capability. They are listed in the Builders Exchange of Central Ohio under the HIGH VOLTAGE DISTRIBUTION (Above 600-Volt) category, and are active IEC Central Ohio members. Multiple sources confirm Mark Muter as President with no ESOP or institutional backing. Size (~38-99 employees, ~$28-100M revenue) appears within target acquisition range. The company qualifies for T, D, and S categories based on explicit high-voltage utility language. Evidence: [Official site](https://settlemuter.com), [Atlas BX listing](https://bxcentralohio.atlasams.com/HIGH-VOLTAGE-DISTRIBUTION-(Above-600Volt)/SettleMuter-Electric,-Ltd-1725), [IEC Central Ohio](https://ieccentraloh.org/our-members/name/sme-settle-muter-electric/)",
+    "review_resolution_notes": "{\"issues_found\": [], \"name_changed\": false, \"reasoning_rewritten\": true, \"website_added\": true}",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0002",
+    "name": "Broadfoot Electrical Contracting, Inc.",
+    "domain": "broadfootelectrical.com",
+    "official_website_url": "http://broadfootelectrical.com",
+    "categories": [
+      "T",
+      "D",
+      "CI"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "Broadfoot Electrical Contracting, Inc. is a Chandler, Arizona-based electrical contractor specializing in commercial and industrial electrical work including high/medium voltage systems and transmission lines, as confirmed by its [official website](http://www.broadfootelectrical.com/), its [Blue Book ProView profile](https://www.thebluebook.com/iProView/420553/broadfoot-electrical-contracting-inc/subcontractors/), and multiple business directories listing the company with an active Arizona ROC A-17 license (license #258282) for electrical and transmission line work, with Robert Scott Broadfoot listed as the owner and the company showing consistent small-business size indicators across multiple sources.",
+    "review_resolution_notes": "",
+    "comparison_summary": "legacy_225_bucket=matched_qualified"
+  },
+  {
+    "record_id": "q-0438",
+    "name": "Joe Dickey Electric Inc",
+    "domain": "dickeyelectric.com",
+    "official_website_url": "https://dickeyelectric.com",
+    "categories": [
+      "T",
+      "D",
+      "S"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "Joe Dickey Electric Inc. is a family-founded Ohio electrical contractor established in 1957, confirmed by its official [website](https://www.dickeyelectric.com) and [IBEW 141 contractor listing](https://www.ibew141.org/contractors/), with Eric Carlson serving as president and likely majority owner following a 2018 ownership transition announced in [Business Journal Daily](https://businessjournaldaily.com/dickey-electric-new-ownership/). The company operates substation work per its [services page](https://www.dickeyelectric.com/services/) and [NECA-IBEW profile](https://necaibewelectricians.com/joe-dickey-electric/), but transmission and distribution specialization is not explicitly documented on official pages, creating mixed service fit evidence.",
+    "review_resolution_notes": "",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0448",
+    "name": "WILHITE ELECTRIC, INC.",
+    "domain": "wilhiteinc.com",
+    "official_website_url": "https://wilhiteinc.com",
+    "categories": [
+      "T",
+      "D",
+      "S"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "Wilhite Electric Inc., based in Livermore, CA and established in 2003, is a NECA-member electrical contractor specializing in transmission, distribution, and substation work according to its [services page](https://wilhiteinc.com/our-services/) and [Blue Book profile](https://www.thebluebook.com/iProView/316518/wilhite-electric-inc/subcontractors/), with its official [website](https://wilhiteinc.com) identifying the company name and Troy Wilhite as owner, its [state business filing](https://www.bizprofile.net/ca/livermore/wilhite-electric-inc) showing Troy J. Wilhite as a corporate officer, and its [NorCal NECA listing](https://norcalneca.org/hpbottom/wilhite-electric-inc-2/) confirming active industry membership and operating status.",
+    "review_resolution_notes": "",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0794",
+    "name": "Jamison Electric Company Inc.",
+    "domain": "jamisonelectricinc.com",
+    "official_website_url": "https://www.jamisonelectricinc.com",
+    "categories": [
+      "T",
+      "D"
+    ],
+    "confidence": "low",
+    "master_status": "maybe",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Roger Marshall Jamison",
+    "ownership": "Family-owned, founded 1969 by brothers Roger and Marshall Jamison, now led by Roger Marshall Jamison (second-generation family leadership)",
+    "reasoning": "Jamison Electric Company Inc. is a family-owned electrical contractor based in Callaway, Virginia founded in 1969 by brothers Roger and Marshall Jamison and now led by Roger Marshall Jamison, with approximately 65 workers confirmed on the official website. The company offers underground electrical systems including duct banks, concrete vaults, and manholes per its website, and Procore lists the company as specializing in high voltage utility transmission and distribution, while the Blue Book provides an independent profile corroborating active operating status. However, the official website lacks explicit high-voltage utility language and the Roanoke Chamber listing emphasizes commercial electrical wiring and fire alarm work, indicating the company performs significant commercial and low-voltage work alongside any utility work, making the T|D qualification borderline and warranting manual review rather than automatic qualification.",
+    "review_resolution_notes": "Website language is generic electrical contractor without explicit high-voltage utility service descriptions on service pages. Portfolio mentions power line work at Virginia Tech Corporate Research Center but details are sparse. The company appears to be a mixed commercial/industrial/utility electrical contractor where utility high-voltage work may be one component but not the dominant identity. Pass 1 T|D categorization may be aggressive given the mixed service evidence.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0821",
+    "name": "Inception Energy Solutions",
+    "domain": "inceptionsolutions.com",
+    "official_website_url": "https://inceptionsolutions.com",
+    "categories": [
+      "T",
+      "D",
+      "S"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Hilary Pounds (CEO), Gerry Pounds (President)",
+    "ownership": "Woman-owned small business; Hilary Pounds (CEO), Gerry Pounds (President)",
+    "reasoning": "Inception Energy Solutions is a woman-owned, WBENC and WOSB certified utility contractor headquartered in Waco, Georgia, founded in 2022. Its official website describes substation construction, transmission line, and distribution services (both underground and overhead), and its LinkedIn profile explicitly confirms expertise in Distribution Underground and Overhead, Transmission Substation, and Transmission Line construction. The IES Family page identifies Hilary Pounds as owner/CEO and Gerry Pounds as president. The company is registered with DOT# 4105597 as an active motor carrier. This clearly meets the high-voltage utility capability requirement with explicit transmission, distribution, and substation scope.",
+    "review_resolution_notes": "Address discrepancy noted - LinkedIn shows 101 Atlantic ave while MapQuest and O Trucking show 34 Mineral Springs Rd and 70 Atlantic Avenue respectively. Cortera profile incorrectly lists company as plumbing/HVAC contractor, which contradicts all other verified sources.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0931",
+    "name": "Sky Electric Inc",
+    "domain": "skyelectricinc.com",
+    "official_website_url": "https://skyelectricinc.com",
+    "categories": [
+      "CI"
+    ],
+    "confidence": "low",
+    "master_status": "not_qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Dave Filipiak",
+    "ownership": "Dave Filipiak (owner)",
+    "reasoning": "Sky Electric Inc appears to be a small Lapeer, Michigan-based electrical contractor (Dave Filipiak, owner, 865 Whitney Drive) rather than a demonstrated high-voltage utility operator. The official website (skyelectricinc.com) explicitly markets the company as ceiling fan installation experts with generic building electrical services, directly contradicting the Pass 1 narrative of transmission and distribution utility work. BlueBook lists medium-voltage CSI codes but shows no actual project examples of substation, transmission line, or primary distribution work, and reports annual volume under $500,000 suggesting a very small operation. Multiple third-party sources describe the company as focusing on general residential and commercial electrical needs rather than utility-grade high-voltage work. The company fails the core qualification test: it does not demonstrate ability to self-perform real high-voltage utility field work with qualified crews.",
+    "review_resolution_notes": "Pass 1 QA failed. Official website contradicts HV utility narrative. Company is building-focused electrician, not utility contractor. Directory 'high voltage' claims appear to be generic labels not backed by actual service evidence.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0567",
+    "name": "Collins Electrical Construction Co.",
+    "domain": "collinsmn.com",
+    "official_website_url": "https://collinsmn.com",
+    "categories": [
+      "T",
+      "D",
+      "S",
+      "CI"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "Collins Electrical Construction Co. is a St. Paul, Minnesota-based electrical contractor founded in 1948 by William Neil Collins according to its [official company history page](https://collinsmn.com/our-history/), and the company [services page](https://collinsmn.com/services/) describes utility transmission, distribution, substation, and commercial/industrial electrical work consistent with categories T, D, S, and CI. The company's [about page](https://collinsmn.com/about/) confirms its long-standing operation since 1948 and its focus on commercial and industrial clients, while [LinkedIn company profile](https://www.linkedin.com/company/collins-electrical-construction-co.) and employee profiles on the company site demonstrate active staffing and operations, supporting operating status. Ownership by William Neil Collins is indicated by the [Power Partner MN directory listing](https://www.powerpartnermn.com/directory/collins-electrical-construction-co/) and multiple business directories, though the original founder is likely deceased given the 1948 founding date and current employee references to multi-generational employment.",
+    "review_resolution_notes": "",
+    "comparison_summary": "name normalized from Collins Electrical: Commercial and Industrial Electrical and ... to Collins Electrical Construction Co.; legacy_225_bucket=matched_qualified"
+  },
+  {
+    "record_id": "v6-authority-authority_directory-00362",
+    "name": "Tony Demaria Electric, Inc.",
+    "domain": "tdeinc.com",
+    "official_website_url": "https://tdeinc.com",
+    "categories": [
+      "T",
+      "D",
+      "S"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "pass2_20260407",
+    "owner_names": "Tony Demaria (owner), Demaria family (third generation)",
+    "ownership": "Family-owned (third-generation Demaria family), woman-owned small business (WOSB/EDWOSB certified), led by owner Tony Demaria",
+    "reasoning": "Tony Demaria Electric (TDE) is a family-owned, NETA Level 3-accredited high-voltage utility contractor based in Wilmington, CA with approximately 35–50 employees. The company explicitly specializes in medium- and high-voltage transmission, distribution, and substation work serving utilities, oil & gas, marine, defense, and industrial sectors [tdeinc.com/services](https://tdeinc.com/services). NETA accreditation with Level 3-certified field technicians and 80% of workers holding CAL/OSHA Title 8 Group 2 High Voltage certification provides Tier 1 evidence of genuine HV field capability [tdeinc.com/certifications-and-awards](https://tdeinc.com/certifications-and-awards). The company is third-generation family-owned and operated by Tony Demaria, certified as a woman-owned small business (WOSB/EDWOSB), with no evidence of ESOP, public, or PE ownership [highergov.com/awardee/tony-demaria-electric-inc-10053626](https://www.highergov.com/awardee/tony-demaria-electric-inc-10053626). The official site confirms active operations with 2025 updates. Company meets all Pass 1 hard gates and qualifies for T|D|S categories under strong confidence.",
+    "review_resolution_notes": "{\"issues_found\": [], \"name_changed\": false, \"reasoning_rewritten\": true, \"website_added\": false}",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "v6-pass1-05626",
+    "name": "Walter J Barnes Electric Co",
+    "domain": "wjbe.com",
+    "official_website_url": "http://wjbe.com/",
+    "categories": [
+      "D",
+      "S"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "William C Ellis III (President/CEO); Donald G Ellis Jr (Executive VP); Michael H Ellis",
+    "ownership": "Family-owned (Ellis family, third generation). Private. No ESOP, PE, or public ownership.",
+    "reasoning": "Walter J Barnes Electric Co is a third-generation family-owned electrical contractor founded in 1932, headquartered in Jefferson LA. The official website (wjbe.com/services) explicitly demonstrates high-voltage utility capability including High/Medium Voltage Construction up to 34.5 kV, overhead and underground distribution, substation work, transformer installation/replacement, cable splicing/terminations, Hi-Pot and VLF testing, and emergency restoration up to 34.5 kV. Company is registered with ISNetworld (400-143143), Avetta, and MSHA (B2478). Ownership is confirmed via the official Our Team page showing William C Ellis III as President/CEO and Donald G Ellis Jr as Executive VP, both third-generation Ellis family members. Company size is 51-200 employees with $25-50M revenue per ciScience.com, fitting the regional tuck-in target range. No ESOP, PE backing, or public ownership detected.",
+    "review_resolution_notes": "Pass 1 decision confirmed. Strong official site evidence for high-voltage utility capability. Family-owned independence verified. D and S categories confirmed.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0544",
+    "name": "Circuit Electric Inc",
+    "domain": "circuitelectric.com",
+    "official_website_url": "https://circuitelectric.com",
+    "categories": [
+      "T",
+      "D",
+      "S"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Peter Bultsma",
+    "ownership": "Peter Bultsma (owner)",
+    "reasoning": "Circuit Electric Inc is a Michigan-based electrical contractor (HQ: Byron Center, MI) whose official website explicitly describes transmission line, substation, and outdoor utility distribution as core services, with their outdoor utilities page confirming equipment fleet including bucket trucks, boom trucks, and backhoes for utility work. The BuildZoom profile confirms Peter Bultsma as owner with a BuildZoom score of 104, and multiple sources corroborate ownership and operations in Michigan and Florida. The company holds licenses in Michigan, Iowa, and Florida. Employee estimates range from 12 to 140 across sources, creating a size discrepancy, but consistent evidence shows this is an established regional independent contractor with utility-grade equipment and explicit T&D&S service claims. No evidence of ESOP, PE backing, or platform affiliation was found.",
+    "review_resolution_notes": "Pass 1 qualification is confirmed. Size discrepancy noted across sources (12 vs 86 vs 140 employees). Florida DBPR license URL returns error - may need manual verification. Company appears genuinely independent based on available evidence.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "v6-recovery-v13-04966",
+    "name": "CW Services Engineering & Construction",
+    "domain": "cw.services",
+    "official_website_url": "https://www.cw.services",
+    "categories": [
+      "T",
+      "D",
+      "S"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "pass2_recovery_plus_v13_20260408",
+    "owner_names": "Shannon Wells (CEO, 100% owner since 2001)",
+    "ownership": "Privately held; CEO Shannon Wells (acquired 100% by 2001); Founder-led since 1985",
+    "reasoning": "The official website (cw.services) explicitly lists High Voltage Substations, Electrical Transmission Systems (overhead and underground), and High Voltage Power Distribution with experience up to 348KV. Multiple external sources confirm they specialize in utility power transmission and distribution projects. The company was founded in 1985 and acquired High Voltage Construction in 2001. CEO Shannon Wells acquired 100% ownership by 2001. The company operates 5 locations in KY, PA, and WV with 300+ staff. However, their primary branding emphasizes industrial construction (mining, aggregates, coal) rather than pure utility work, and size (300+) is at the larger end, warranting medium confidence. All hard gates pass: U.S.-based, explicit HV utility capability, privately held (not PE/ESOP/public), and not part of listed platforms.",
+    "review_resolution_notes": "Pass 1 correctly identified this company. The original Maps source listed \"C W Electric Inc\" at the same address (1512 N Big Run Rd, Ashland, KY 41102) which is CW Services' corporate HQ. The company operates under multiple acquired entities including High Voltage Construction (acquired 2001), R&E Electric, and Rock and Coal Construction. External search results specifically confirm utility power transmission and distribution specialization, validating Pass 1's T, D, S categories.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "v6-next-expand-v9-03278",
+    "name": "ElectricCity Inc.",
+    "domain": "electriccity.nyc",
+    "official_website_url": "https://electriccity.nyc/",
+    "categories": [
+      "CI"
+    ],
+    "confidence": "low",
+    "master_status": "not_qualified",
+    "source_origin": "pass2_recovery_plus_v13_20260408",
+    "owner_names": "Unknown",
+    "ownership": "Unknown - no named owner or principals found",
+    "reasoning": "The official website at electriccity.nyc shows only general residential and commercial electrical services (panel upgrades, rewiring, lighting, security cameras, fire alarm, surge protection) with no mention of medium voltage, high voltage, substation, transformer, switchgear, cable splicing, utility distribution, or any high-voltage utility work capability. Directory sources claiming medium voltage specialization appear to be auto-generated listings without verifiable evidence from the company's own service descriptions. The NYC government licensed electrician PDF confirms only that ElectricCity Inc. holds a valid electrical contractor license, not any specialized utility capability. The Pass 1 rationale referenced Tectonic Engineering project pages but no verified connection was found between ElectricCity Inc. and Tectonic Engineering. The company appears to be a standard building electrician operation with no demonstrated high-voltage utility field work capability. Per the qualification criteria, companies may not qualify on directory evidence alone when the official site is weak or silent on the claimed specialty.",
+    "review_resolution_notes": "Pass 1 qualification was not adequately supported by evidence. Official site is generic building electrical only. Directory claims of medium voltage specialization are unverified. No ownership, size, or independence data found. Recommend not_qualified based on failure to demonstrate real high-voltage utility capability.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0819",
+    "name": "Lind Electric Service Incorporated",
+    "domain": "lindelectricservice.com",
+    "official_website_url": "https://lindelectricservice.com",
+    "categories": [],
+    "confidence": "high",
+    "master_status": "not_qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "Lind Electric Service Incorporated is a Stevens Point, Wisconsin-based electrical contractor founded in 1947 and managed by President/Owner Donald Lind and Vice President Missy Lind according to the [BBB business profile](https://www.bbb.org/us/wi/stevens-point/profile/electrician/lind-electric-service-incorporated-0694-1008173), which lists the company as an active entity with a verified [license number 1008173](https://www.buildzoom.com/contractor/lind-electric-stevens-point-wi) from the Wisconsin license board, and the company's [official website](https://lindelectricservice.com) confirms active operations, although the website focuses on general residential, commercial, and industrial electrical services rather than explicitly describing power line transmission or distribution work, leaving the T and D service categories supported primarily by directory listings rather than first-party evidence.",
+    "review_resolution_notes": "",
+    "comparison_summary": "adjudicated from manual_review to not_qualified: Primary evidence shows an electrician/electrical contractor but not utility transmission, distribution, or substation work."
+  },
+  {
+    "record_id": "q-0600",
+    "name": "MCR Services, LLC",
+    "domain": "mcrservice.wpengine.com",
+    "official_website_url": "https://mcrservice.wpengine.com",
+    "categories": [
+      "D"
+    ],
+    "confidence": "low",
+    "master_status": "not_qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Michael T. Chevalier",
+    "ownership": "Michael T. Chevalier (owner)",
+    "reasoning": "MCR Services LLC is a Wisconsin-based electrical contractor founded in 1999 and owned by Michael T. Chevalier per its official website and BuildZoom profile. However, the company's stated services are entirely building-focused: commercial, industrial, healthcare, retail, institutional, and multi-family electrical work; design/build electrical; lighting upgrades; and low-voltage systems including access controls, security, networking, and fire alarms. Their Focus on Energy Trade Ally participation relates to energy efficiency lighting upgrades, not utility high-voltage work. There is no evidence of transmission line, overhead or underground primary distribution, substation, transformer, switchgear, relay, or cable-splicing work tied to utility or high-voltage systems. The company appears to be a general building electrical contractor rather than a high-voltage utility operator. Under the V6 qualification criteria, this company fails the mandatory high-voltage utility capability requirement and fits the explicit exclusion for commercial/industrial building electrical contractors with no clear utility or high-voltage field scope.",
+    "review_resolution_notes": "Pass 1 incorrectly qualified this company as 'D' category. Official site and service descriptions show building-electrical focus only. No utility HV language found. Trade Ally status is for energy efficiency, not utility infrastructure work.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "v6-recovery-v13-04840",
+    "name": "Madison Electric Services Inc",
+    "domain": "tristatearmature.com",
+    "official_website_url": "https://go.tristatearmature.com/tsa/",
+    "categories": [
+      "S",
+      "D"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "pass2_recovery_plus_v13_20260408",
+    "owner_names": "Private family-owned; no specific individual owners named in public records",
+    "ownership": "Private family-owned (Tristate Armature & Electrical Works, founded 1920; rebranded as Voltrio 2025)",
+    "reasoning": "Madison Electric Services Inc at 29 Miller Ave, Jackson TN operates as the Jackson location of Voltrio (formerly Tristate Armature & Electrical Works, founded 1920), a private family-owned Mid-South industrial electrical distributor and contractor. The official site at go.tristatearmature.com confirms medium-voltage cable splicing and termination, breaker testing and repair, switchgear maintenance and testing, thermographic infrared scanning, and high-potential maintenance testing up to 100kV DC—explicit high-voltage utility capability signals tied to substation and distribution work per qualification criteria. Voltrio/Tristate Armature is confirmed family-owned and private, ESOP is not in evidence for this entity (the ESOP article found was for a different Madison company), and revenue of $10M-$100M with 51-200 employees fits the preferred acquisition range. Service fit is strong with explicit S-category signals (substation, breaker, switchgear, cable splicing). The entity qualifies under S and D categories with medium confidence based on Tier 1 official site evidence.",
+    "review_resolution_notes": "Pass 1 correctly identified this entity as the Jackson location of Tristate Armature/Voltrio and assigned S and D categories. Ownership verification confirms family-owned private company, not ESOP. The ESOP reference in search results was for a different company (All Comfort Services in Madison, WI). Service evidence from official site is strong and explicit for medium-voltage substation work.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0077",
+    "name": "Industrial Electric Company of Detroit, Inc.",
+    "domain": "industrialelectric.net",
+    "official_website_url": "https://industrialelectric.net",
+    "categories": [
+      "D",
+      "S"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "Industrial Electric Company of Detroit, Inc. is a family-owned, independent electrical contractor established in 1932 that performs utility work including substation construction (S) and underground/overhead distribution (D) because its [official website](https://industrialelectric.net) describes these services and confirms active operations, its [EVITP contractor listing](https://evitp.org/michigan/listing/industrial-electric-company-of-detroit-inc) verifies licensed contractor status in Michigan, the [BBB business profile](https://www.bbb.org/us/mi/detroit/profile/electrician/industrial-electric-037-44099059) shows an A+ rating with business since 1935, and [Tom Darish's LinkedIn profile](https://www.linkedin.com/in/tom-darish-12a00116) confirms ownership and finance/management background.",
+    "review_resolution_notes": "",
+    "comparison_summary": "legacy_225_bucket=matched_qualified"
+  },
+  {
+    "record_id": "q-0577",
+    "name": "RML Electric, Inc.",
+    "domain": "rmlelectric.com",
+    "official_website_url": "https://rmlelectric.com",
+    "categories": [
+      "D",
+      "S"
+    ],
+    "confidence": "low",
+    "master_status": "maybe",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Joel Hendrickson (owner per Blue Book), Rob Lafferty (founder and former CEO per LinkedIn), Robert Lafferty (President per Central Index)",
+    "ownership": "unclear - multiple conflicting claims (Joel Hendrickson vs Rob/Robert Lafferty vs Steve Crabtree)",
+    "reasoning": "RML Electric, Inc. is a Phoenix, Arizona-based electrical contractor established in 1996 per Blue Book and EnergySage, holding ROC license 112490 at address 3749 E. Atlanta Ave. The company lists CSI codes including 33 71 00 (Electrical Utility Transmission and Distribution) and 26 10 00 (Medium-Voltage Electrical Distribution), which indicate high-voltage utility scope. However, the official website (rmlelectric.com) returns HTTP 200 but redirects to a lander page with no functional content, and multiple directories cite the domain as for sale or non-operational. Ownership evidence is contradictory: Blue Book lists owner Joel Hendrickson and principal Steve Crabtree, LinkedIn shows Rob Lafferty as founder and former President/CEO, Central Index lists President Robert Lafferty, and BBB references Rob Lafferty as manager. Size estimates conflict significantly between Blue Book ($1M-$3M annual) and EnergySage ($50M+ lifetime). The high-voltage language appears primarily in directories rather than on a functioning official company website, and no utility approval list or specific substation/transformer project evidence was found. These issues warrant manual review before qualification.",
+    "review_resolution_notes": "QA decision changed from qualified to manual_review due to non-functional official website, conflicting ownership evidence, and size estimate discrepancies.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0466",
+    "name": "Robles Electric Solutions LLC",
+    "domain": "robleselectric.com",
+    "official_website_url": "https://robleselectric.com",
+    "categories": [
+      "CI"
+    ],
+    "confidence": "low",
+    "master_status": "not_qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Mario Robles",
+    "ownership": "Mario Robles (founder/owner)",
+    "reasoning": "Robles Electric Solutions LLC, based in Tucson, Arizona and founded in 2017 by Mario Robles, is primarily a family-owned commercial and residential electrical contractor that also performs tenant improvements, service upgrades, solar PV installations, and building electrical work according to its official website and Blue Book profile. While third-party directories (Procore, EVITP, BBB) contain generic language about transmission, distribution, and substation work, the company's own website and primary business description emphasize commercial/residential electrical services rather than high-voltage utility infrastructure work. The company has 10-19 employees, annual volume of $3M-$6M, is a signatory IBEW Local 570 union contractor, and appears to operate as a standard commercial electrical contractor rather than a dedicated utility line contractor. No evidence of explicit substation, transformer, switchgear, cable splicing, or utility primary distribution capability was found on Tier 1 sources.",
+    "review_resolution_notes": "Pass 1 recommendation of qualified with T|D|S categories is not supported by the company's own service descriptions. The high-voltage utility language appears mainly in third-party directories. QA downgrades to not_qualified based on weak service fit and directory-heavy evidence for utility claims.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0065",
+    "name": "KP Utility Group LLC",
+    "domain": "kputility.com",
+    "official_website_url": "https://www.kputility.com",
+    "categories": [
+      "D",
+      "S"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Kelvin Owens",
+    "ownership": "Kelvin Owens (Founder/CEO)",
+    "reasoning": "KP Utility Group LLC is an IBEW Local 51 signatory utility contractor founded by Kelvin Owens, who brings over 30 years of utility industry experience including Electric T&D, substation maintenance, and hurricane storm restoration work per the official [about page](https://www.kputility.com/about-9); its presence on the [IBEW Local 51 employer listing](http://www.ibew51.org/employers) confirms union affiliation and outside line focus; the company offers construction and maintenance services to utility, telecom, governmental, and other business entities with a small operating fleet of approximately 9 drivers and 7-8 trucks per FMCSA records.",
+    "review_resolution_notes": "Minority-owned utility contractor confirmed through IBEW listing. Company provides explicit Electric T&D, substation maintenance, and storm restoration services per founder profile. Pass 1 decision to qualify is upheld.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0800",
+    "name": "Scandia Electric, Inc.",
+    "domain": "scandiaelectricinc.com",
+    "official_website_url": "https://www.scandiaelectricinc.com",
+    "categories": [
+      "CI"
+    ],
+    "confidence": "low",
+    "master_status": "not_qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Daniel Joseph Schmidt",
+    "ownership": "Family-owned; Daniel Joseph Schmidt (owner), Cheryl Schmidt (vice-president)",
+    "reasoning": "Scandia Electric, Inc. is a small Minnesota-based electrical contractor (BBB shows 2 employees) serving residential, commercial, agricultural, and industrial clients since 1997. The official website describes new construction, rewiring, upgrades, lighting, and EV charger installation but lacks any explicit high-voltage utility terminology such as transmission, distribution, substation, transformer, switchgear, cable splicing, or primary distribution work. Pass 1 claimed T|D|S categories based on vague references to transmission and distribution, but the actual service descriptions and directory evidence do not demonstrate real high-voltage utility field capability with qualified crews. The company appears to be a local building electrician rather than a utility high-voltage contractor.",
+    "review_resolution_notes": "Pass 1 decision of qualified is not supported by evidence. Company is extremely small (2 employees per BBB) which is inconsistent with utility HV work. Directory listing claiming 'high voltage' is not authoritative. Multiple 'Scandia Electric' entities exist in Minnesota causing potential confusion.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "v6-next-maps-v12-03851",
+    "name": "Madesafe Electrical Systems",
+    "domain": "made-safe.com",
+    "official_website_url": "https://www.made-safe.com",
+    "categories": [],
+    "confidence": "low",
+    "master_status": "not_qualified",
+    "source_origin": "pass2_recovery_plus_v13_20260408",
+    "owner_names": "Brian Bolton",
+    "ownership": "Brian Bolton (owner)",
+    "reasoning": "Madesafe Electrical Systems presents primarily as a commercial/industrial electrical contractor serving SW Ohio and Northern Kentucky since 2006. The official site (made-safe.com) lists general electrical services including outlets, lighting, EV charging, generators, and switchgear framed as building-level work. No explicit high-voltage utility, transmission, distribution line, substation, transformer, cable splicing, or utility feeder capability was found despite Pass 1 claims. The 3,000 amp switchgear reference is commercial building equipment, not utility-grade. IEC associate membership indicates training/support affiliation but not a full contractor qualification. Brian Bolton confirmed as owner from Chamber of Commerce listing. Without explicit HV utility language on the official site, the company does not meet the high-voltage utility capability screen.",
+    "review_resolution_notes": "Pass 1 claimed explicit substation/utility language on made-safe.com/home-1 but actual page content shows general commercial electrical services. The site does not claim to be a utility contractor or perform transmission/distribution/substation work. Quality issue: website_added should be true since Pass 1 used made-safe.com but candidate record had webinar registration URL.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0317",
+    "name": "Norrell Construction Inc",
+    "domain": "norrellconstruction.com",
+    "official_website_url": "http://norrellconstruction.com",
+    "categories": [],
+    "confidence": "high",
+    "master_status": "not_qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "Norrell Construction Inc is a Texas-based industrial contractor founded in 1959 and headquartered in Clute, TX, currently owned by Andrew Cone who acquired the company in 2015, per the [Texas City-La Marque Chamber of Commerce listing](https://directory.tclmchamber.com/list/member/norrell-construction-inc-7887) and [Explorium company data](https://www.explorium.ai/manufacturing/companies/norrell). The company operates as a broad industrial contractor offering mechanical, piping, civil, electrical, HVAC, cranes, and structural steel services according to its [Procore contractor profile](https://www.procore.com/network/p/norrell-construction-inc-clute) and [Siteline contractor listing](https://www.siteline.com/general-contractor/contractor/norrell-construction), which describes it as serving the Texas Gulf Coast region. While the company performs electrical work, evidence from multiple sources including [RocketReach](https://rocketreach.co/norrell-construction-inc-profile_b4438019fdf71e84) and [Construction Today](https://construction-today.com/news/learn-how-norrell-constructions-focus-on-...) indicates it is a full-service industrial contractor rather than a powerline-specialist, so the service fit for T and D categories remains mixed and should be verified through additional sources such as project records or direct service documentation.",
+    "review_resolution_notes": "",
+    "comparison_summary": "adjudicated from manual_review to not_qualified: Official services page shows a broad industrial contractor with electrical/instrumentation work, not dedicated utility transmission or distribution line work."
+  },
+  {
+    "record_id": "legacy-gray-services",
+    "name": "Gray Services, Inc.",
+    "domain": "grayservicesgov.com",
+    "official_website_url": "https://grayservicesgov.com",
+    "categories": [],
+    "confidence": "medium",
+    "master_status": "not_qualified",
+    "source_origin": "legacy_old_tds_carryforward",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "Service fit is confirmed by Gray Services' [capability statement](https://grayservicesgov.com/) describing groundsmen work for linemen, substation set-ups/maintenance, and right-of-way clearing, and by BBB's [Power Line Construction profile](https://www.bbb.org/us/la/cut-off/profile/power-line-construction/gray-services-inc-0985-90044733) listing the firm under power line construction. Ownership is credible and independent: BBB names Chuckie Cheramie and Kelly Cheramie as owner/operators, and the business is locally based in Louisiana with contractor license CL.66082. Size looks small and acquirable rather than platform-scale: ProPublica's [PPP record](https://projects.propublica.org/coronavirus/bailouts/loans/gray-services-inc-4230198005) reports 16 jobs in 2020, and BBB shows 9 years in business. I found no credible evidence of acquisition, PE ownership, bankruptcy, or defunct status in the sources reviewed.",
+    "review_resolution_notes": "",
+    "comparison_summary": "legacy old T/D/S row carried forward for manual review; categories changed from blank to T|D|S; legacy_225_bucket=unmatched_old_tds_needs_review; adjudicated from manual_review to not_qualified: Official site emphasizes government and industrial services; T/D/S utility field work is not proved clearly enough."
+  },
+  {
+    "record_id": "q-0197",
+    "name": "Perras Construction Services, Inc.",
+    "domain": "perrascompanies.com",
+    "official_website_url": "https://perrascompanies.com/companies/construction",
+    "categories": [
+      "S",
+      "CI"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "Perras Construction Services, Inc. is an IBEW Local 910 signatory electrical contractor based in Massena, New York, whose official website describes substations, high and low voltage installations, fiber optic work, and emergency generator services, its history page identifies Jeffrey W. Tyo as current owner and documents the company's founding in 1954 with family ownership transitions through Wayne Tyo to his sons Jeffrey and Mark Tyo in 2007, and its listing on the IBEW Local 910 signatory contractors page confirms active union affiliation and utility-grade electrical work scope, with company revenues reported between $30-50 million annually supporting the size requirement.",
+    "review_resolution_notes": "",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "v6-pass1-01214",
+    "name": "Purefoy Electric LLC",
+    "domain": "purefoyelectric.com",
+    "official_website_url": "https://www.purefoyelectric.com",
+    "categories": [
+      "D",
+      "S"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Michael Purefoy (founder/CEO); Leesa Purefoy (President)",
+    "ownership": "Family-owned; Michael Purefoy is founder and CEO; Leesa Purefoy is President with 26+ years in the electrical contracting industry",
+    "reasoning": "Purefoy Electric LLC is a family-owned, Weatherford TX-based electrical contractor. Multiple sources including Exa business data and the company's own portfolio page confirm utility distribution and substation transformer work. Contact page explicitly claims high voltage electrical work and utility substation transformers. However, the company originated as residential-focused MP Electric in 1999 and still emphasizes commercial building electrical and multifamily construction on primary service pages. No specific voltage levels or detailed project examples are provided. The mixed commercial/residential history and lack of detailed HV specifications on main service pages creates uncertainty about the proportion of true utility field work versus building electrical. Categories D and S are supported by explicit claims but with the caveat that the company identity may still be more commercial/residential than utility-focused. Recommended confidence is medium due to this ambiguity.",
+    "review_resolution_notes": "Employee count discrepancy: Exa shows 14 employees while company website claims ~100. Company operated as MP Electric until approximately 2019 before rebranding to Purefoy Electric LLC. Primary service pages are generic and emphasize CI work rather than utility specificity.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0633",
+    "name": "Electric Service of Clinton, Inc.",
+    "domain": "electricserviceofclinton.com",
+    "official_website_url": "http://www.electricserviceofclinton.com",
+    "categories": [
+      "T",
+      "D"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Steven M. Heysinger",
+    "ownership": "Steven M. Heysinger (third-generation owner, family-owned)",
+    "reasoning": "Electric Service of Clinton, Inc. is a family-owned Iowa electrical contractor based at 1115 South 14th Street in Clinton, Iowa, led by third-generation owner Steven M. Heysinger as confirmed on its official [website](http://www.electricserviceofclinton.com/about2.html) and [Iowa Secretary of State business registration](http://datalog.co.uk/browse/detail.php/CompanyNumber/USIA012953/ELECTRIC+SERV...). Its [Utilities Division page](http://www.electricserviceofclinton.com/utilities.html) explicitly describes transmission and distribution capabilities including line relocation and reconductoring, pole replacements, wood and steel pole erection, steel lattice tower erection, tower raising, underground installation, substations, transformers, and street lighting systems, providing strong evidence for T and D category fit. The company has been in operation since 1948 and maintains active status. Size evidence is mixed with SignalHire showing 1-10 employees while PrivCo indicates approximately $8.8M revenue, suggesting a subcontracting-heavy or specialized utility model. The company is not ESOP, public, PE-backed, or part of any large platform.",
+    "review_resolution_notes": "Pass 1 correctly identified this as a qualified utility contractor. The Utilities Division page provides explicit high-voltage language including transmission lines, substations, transformers, and distribution work. Third-generation family ownership is confirmed. Size is small but within acceptable range for a specialty tuck-in. No evidence of being part of a large platform.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0747",
+    "name": "Minako America Corporation dba Minco Construction",
+    "domain": "mincoconstruction.com",
+    "official_website_url": "http://mincoconstruction.com",
+    "categories": [
+      "T",
+      "D",
+      "S"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "Minako America Corporation dba Minco Construction is a Gardena, CA-based electrical utility contractor specializing in underground infrastructure including electrical utility transmission, distribution, and substation projects, as confirmed by its [ProView profile](https://www.thebluebook.com/iProView/9192/minco-construction/general-contractors/), [BuildZoom license record](https://www.buildzoom.com/contractor/minako-america-corporation-dba-minco-con...), and [official website](http://www.mincoconstruction.com/contact); the company has been operating since 1993 and is led by Refaat Hilmay (Hilmy) Mina according to [BuildZoom](https://www.buildzoom.com/contractor/minako-america-corporation-dba-minco-con...) and [AGC-CA membership records](https://web.agc-ca.org/233-Building,-Developing-and-General-Contracting/Minak...); however, California DLSE records show the company and its owner were debarred from public works contracts from September 27, 2021 through September 26, 2022 due to unpaid prevailing wages, a [documented DLSE decision](https://www.dir.ca.gov/oprl/1742Decisions/15-0275-PWH.pdf) confirms this enforcement action.",
+    "review_resolution_notes": "",
+    "comparison_summary": "adjudicated from manual_review to qualified: Multiple sources support underground electrical utility transmission, distribution, and substation construction work."
+  },
+  {
+    "record_id": "v6-pass1-05297",
+    "name": "Kasselman Electric Co., Inc.",
+    "domain": "kasselmanelectric.com",
+    "official_website_url": "https://kasselmanelectric.com/",
+    "categories": [
+      "S",
+      "D"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Becky Kasselman (President & CEO); Steve Kasselman (family member); Kasselman family",
+    "ownership": "Family-owned (Kasselman family); President & CEO Becky Kasselman; family members including Steve Kasselman; not ESOP, not public, not PE-backed",
+    "reasoning": "Kasselman Electric Co., Inc. is a family-owned IBEW union electrical contractor founded in 1948 and based in Menands, NY (279 Broadway Building 1, Menands, NY 12204). The company explicitly claims high-voltage utility substation projects and transmission and distribution line work on its official website, and is listed as a National Grid-approved vendor on its own site and in web records. They are EVITP certified, built a double-ended substation at Watervliet Arsenal, and serve critical infrastructure clients. Leadership includes President & CEO Becky Kasselman and family members (Steve Kasselman) consistent with a family-owned business. Revenue is approximately $53 million per RocketReach with an estimated 10-23 employees, placing them in the small specialty HV tuck-in range. Service fit is strong based on explicit substation (S) and transmission/distribution (T|D) claims confirmed by National Grid approval and project evidence. The company's self-description as a \"large electrical contractor\" appears to be marketing language consistent with trade contractor positioning, not institutional scale.",
+    "review_resolution_notes": "Pass 1 correctly identified the company as qualified with strong service fit. Official website is active and current (2026). Company is woman-owned (WBE) and IBEW union. No evidence of ESOP, public ownership, PE backing, or platform affiliation. The \"large\" descriptor on the website is marketing language; actual scale is small specialty shop. No name changes detected.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0914",
+    "name": "Plymouth Electric",
+    "domain": "plymouthelectric.com",
+    "official_website_url": "https://plymouthelectric.com",
+    "categories": [
+      "CI"
+    ],
+    "confidence": "low",
+    "master_status": "not_qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Brian Scheele, Logan Scheele",
+    "ownership": "Family-owned, Brian Scheele (Owner), Logan Scheele (Office Manager)",
+    "reasoning": "Plymouth Electric Inc is a family-owned Nebraska electrical contractor that provides wiring installation, repairs, and lighting design for residential, commercial, industrial, and agricultural projects per its [website](https://plymouthelectric.com) and [BBB profile](https://www.bbb.org/us/ne/plymouth/profile/electrician/plymouth-electric-0714-216002028) with A+ rating and BBB accreditation since 2016. Brian Scheele is confirmed as owner since the company's founding in 1979 via BBB schema. However, no high-voltage utility language appears anywhere on the official site or BBB listing — there is no mention of transmission, distribution, substation, transformer, utility line work, overhead power, underground primary, cable splicing, or any utility-scale capability. The company is classified as a generic Electrician on BBB and BuildZoom with no service pages describing power line, utility grid, or high-voltage field work. No equipment signals (bucket trucks, digger derricks, line trucks) were found. This is a building electrician serving residential, commercial, and agricultural clients and does not meet the high-voltage utility capability threshold.",
+    "review_resolution_notes": "Pass 1 claim that the company specializes in power line transmission, distribution, and substation work is not supported by the official website or any other source. No such language was found. Company appears to be a building/residential/commercial electrician only.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "v6-next-maps-v12-02064",
+    "name": "ASAP Electric Inc",
+    "domain": "asapelectric209.com",
+    "official_website_url": "https://asapelectric209.com/",
+    "categories": [
+      "S"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "pass2_recovery_plus_v13_20260408",
+    "owner_names": "Ryan Carlson",
+    "ownership": "Family-owned (Ryan Carlson, owner)",
+    "reasoning": "ASAP Electric Inc (Stockton, CA) is a family-owned electrical contractor with over 25 years of experience. The official website at https://asapelectric209.com/ provides dedicated service pages for Medium Voltage Splicing, PG&E Applicant Install for Medium Voltage, and Testing & Cable Fault Locating, directly matching the cable fault locating trigger query. The company operates as a PG&E approved contractor for medium voltage systems, providing Tier 1 qualification evidence per the criteria. Owner Ryan Carlson is identified on the About page with 25 years of medium voltage experience, and the company is affiliated with IBEW Local 595. Company claims 1-10 employees with no PE/ESOP/platform indicators, consistent with an independently owned small specialty HV contractor. Evidence at https://asapelectric209.com/about/ and https://asapelectric209.com/services/medium-voltage-splicing/.",
+    "review_resolution_notes": "Pass 1 qualification of qualified is upheld. Company operates medium voltage cable splicing as a core capability with explicit PG&E approval. Family ownership confirmed. Size evidence is weak (self-reported 1-10 employees) but consistent with small specialty HV tuck-in. Company does not appear to be overhead line or substation general contractor but rather a specialist MV cable splicing and fault locating operator. This maps to category S.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "v6-next-maps-v12-03119",
+    "name": "Zarco's Electrical Inc.",
+    "domain": "zarcoselectrical.com",
+    "official_website_url": "https://www.zarcoselectrical.com/",
+    "categories": [
+      "D",
+      "S"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "pass2_recovery_plus_v13_20260408",
+    "owner_names": "Elvis Zarco",
+    "ownership": "Owner-operated independent",
+    "reasoning": "Zarco's Electrical Inc., owned by Elvis Zarco and based in Petaluma, CA, is confirmed by multiple third-party sources including BuildZoom to specialize in padmount transformer installation for utility distribution work. The trigger query match and corroborating directory evidence support high-voltage utility capability. BuildZoom explicitly notes specialization in installation of padmount transformers for utility distribution. License #1024658 is active with the California CSLB. However, official website lacks dedicated service pages and evidence relies heavily on directories (Tier 3) rather than Tier 1 official site service descriptions. Company size and fleet details are unclear from available evidence. No evidence of public, PE-backed, ESOP, or platform company status.",
+    "review_resolution_notes": "Address inconsistency noted: official site shows 1320 Industrial Ave Suite F Petaluma while some directories show 711 5th St Petaluma. Directory evidence (BuildZoom, MapQuest, ClaimsPages) corroborates padmount transformer utility work but official website itself does not display explicit service pages describing high voltage or utility capabilities. Possible related entity 'Zarco Electric' in San Pablo with same license number may warrant further identity verification.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "v6-next-expand-v9-06555",
+    "name": "Panhandle Line Service, LLC",
+    "domain": "panhandlelineservice.com",
+    "official_website_url": "https://panhandlelineservice.com",
+    "categories": [
+      "D",
+      "S"
+    ],
+    "confidence": "medium",
+    "master_status": "not_qualified",
+    "source_origin": "pass2_20260407",
+    "owner_names": "ESOP — no individual founder/owner named",
+    "ownership": "ESOP (Employee Stock Ownership Plan)",
+    "reasoning": "Panhandle Line Service LLC is a Texas-based powerline contractor whose official website explicitly lists Transmission & Distribution, Substations, and Underground Construction & Maintenance as core services, serving Electric Cooperatives, Investor-Owned Utilities, and Municipalities — meeting the core HV utility capability requirement. However, the company is employee-owned via an ESOP (Employee Stock Ownership Plan), which is a hard fail under Section 1.7 ownership criteria. DOT records show 9 power units and 6 drivers, indicating a small regional operator. While service fit is strong and categories D and S are supported by explicit service language, the ESOP ownership structure disqualifies this candidate from qualification.",
+    "review_resolution_notes": "{\"issues_found\": [\"ownership_unclear\"], \"name_changed\": false, \"reasoning_rewritten\": true, \"website_added\": true}",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "v6-authority-iec_member_directory-00641",
+    "name": "Mosby Electric LLC",
+    "domain": "mosbyelectric.com",
+    "official_website_url": "https://mosbyelectric.com",
+    "categories": [
+      "T",
+      "D"
+    ],
+    "confidence": "low",
+    "master_status": "maybe",
+    "source_origin": "pass2_20260407",
+    "owner_names": "Gavin Mosby",
+    "ownership": "Gavin Mosby (owner/operator, per IEC Central Ohio member listing)",
+    "reasoning": "Mosby Electric LLC is an IEC Central Ohio member based in Pataskala, Ohio, founded circa 2015 and owned by Gavin Mosby per the IEC member listing. The IEC page confirms a focus on overhead, distribution, and transmission work, and Blue Book lists the company under CSI codes 33 71 00 (Electrical Utility Transmission and Distribution). However, the official website (mosbyelectric.com) shows only generic residential and commercial electrical services language with no explicit high-voltage, utility transmission, distribution, substation, or transformer service pages. The Blue Book description is also generic 'Electrical Contractors' without specific HV self-perform language. The evidence is corroborative but not conclusive for explicit HV utility capability on the primary Tier 1 source. Categories T and D are supported by the IEC listing but with lower confidence due to weak official site language.",
+    "review_resolution_notes": "{\"issues_found\": [\"missing_website\", \"directory_heavy_evidence\"], \"name_changed\": false, \"reasoning_rewritten\": true, \"website_added\": true}",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0018",
+    "name": "All Reliable Services, Inc.",
+    "domain": "allreliableservices.com",
+    "official_website_url": "https://allreliableservices.com",
+    "categories": [
+      "V"
+    ],
+    "confidence": "low",
+    "master_status": "maybe",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Eric Bray; Michael Heridia",
+    "ownership": "Co-owned by Eric Bray (Vice President) and Michael Heridia (Board of Directors); Jill Sutton listed as manager in some directories",
+    "reasoning": "All Reliable Services, Inc. is a Florida-based utility contractor at 159 Hampton Point Drive in Saint Augustine, co-owned by Eric Bray (VP) and Michael Heridia (Board), ISNETWORLD-certified and specializing in utility line clearance, vegetation management, and emergency storm response per cached service pages and multiple bid directories (buildingbidleads.com; westvirginiabids.com); the archived services page mentions 'transmission site construction' and 'substation maintenance' alongside vegetation management, and emergency storm services page confirms storm damage response for electric utilities, but the official website is currently down with an EsoSoft hosting error and size signals are inconsistent (3 employees per VisualVisitor vs. 68-245 per other sources); a 2024 federal court case (Altec Capital Services v. All Reliable Services, Inc. et al) links this entity to All Railroad Services Corp. at the same address, raising identity questions; without live website content or specific project evidence for transmission, distribution, or substation work, the high-voltage utility field capability cannot be clearly separated from the vegetation management core.",
+    "review_resolution_notes": "Website down (EsoSoft hosting error). Identity confusion with All Railroad Services Corp. at same address requires disambiguation. Size signals inconsistent. Court case links both entities. Manual review recommended due to identity ambiguity and website unavailability.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0450",
+    "name": "Delta Electric, L.L.C.",
+    "domain": "deltaelectricpb.com",
+    "official_website_url": "https://www.deltaelectricpb.com",
+    "categories": [
+      "CI"
+    ],
+    "confidence": "low",
+    "master_status": "maybe",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Fernando Santana",
+    "ownership": "Fernando Santana",
+    "reasoning": "Delta Electric, L.L.C. holds an active Florida certified electrical contractor license (EC13007932) and is BBB-accredited with an A+ rating, and ownership by Fernando Santana is confirmed via state records and LinkedIn. However, the official website uses generic marketing language claiming high-voltage utility services without documenting specific transmission, distribution, or substation projects. The permit history via BuildZoom shows predominantly residential and commercial panel replacement work (159 permits for items like 'replace existing 100a electrical panel' and 'temporary electrical service'), not utility high-voltage construction. The utility equipment signals (bucket trucks, digger derricks, line crews) cited as positive evidence actually belong to a separate company, Delta Tech Electric (deltatechelectric.com), not Delta Electric L.L.C. Directory sources (BuildZoom, BBB) repeat the company's self-claims without independent verification. The gap between claimed capabilities and demonstrated work product is too large for a qualified determination; this candidate should be manually reviewed.",
+    "review_resolution_notes": "Confusion risk: Delta Tech Electric (deltatechelectric.com) is a separate company also claiming Fernando Santana leadership and utility work with actual equipment photos. Delta Electric L.L.C. (deltaelectricpb.com) shows no utility fleet or project evidence. Recommend suppression of directory-only claims.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0761",
+    "name": "Comroe Advanced Power, Inc.",
+    "domain": "comroeap.com",
+    "official_website_url": "http://comroeap.com",
+    "categories": [
+      "D",
+      "S"
+    ],
+    "confidence": "medium",
+    "master_status": "not_qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "Comroe Advanced Power, Inc. is a Pennsylvania-based electrical contractor with an active [website](http://www.comroeap.com/) and a [Procore profile](https://www.procore.com/network/p/comroe-advance-power-inc-northampton) indicating utility electrical work including distribution and substation services, supported by a [LinkedIn company page](https://www.linkedin.com/company/comroe-advanced-power-inc) showing approximately 7 employees and operations in the Pennsylvania utility sector, and a [PrivCo company profile](https://www.privco.com/company/comroe-advanced-power) confirming the company as a Media, Pennsylvania-based commercial and industrial engineering firm, though no specific owner, president, or individual principal could be verified from any credible source including state business registration records.",
+    "review_resolution_notes": "",
+    "comparison_summary": "adjudicated from manual_review to not_qualified: There is some distribution/substation evidence, but ownership and company identity remain too weakly verified to promote under a strict standard."
+  },
+  {
+    "record_id": "v6-pass1-01454",
+    "name": "JMEC Wiring Group Inc",
+    "domain": "jmecwiring.com",
+    "official_website_url": "https://www.jmecwiring.com/",
+    "categories": [
+      "D",
+      "S"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Joseph Mutino Sr.",
+    "ownership": "Independently owned; Founder-led (Joseph Mutino Sr.)",
+    "reasoning": "JMEC Wiring Group Inc (jmecwiring.com) is a founder-led independent electrical contractor based in Wantagh, NY with 25+ years of experience. The official site explicitly states the company specializes in high voltage utility electrical services and the facility maintenance page specifically mentions work on substations, transformers, and transmission equipment. Blue Book corroborates medium-voltage and high-voltage electrical distribution and utility transmission capabilities. The company is U.S.-based, independently owned (Joseph Mutino Sr.), and serves the Long Island market with HV utility electrical work. Qualifies under D (distribution) and S (substation/transformer) categories. Confidence is medium because the website could not be directly fetched for full verification, though multiple web sources corroborate the HV utility identity. Blue Book: https://www.bluebook.com/professionals/company/jmec-wiring-group-inc/",
+    "review_resolution_notes": "Pass 1 QA: Confirmed qualified D|S medium. Blue Book ProView confirms HV utility, size 20-49, founded 1997, Joseph Mutino Sr. owner. Facility maintenance page mentions substations/transformers/transmission equipment. Pass 2 enrichment completed with full schema output.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "v6-recovery-v13-03808",
+    "name": "JCS Electrical Contracting Services LLC",
+    "domain": "jcselectricalcontractingservicesllc.com",
+    "official_website_url": "http://jcselectricalcontractingservicesllc.com",
+    "categories": [
+      "D"
+    ],
+    "confidence": "low",
+    "master_status": "qualified",
+    "source_origin": "pass2_recovery_plus_v13_20260408",
+    "owner_names": "Dennis P. Hull",
+    "ownership": "Dennis P. Hull (owner-operator)",
+    "reasoning": "JCS Electrical Contracting Services LLC (Circleville, OH) shows HV utility distribution signals via Blue Book CSI codes (26 01 10, 33 71 00, 33 71 39, 33 71 49) and trigger query \"breaker relay field service contractor\" aligns with utility distribution work. Owner Dennis P. Hull confirmed via BuildZoom. However, official website jcselectricalcontractingservicesllc.com is inaccessible, leaving Blue Book as the primary qualification source (Tier 3). License status is contradictory across sources. No explicit substation, transformer, switchgear, or cable-splicing evidence found. No utility prequalification, fleet evidence, or crew signals. Directory evidence alone cannot carry qualification when official site is unavailable per v6 criteria.",
+    "review_resolution_notes": "Blue Book CSI codes support distribution category. Trigger query aligns with utility breaker/relay work. Official site inaccessible creates Tier 1 evidence gap. License ambiguity noted.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "v6-pass1-05602",
+    "name": "Trumbo Electric Inc",
+    "domain": "trumboelectric.com",
+    "official_website_url": "https://trumboelectric.com/",
+    "categories": [
+      "D",
+      "S"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "pass2_20260406",
+    "owner_names": "Norvell Trumbo Jr. (founder), Brent Trumbo (former president, retired), Shanna Billhimer (current president)",
+    "ownership": "Private family-owned (Trumbo family), independent",
+    "reasoning": "Trumbo Electric Inc (trumboelectric.com) is a family-owned, founder-led electrical contractor founded in 1948 by Norvell Trumbo Jr. in Broadway, Virginia, now led by President Shanna Billhimer. The company's official website explicitly describes specialization in high-voltage utility services including substation design/installation/maintenance, transformer services, transmission, and power distribution systems. Multiple sources confirm substation work and high-voltage distribution capabilities. The company operates with approximately 100 employees and approximately $69.3M in annual revenue, serving critical infrastructure applications. No disqualifying factors found—the company is private, independent, U.S.-based, and demonstrates clear high-voltage utility capability with explicit substation and distribution scope. [Official site](https://trumboelectric.com/power-distribution-systems/) [ProView](https://www.thebluebook.com/iProView/319509/trumbo-electric-inc/subcontractors/) [LinkedIn](https://ch.linkedin.com/company/trumbo-electric-inc) [Our History](https://trumboelectric.com/our-history/)",
+    "review_resolution_notes": "Pass 1 recommendation verified and confirmed. Company demonstrates clear D|S capability. No quality issues found. Family ownership confirmed via official history page and news articles.",
+    "comparison_summary": ""
+  },
+  {
+    "record_id": "q-0483",
+    "name": "Prairie Electric, Inc.",
+    "domain": "prairielectric.com",
+    "official_website_url": "https://prairielectric.com",
+    "categories": [
+      "T",
+      "D",
+      "S",
+      "CI"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "Prairie Electric, Inc. is a Vancouver, Washington-based electrical contractor founded in 1981 by Bill Halberg, with his son Matt Halberg currently in management, as confirmed by the company's [official website](https://www.prairielectric.com), [BBB business profile](https://www.bbb.org/us/wa/ridgefield/profile/electrician/prairie-electric-inc), and [LinkedIn company page](https://www.linkedin.com/company/prairie-electric-inc), making this a family-owned heritage business with no platform company or PE sponsor acquisition detected. The company's [high voltage contractors page](https://www.prairielectric.com/commercial-industrial/high-voltage-contractors/) explicitly describes specialization in utility transmission, distribution, and substation services, supporting T, D, and S category fit, while their [public utilities infrastructures page](https://www.prairielectric.com/public-utilities-infrastructures/) further confirms these core capabilities. Company size is estimated at 51-116 employees and $10-50M annual revenue per multiple sources including [Growjo](https://growjo.com/company/Prairie_Electric) and [Visual Visitor](https://www.visualvisitor.com/companies/144297/prairie_electric_inc), placing it squarely in the acquirable target zone. The company maintains an active website with 2025-2026 content, active social media presence, and 40+ years of continuous operation with no distress signals detected.",
+    "review_resolution_notes": "",
+    "comparison_summary": "merged duplicate rows: q-0226|q-0483"
+  },
+  {
+    "record_id": "q-0627",
+    "name": "CENTRAL ILLINOIS ELECTRICAL SERVICES, LLC",
+    "domain": "cieselectric.com",
+    "official_website_url": "https://cieselectric.com",
+    "categories": [
+      "D"
+    ],
+    "confidence": "medium",
+    "master_status": "qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "Central Illinois Electrical Services LLC is a Bartonville, Illinois-based electrical contractor founded in 1997 and owned by Brock Yeske per multiple industry directories including the [GPCSA directory](https://gpcsa.org/directory/central-illinois-electrical-services-cies/), [EVITP listing](https://evitp.org/illinois/listing/central-illinois-electrical-services), and [govcb government vendor record](https://www.govcb.com/government-vendors/profile-SAM00000000001328157-central-illinois-elec-svcs-llc.htm). The company's [official website](https://cieselectric.com/) confirms active operations, location at 4600 Enterprise Dr in Bartonville, and describes full-service electrical work for commercial, industrial, and residential clients, while the GPCSA directory specifically notes involvement with utility power projects supporting the D category. However, the company's small scale per available PPP data and lack of explicit substation service claims on official pages suggest the originally assigned S category may be overstated, so only D category is retained.",
+    "review_resolution_notes": "",
+    "comparison_summary": "categories changed from D|S to D"
+  },
+  {
+    "record_id": "q-0029",
+    "name": "ELDOR Contracting Corporation",
+    "domain": "eldor.com",
+    "official_website_url": "https://eldor.com",
+    "categories": [
+      "T",
+      "D",
+      "S"
+    ],
+    "confidence": "high",
+    "master_status": "qualified",
+    "source_origin": "recovered_952",
+    "owner_names": "",
+    "ownership": "",
+    "reasoning": "ELDOR Contracting Corporation, based in Holtsville, NY, is a privately held electrical construction firm founded in 1978 by Nick Feldmann, who serves as president and leads the company with over 45 years of industry experience according to the company's [leadership page](https://www.eldor.com/about-leadership.php). The company's [transmission/utility services page](https://www.eldor.com/electrical-transmission-utility.php) explicitly lists power plant construction, substation construction, and transmission and distribution as core capabilities, with KeySpan Energy and the Long Island Power Authority among its utility clients. The company maintains active operations confirmed by a recent [NYSDOT contract award](https://www.eldor.com/news/eldor-contracting-corporation-wins-new-york-state-...) and an active [LinkedIn company profile](https://www.linkedin.com/company/eldor-contracting-corporation) showing ongoing recruitment and 366 followers. Eldor is also listed as an affiliated contractor with [NEAT (Northeastern Apprenticeship and Training Program)](https://www.neat1968.org/about-neat/affiliated-contractors/), confirming its IBEW-affiliated union standing and training program participation.",
+    "review_resolution_notes": "",
+    "comparison_summary": "legacy_225_bucket=matched_qualified"
   }
 ]
