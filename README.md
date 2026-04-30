@@ -16,11 +16,27 @@ cd power-line-review-app
 python3 server.py
 ```
 
-Open <http://127.0.0.1:8765> in your browser. The app loads `data/dataset.json` (10 sample companies are included) and you can immediately start triaging.
+Open <http://127.0.0.1:8765> in your browser. The app loads `data/dataset.json` (**100 real demo records** are included — stratified across qualified / not qualified / maybe with full reasoning and live company URLs) and you can immediately start triaging.
 
 To use your own data, replace `data/dataset.json` with a JSON array of entity records (schema below) and restart the server.
 
 That's the whole setup.
+
+---
+
+## What's in the demo dataset
+
+`data/dataset.json` ships with 100 real records sampled from a live power-line / T&D contractor sourcing run. Each record has a real company name, working website, category tags, confidence rating, ownership notes, and ~1,000 chars of reasoning narrative with embedded source links.
+
+| Slice | Count |
+|-------|-------|
+| Qualified | 65 |
+| Not Qualified | 25 |
+| Maybe | 10 |
+| Categories present | T, D, S, V, CI |
+| Confidence mix | high / medium / low |
+
+Press `U` to jump to the first unreviewed record and start clicking.
 
 ---
 
@@ -127,12 +143,12 @@ Example:
   "source_file": "dataset.json",
   "updated_at": "2026-04-30T22:14:08+00:00",
   "decisions": {
-    "demo-0001": {
+    "q-0605": {
       "decision": "qualified",
       "categories": ["T", "S"],
       "confidence": "high",
       "note": "Confirmed family ownership via state filings.",
-      "name": "Northwind Transmission Constructors",
+      "name": "Example Power & Line Co.",
       "updated_at": "2026-04-30T22:14:08+00:00"
     }
   }
@@ -185,7 +201,7 @@ power-line-review-app/
 │   ├── styles.css              # Light/dark themes
 │   └── favicon.svg
 ├── data/
-│   ├── dataset.json            # 10 sample records — replace with yours
+│   ├── dataset.json            # 100 real demo records — replace with yours
 │   └── review_decisions.json   # Created on first decision (gitignored)
 ├── README.md
 ├── LICENSE
