@@ -1,0 +1,16 @@
+# local decisions and any private datasets
+data/review_decisions.json
+data/review_decisions.*.json
+data/private_*.json
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# editor / OS
+.DS_Store
+.vscode/
+.idea/
+*.log

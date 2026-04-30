@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Power Line — Review Triage</title>
+    <link rel="icon" href="./favicon.svg?v=8" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css?v=8" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- Top bar: progress + stats -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <span class="logo">PL</span>
+          <span class="logo-text">Review Triage</span>
+          <span class="topbar-divider"></span>
+          <span class="topbar-file" id="datasetMeta">Loading...</span>
+        </div>
+        <div class="topbar-stats" id="topbarStats"></div>
+        <div class="topbar-right">
+          <button id="nextUnreviewedBtn" class="btn btn-ghost" title="U">
+            <span class="key-hint">U</span> Next Unreviewed
+          </button>
+          <a href="/api/export.csv" class="btn btn-ghost" download>CSV</a>
+          <a href="/api/export.json" class="btn btn-ghost" download>JSON</a>
+          <button id="themeToggle" class="btn btn-ghost" title="Toggle light/dark mode">&#9788;</button>
+        </div>
+      </header>
+
+      <!-- Progress bar -->
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+        <div class="progress-label" id="progressLabel"></div>
+      </div>
+
+      <!-- Main workspace -->
+      <main class="workspace">
+        <!-- Left: queue -->
+        <aside class="queue">
+          <div class="queue-controls">
+            <div class="search-wrap">
+              <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              <input id="searchInput" type="search" placeholder="Search... ( / )" />
+            </div>
+            <div class="filter-row">
+              <div class="chip-group" id="statusFilters"></div>
+            </div>
+            <div class="filter-row">
+              <div class="chip-group" id="categoryFilters"></div>
+              <div class="chip-group" id="confidenceFilters"></div>
+            </div>
+            <div class="filter-meta">
+              <span id="queueSummary"></span>
+              <button id="clearFiltersBtn" class="btn-link">Clear</button>
+            </div>
+          </div>
+          <div id="recordList" class="record-list"></div>
+        </aside>
+
+        <!-- Right: detail -->
+        <section class="detail">
+          <div class="detail-empty" id="emptyState">
+            <div class="detail-empty-inner">
+              <p class="empty-icon">&#9662;</p>
+              <p>Select an entity from the queue</p>
+              <p class="subtle">or press <kbd>U</kbd> to jump to next unreviewed</p>
+            </div>
+          </div>
+
+          <div class="detail-content hidden" id="detailCard">
+            <!-- Entity header -->
+            <div class="entity-header">
+              <div class="entity-header-top">
+                <div class="entity-id-badge" id="recordEyebrow"></div>
+                <div class="entity-nav">
+                  <button id="prevBtn" class="btn btn-icon" title="K / ↑">&#8593;</button>
+                  <button id="nextBtn" class="btn btn-icon" title="J / ↓">&#8595;</button>
+                </div>
+              </div>
+              <h1
+                id="recordName"
+                class="entity-name"
+                tabindex="0"
+                role="button"
+                title="Click to Google (S)"
+              ></h1>
+              <p class="entity-meta" id="recordMeta"></p>
+              <div class="entity-badges" id="recordBadges"></div>
+            </div>
+
+            <!-- Decision bar — the main action -->
+            <div class="decision-bar">
+              <button class="decision-btn decision-qualify" data-decision="qualified">
+                <span class="decision-label">Qualified</span>
+                <kbd>Q</kbd>
+              </button>
+              <button class="decision-btn decision-reject" data-decision="not_qualified">
+                <span class="decision-label">Not Qualified</span>
+                <kbd>N</kbd>
+              </button>
+              <button class="decision-btn decision-maybe" data-decision="maybe">
+                <span class="decision-label">Maybe</span>
+                <kbd>M</kbd>
+              </button>
+              <button id="clearDecisionBtn" class="btn btn-ghost btn-sm">Clear</button>
+              <div class="save-status" id="saveIndicator"></div>
+            </div>
+
+            <!-- Qualification overrides (collapsed by default) -->
+            <details class="qual-overrides">
+              <summary class="qual-summary">
+                <span>Override Categories / Confidence</span>
+                <span class="subtle" id="qualificationMeta"></span>
+              </summary>
+              <div class="qual-grid">
+                <div>
+                  <p class="label">Categories</p>
+                  <div class="chip-group" id="recordCategoryEditor"></div>
+                </div>
+                <div>
+                  <p class="label">Confidence</p>
+                  <div class="chip-group" id="recordConfidenceEditor"></div>
+                </div>
+              </div>
+            </details>
+
+            <!-- Content columns: reasoning + links -->
+            <div class="detail-columns">
+              <div class="detail-main">
+                <div class="section">
+                  <div class="section-head">
+                    <h3>Reasoning</h3>
+                    <button id="openEntityBtn" class="btn-link">Open URL</button>
+                  </div>
+                  <div id="reasoningBody" class="reasoning"></div>
+                </div>
+              </div>
+
+              <div class="detail-side">
+                <div class="section">
+                  <div class="section-head">
+                    <h3>Links</h3>
+                    <button id="openLinksBtn" class="btn-link">Open All</button>
+                  </div>
+                  <div id="linksList" class="links"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Notes — standalone -->
+            <div class="section">
+              <div class="section-head">
+                <h3>Notes</h3>
+                <span class="subtle" id="updatedAt"></span>
+              </div>
+              <textarea id="noteInput" placeholder="Quick note... (click to type, Esc to exit)" rows="2"></textarea>
+            </div>
+
+            <!-- Ownership / Intel — bottom -->
+            <div class="intel-row" id="intelRow">
+              <div class="section intel-section">
+                <div class="section-head"><h3>Ownership</h3></div>
+                <div class="intel-owner-names" id="ownerNames"></div>
+                <div class="intel-body" id="ownershipBody"></div>
+              </div>
+              <div class="section intel-section">
+                <div class="section-head"><h3>Pre-Enrichment</h3></div>
+                <div class="intel-body" id="preEnrichBody"></div>
+              </div>
+              <div class="section intel-section">
+                <div class="section-head"><h3>Comparison</h3></div>
+                <div class="intel-body" id="comparisonBody"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Keyboard legend -->
+      <footer class="hotkey-bar">
+        <span><kbd>Q</kbd> qualify</span>
+        <span><kbd>N</kbd> reject</span>
+        <span><kbd>M</kbd> maybe</span>
+        <span class="hotkey-sep"></span>
+        <span><kbd>J</kbd><kbd>K</kbd> navigate</span>
+        <span><kbd>U</kbd> next unreviewed</span>
+        <span><kbd>O</kbd> open domain</span>
+        <span><kbd>S</kbd> google</span>
+        <span><kbd>/</kbd> search</span>
+        <span><kbd>Esc</kbd> blur</span>
+      </footer>
+    </div>
+
+    <!-- Toast container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="./app.js?v=8" defer></script>
+  </body>
+</html>
