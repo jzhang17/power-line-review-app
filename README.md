@@ -63,6 +63,7 @@ Press `U` to jump to the first unreviewed record and start clicking.
 | `U` | Jump to next unreviewed |
 | `O` | Open the company website in a new tab |
 | `S` | Google the company name |
+| `C` | Copy the HubSpot ID for the selected record |
 | `/` | Focus the search box |
 | `Esc` | Blur input / exit notes |
 
@@ -89,20 +90,39 @@ A record can carry multiple tags (e.g., `["T", "D", "S"]` for a full-scope T&D c
 ```json
 [
   {
-    "record_id": "demo-0001",
+    "record_id": "29279763251",
+    "hubspot_id": "29279763251",
     "name": "Northwind Transmission Constructors",
+    "original_name": "Northwind Transmission Constructors",
     "domain": "northwind-transmission.example",
     "official_website_url": "https://www.northwind-transmission.example",
+    "hq_state": "ID",
     "categories": ["T", "S"],
     "confidence": "high",
     "master_status": "qualified",
-    "source_origin": "demo_seed",
-    "owner_names": "Patricia Holt (CEO); Mark Holt (COO); family ownership",
+    "transmission_pct": 60,
+    "distribution_pct": 0,
+    "substation_pct": 35,
+    "other_pct": 5,
+    "service_fit": "strong",
+    "ownership_fit": "confirmed_fit",
+    "size_fit": "good",
+    "viability": "operating",
+    "website_confidence": "high",
+    "nq_reason_category": "n/a",
+    "owner_names": "Patricia Holt; Mark Holt",
     "ownership": "Family-owned, second generation",
     "company_size": "180 employees",
-    "hq_state": "Idaho",
-    "reasoning": "Idaho-based EPC contractor specializing in 69kV–500kV overhead transmission and substation builds...",
-    "review_resolution_notes": "Confirmed via FERC project list and state contractor licensing database."
+    "aliases": ["Northwind T&D", "NTC"],
+    "ownership_evidence_urls": ["https://..."],
+    "identity_evidence_urls": ["https://..."],
+    "reasoning": "Idaho-based EPC contractor for 69-500kV transmission and substation builds. Family-owned, ~180 employees, plausible acquisition target.",
+    "internal_reasoning": "Per their [services page](https://...) the company performs transmission line construction across the Northwest. Ownership confirmed via [BBB profile](https://...).",
+    "pre_enrichment_reasoning": "Pass 1 rationale from the qualification stage.",
+    "comparison_summary": "categories changed from T to T/S; adjudicated from manual_review to qualified.",
+    "review_resolution_notes": "Pass 2 confirmed substation work via project list.",
+    "source_origin": "hh_exclusion_v2_20260504",
+    "duplicate_domain_cluster": ""
   }
 ]
 ```
@@ -112,21 +132,35 @@ A record can carry multiple tags (e.g., `["T", "D", "S"]` for a full-scope T&D c
 | Field | Type | Notes |
 |-------|------|-------|
 | `record_id` | string | Stable id used to key decisions. Auto-generated if omitted. |
+| `hubspot_id` | string | HubSpot record id. Surfaced as a copy-button chip in the detail header and as **column A** in CSV export — the join key the client uses. Defaults to `record_id` if not provided. |
 | `name` | string | Company name shown in the queue. **Required.** |
-| `domain` | string | Bare domain. Used in the meta line. |
+| `original_name` | string | Name from the input list, before pipeline corrections. |
+| `domain` | string | Bare domain. |
 | `official_website_url` | string | Full URL. Powers the "Open URL" button and `O` shortcut. |
+| `hq_state` | string | Two-letter US state. Shown as a pill in the queue and detail header. |
 | `categories` | array of `T` / `D` / `S` / `V` / `CI` | Initial category tags. Reviewers can override. |
 | `confidence` | `high` / `medium` / `low` | Initial confidence. Reviewers can override. |
-| `master_status` | `qualified` / `not_qualified` / `maybe` / "" | Suggested initial decision (purely informational — reviewer always decides). |
-| `reasoning` | string (long form OK) | The narrative shown in the main detail pane. URLs are auto-linkified. |
-| `owner_names` | string | Shown under "Ownership". |
-| `ownership` | string | Shown under "Ownership". |
+| `master_status` | `qualified` / `not_qualified` / `maybe` / "" | Suggested initial decision (informational — reviewer always decides). |
+| `transmission_pct`, `distribution_pct`, `substation_pct`, `other_pct` | int 0-100 | Estimated work-mix percentages. Must sum to 100 if any are set. Reviewer can edit in the detail pane; saved to decisions and exported in the CSV. |
+| `service_fit` | `strong` / `mixed` / `weak` / `none` | Shown as a colored chip in the QA Signals panel. |
+| `ownership_fit` | `confirmed_fit` / `likely_fit` / `unknown` / `contradicted` | QA Signals panel. |
+| `size_fit` | `good` / `mixed` / `weak` / `unknown` | QA Signals panel. |
+| `viability` | `operating` / `unclear` / `inactive` | QA Signals panel. |
+| `website_confidence` | `high` / `medium` / `low` / `none` | QA Signals panel. |
+| `nq_reason_category` | one of `n/a`, `services_not_grid_related`, `ownership_misfit`, `size_misfit`, `defunct`, `non_us`, `evidence_insufficient` | Editable per record when decision = not_qualified. Lets the client sort the rejections by reason. |
+| `reasoning` | string (1-3 sentences) | **Editable** in the app. This is the client-facing reasoning that ships in the deliverable. |
+| `internal_reasoning` | string (long form OK, markdown links) | Internal-facing reasoning with sourced URLs. Hidden by default; expand `<summary>` to view. URLs are auto-linkified. |
+| `pre_enrichment_reasoning` | string | Pass 1 rationale (shown in collapsed `<summary>` for context). |
+| `owner_names` | string or array of strings | Shown under "Ownership". |
+| `ownership` | string | One-line ownership summary, shown under "Ownership". |
 | `company_size` | string | Shown in the meta line. |
-| `hq_state` | string | Shown in the meta line. |
-| `source_origin` | string | Where the record came from in your sourcing pipeline. |
+| `aliases` | array of strings | Shown in the intel row. |
+| `ownership_evidence_urls` | array of strings | Shown as link pills under "Ownership". |
+| `identity_evidence_urls` | array of strings | Folded into the Links panel. |
+| `comparison_summary` | string | Auto-built diff between Pass 1 and Pass 2 (name change, website change, category change, adjudication). |
 | `review_resolution_notes` | string | Prior review notes, if any. |
-| `pre_enrichment_reasoning` | string | Earlier-pass reasoning (shown in intel row). |
-| `comparison_summary` | string | Diff/adjudication summary (shown in intel row). |
+| `source_origin` | string | Where the record came from in your sourcing pipeline. |
+| `duplicate_domain_cluster` | string | If multiple input records share a domain, all of them carry the same cluster label. Shown as a banner in the detail pane with a "next sibling" link. |
 
 ---
 

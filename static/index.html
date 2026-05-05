@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Power Line — Review Triage</title>
-    <link rel="icon" href="./favicon.svg?v=8" type="image/svg+xml" />
-    <link rel="stylesheet" href="./styles.css?v=8" />
+    <link rel="icon" href="./favicon.svg?v=9" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css?v=9" />
   </head>
   <body>
     <div class="app">
@@ -41,7 +41,7 @@
           <div class="queue-controls">
             <div class="search-wrap">
               <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-              <input id="searchInput" type="search" placeholder="Search... ( / )" />
+              <input id="searchInput" type="search" placeholder="Search name, HubSpot ID... ( / )" />
             </div>
             <div class="filter-row">
               <div class="chip-group" id="statusFilters"></div>
@@ -49,6 +49,14 @@
             <div class="filter-row">
               <div class="chip-group" id="categoryFilters"></div>
               <div class="chip-group" id="confidenceFilters"></div>
+            </div>
+            <div class="filter-row">
+              <span class="filter-label">Service fit</span>
+              <div class="chip-group" id="serviceFitFilters"></div>
+            </div>
+            <div class="filter-row">
+              <span class="filter-label">Ownership</span>
+              <div class="chip-group" id="ownershipFitFilters"></div>
             </div>
             <div class="filter-meta">
               <span id="queueSummary"></span>
@@ -72,7 +80,14 @@
             <!-- Entity header -->
             <div class="entity-header">
               <div class="entity-header-top">
-                <div class="entity-id-badge" id="recordEyebrow"></div>
+                <div class="entity-id-row">
+                  <button id="hubspotIdChip" class="hubspot-chip" title="Click to copy HubSpot ID (C)">
+                    <span class="hubspot-chip-label">HubSpot</span>
+                    <span class="hubspot-chip-value" id="hubspotIdValue">—</span>
+                    <span class="hubspot-chip-copy">⧉</span>
+                  </button>
+                  <span class="entity-id-badge" id="recordEyebrow"></span>
+                </div>
                 <div class="entity-nav">
                   <button id="prevBtn" class="btn btn-icon" title="K / ↑">&#8593;</button>
                   <button id="nextBtn" class="btn btn-icon" title="J / ↓">&#8595;</button>
@@ -87,6 +102,7 @@
               ></h1>
               <p class="entity-meta" id="recordMeta"></p>
               <div class="entity-badges" id="recordBadges"></div>
+              <div class="dup-banner hidden" id="dupBanner"></div>
             </div>
 
             <!-- Decision bar — the main action -->
@@ -105,6 +121,35 @@
               </button>
               <button id="clearDecisionBtn" class="btn btn-ghost btn-sm">Clear</button>
               <div class="save-status" id="saveIndicator"></div>
+            </div>
+
+            <!-- QA Signals — colored chips for service_fit / ownership_fit / size_fit / viability / website_confidence -->
+            <div class="qa-signals" id="qaSignals"></div>
+
+            <!-- % Breakdown panel (T / D / S / Other = 100) -->
+            <div class="pct-panel" id="pctPanel">
+              <div class="pct-row">
+                <label class="pct-label">T<input type="number" min="0" max="100" id="pctT" /></label>
+                <label class="pct-label">D<input type="number" min="0" max="100" id="pctD" /></label>
+                <label class="pct-label">S<input type="number" min="0" max="100" id="pctS" /></label>
+                <label class="pct-label">Other<input type="number" min="0" max="100" id="pctO" /></label>
+                <span class="pct-sum" id="pctSum">sum: 0</span>
+                <span class="subtle">T+D+S+Other = 100</span>
+              </div>
+            </div>
+
+            <!-- NQ reason (only for not_qualified) -->
+            <div class="nq-reason hidden" id="nqReasonRow">
+              <span class="label">NQ reason</span>
+              <select id="nqReasonSelect">
+                <option value="">— none —</option>
+                <option value="services_not_grid_related">services not grid-related</option>
+                <option value="ownership_misfit">ownership misfit</option>
+                <option value="size_misfit">size misfit</option>
+                <option value="defunct">defunct</option>
+                <option value="non_us">non-US</option>
+                <option value="evidence_insufficient">evidence insufficient</option>
+              </select>
             </div>
 
             <!-- Qualification overrides (collapsed by default) -->
@@ -130,10 +175,18 @@
               <div class="detail-main">
                 <div class="section">
                   <div class="section-head">
-                    <h3>Reasoning</h3>
+                    <h3>Client-facing reasoning <span class="subtle">(editable)</span></h3>
                     <button id="openEntityBtn" class="btn-link">Open URL</button>
                   </div>
-                  <div id="reasoningBody" class="reasoning"></div>
+                  <textarea id="reasoningInput" class="reasoning-input" rows="5" placeholder="1-3 sentences. Goes into the client deliverable."></textarea>
+                  <details class="internal-reasoning-wrap">
+                    <summary class="subtle">Internal reasoning (with sources)</summary>
+                    <div id="internalReasoningBody" class="reasoning"></div>
+                  </details>
+                  <details class="internal-reasoning-wrap" id="preEnrichmentWrap">
+                    <summary class="subtle">Pass 1 reasoning</summary>
+                    <div id="preEnrichBody" class="reasoning"></div>
+                  </details>
                 </div>
               </div>
 
@@ -154,7 +207,7 @@
                 <h3>Notes</h3>
                 <span class="subtle" id="updatedAt"></span>
               </div>
-              <textarea id="noteInput" placeholder="Quick note... (click to type, Esc to exit)" rows="2"></textarea>
+              <textarea id="noteInput" placeholder="Reviewer note... (free-form, internal)" rows="2"></textarea>
             </div>
 
             <!-- Ownership / Intel — bottom -->
@@ -163,10 +216,11 @@
                 <div class="section-head"><h3>Ownership</h3></div>
                 <div class="intel-owner-names" id="ownerNames"></div>
                 <div class="intel-body" id="ownershipBody"></div>
+                <div class="intel-evidence" id="ownershipEvidence"></div>
               </div>
               <div class="section intel-section">
-                <div class="section-head"><h3>Pre-Enrichment</h3></div>
-                <div class="intel-body" id="preEnrichBody"></div>
+                <div class="section-head"><h3>Aliases</h3></div>
+                <div class="intel-body" id="aliasesBody"></div>
               </div>
               <div class="section intel-section">
                 <div class="section-head"><h3>Comparison</h3></div>
@@ -187,6 +241,7 @@
         <span><kbd>U</kbd> next unreviewed</span>
         <span><kbd>O</kbd> open domain</span>
         <span><kbd>S</kbd> google</span>
+        <span><kbd>C</kbd> copy HubSpot ID</span>
         <span><kbd>/</kbd> search</span>
         <span><kbd>Esc</kbd> blur</span>
       </footer>
@@ -195,6 +250,6 @@
     <!-- Toast container -->
     <div id="toastContainer" class="toast-container"></div>
 
-    <script src="./app.js?v=8" defer></script>
+    <script src="./app.js?v=9" defer></script>
   </body>
 </html>

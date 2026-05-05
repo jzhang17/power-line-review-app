@@ -8,9 +8,9 @@ Run:
 Then open http://127.0.0.1:8765 in your browser.
 
 Loads entities from data/dataset.json, lets you mark each as
-qualified / not qualified / maybe, and autosaves your decisions
-(plus category/confidence overrides and notes) to
-data/review_decisions.json.
+qualified / not qualified / maybe, edit categories / confidence /
+T-D-S-Other percentage breakdown / client-facing reasoning, and
+autosaves your decisions (plus all overrides) to data/review_decisions.json.
 
 Zero dependencies — Python 3.9+ standard library only.
 """
@@ -42,6 +42,16 @@ URL_RE = re.compile(r"https?://[^\s<>\])]+")
 VALID_DECISIONS = {"", "qualified", "not_qualified", "maybe"}
 VALID_CATEGORIES = {"T", "D", "S", "V", "CI"}
 VALID_CONFIDENCE = {"", "high", "medium", "low"}
+VALID_NQ_REASONS = {
+    "",
+    "n/a",
+    "services_not_grid_related",
+    "ownership_misfit",
+    "size_misfit",
+    "defunct",
+    "non_us",
+    "evidence_insufficient",
+}
 
 
 def utc_now() -> str:
@@ -101,6 +111,29 @@ def normalize_categories(value) -> list[str]:
     return parts
 
 
+def safe_int(v) -> int | None:
+    if v is None or v == "":
+        return None
+    try:
+        n = int(v)
+    except (TypeError, ValueError):
+        try:
+            n = int(float(v))
+        except (TypeError, ValueError):
+            return None
+    if n < 0:
+        return 0
+    if n > 100:
+        return 100
+    return n
+
+
+def safe_str_list(v) -> list[str]:
+    if not isinstance(v, list):
+        return []
+    return [str(x).strip() for x in v if str(x).strip()]
+
+
 def build_entity_notes(row: dict) -> str:
     bits = []
     if row.get("ownership"):
@@ -126,33 +159,59 @@ def load_source_records() -> list[dict]:
     records: list[dict] = []
     for idx, row in enumerate(payload, start=1):
         reasoning = (row.get("reasoning") or "").strip()
+        internal_reasoning = (row.get("internal_reasoning") or "").strip()
         entity_url = (row.get("official_website_url") or row.get("website") or "").strip()
         links = extract_links(
             entity_url,
             row.get("domain", ""),
             reasoning,
+            internal_reasoning,
+            *(row.get("ownership_evidence_urls") or []),
+            *(row.get("identity_evidence_urls") or []),
         )
+        record_id = (row.get("record_id") or f"rec-{idx:04d}").strip()
+        hubspot_id = (row.get("hubspot_id") or record_id).strip()
         records.append(
             {
-                "id": (row.get("record_id") or f"rec-{idx:04d}").strip(),
+                "id": record_id,
+                "hubspotId": hubspot_id,
                 "index": idx,
                 "name": (row.get("name") or "").strip(),
+                "originalName": (row.get("original_name") or row.get("name") or "").strip(),
+                "domain": (row.get("domain") or "").strip(),
+                "hqState": (row.get("hq_state") or "").strip(),
                 "entityNotes": build_entity_notes(row),
                 "entityUrl": entity_url,
                 "sourceUrl": (row.get("source_url") or "").strip(),
                 "categories": normalize_categories(row.get("categories")),
                 "confidence": (row.get("confidence") or "").strip().lower(),
                 "reasoning": reasoning,
+                "internalReasoning": internal_reasoning,
                 "links": links,
                 "runId": (row.get("source_origin") or "").strip(),
                 "backend": (row.get("master_status") or "").strip(),
                 "sourceStatus": (row.get("master_status") or "").strip(),
                 "sourceOrigin": (row.get("source_origin") or "").strip(),
                 "sourceDecisionNote": (row.get("review_resolution_notes") or "").strip(),
-                "ownerNames": (row.get("owner_names") or "").strip(),
+                "ownerNames": (row.get("owner_names") or "").strip() if not isinstance(row.get("owner_names"), list) else "; ".join(row["owner_names"]),
                 "ownership": (row.get("ownership") or "").strip(),
+                "companySize": (row.get("company_size") or "").strip(),
+                "aliases": safe_str_list(row.get("aliases")),
+                "ownershipEvidenceUrls": safe_str_list(row.get("ownership_evidence_urls")),
+                "identityEvidenceUrls": safe_str_list(row.get("identity_evidence_urls")),
                 "preEnrichmentReasoning": (row.get("pre_enrichment_reasoning") or "").strip(),
                 "comparisonSummary": (row.get("comparison_summary") or "").strip(),
+                "transmissionPct": safe_int(row.get("transmission_pct")),
+                "distributionPct": safe_int(row.get("distribution_pct")),
+                "substationPct": safe_int(row.get("substation_pct")),
+                "otherPct": safe_int(row.get("other_pct")),
+                "serviceFit": (row.get("service_fit") or "").strip(),
+                "ownershipFit": (row.get("ownership_fit") or "").strip(),
+                "sizeFit": (row.get("size_fit") or "").strip(),
+                "viability": (row.get("viability") or "").strip(),
+                "websiteConfidence": (row.get("website_confidence") or "").strip(),
+                "nqReasonCategory": (row.get("nq_reason_category") or "").strip(),
+                "duplicateDomainCluster": (row.get("duplicate_domain_cluster") or "").strip(),
             }
         )
     return records
@@ -189,6 +248,12 @@ def build_bootstrap() -> dict:
         current_name = saved.get("name", record["name"])
         current_categories = saved.get("categories", record["categories"])
         current_confidence = saved.get("confidence", record["confidence"])
+        current_reasoning = saved.get("reasoning", record["reasoning"])
+        current_t = saved.get("transmissionPct", record["transmissionPct"])
+        current_d = saved.get("distributionPct", record["distributionPct"])
+        current_s = saved.get("substationPct", record["substationPct"])
+        current_o = saved.get("otherPct", record["otherPct"])
+        current_nq = saved.get("nqReasonCategory", record["nqReasonCategory"])
 
         for category in current_categories:
             category_counts[category] += 1
@@ -198,12 +263,23 @@ def build_bootstrap() -> dict:
         items.append(
             {
                 **record,
-                "originalName": record["name"],
-                "name": current_name,
                 "originalCategories": record["categories"],
                 "originalConfidence": record["confidence"],
+                "originalReasoning": record["reasoning"],
+                "originalTransmissionPct": record["transmissionPct"],
+                "originalDistributionPct": record["distributionPct"],
+                "originalSubstationPct": record["substationPct"],
+                "originalOtherPct": record["otherPct"],
+                "originalNqReasonCategory": record["nqReasonCategory"],
+                "name": current_name,
                 "categories": current_categories,
                 "confidence": current_confidence,
+                "reasoning": current_reasoning,
+                "transmissionPct": current_t,
+                "distributionPct": current_d,
+                "substationPct": current_s,
+                "otherPct": current_o,
+                "nqReasonCategory": current_nq,
                 "decision": saved.get("decision", ""),
                 "note": saved.get("note", ""),
                 "updatedAt": saved.get("updated_at", ""),
@@ -229,22 +305,42 @@ def export_rows() -> list[dict]:
     for item in bootstrap["items"]:
         rows.append(
             {
-                "id": item["id"],
+                "hubspot_id": item["hubspotId"],
+                "record_id": item["id"],
                 "index": item["index"],
                 "name": item["name"],
-                "original_name": item["originalName"],
+                "original_name": item.get("originalName", ""),
+                "domain": item.get("domain", ""),
+                "official_website_url": item["entityUrl"],
+                "hq_state": item.get("hqState", ""),
+                "decision": item["decision"],
+                "master_status": item.get("sourceStatus", ""),
                 "categories": ",".join(item["categories"]),
                 "confidence": item["confidence"],
+                "transmission_pct": item.get("transmissionPct") if item.get("transmissionPct") is not None else "",
+                "distribution_pct": item.get("distributionPct") if item.get("distributionPct") is not None else "",
+                "substation_pct": item.get("substationPct") if item.get("substationPct") is not None else "",
+                "other_pct": item.get("otherPct") if item.get("otherPct") is not None else "",
+                "nq_reason_category": item.get("nqReasonCategory", ""),
+                "service_fit": item.get("serviceFit", ""),
+                "ownership_fit": item.get("ownershipFit", ""),
+                "size_fit": item.get("sizeFit", ""),
+                "viability": item.get("viability", ""),
+                "website_confidence": item.get("websiteConfidence", ""),
+                "owner_names": item.get("ownerNames", ""),
+                "ownership": item.get("ownership", ""),
+                "company_size": item.get("companySize", ""),
+                "aliases": "; ".join(item.get("aliases") or []),
+                "ownership_evidence_urls": "; ".join(item.get("ownershipEvidenceUrls") or []),
+                "identity_evidence_urls": "; ".join(item.get("identityEvidenceUrls") or []),
+                "reasoning": item["reasoning"],
+                "comparison_summary": item.get("comparisonSummary", ""),
+                "duplicate_domain_cluster": item.get("duplicateDomainCluster", ""),
                 "original_categories": ",".join(item["originalCategories"]),
                 "original_confidence": item["originalConfidence"],
-                "decision": item["decision"],
                 "note": item["note"],
                 "updated_at": item["updatedAt"],
-                "entity_url": item["entityUrl"],
-                "source_url": item["sourceUrl"],
                 "run_id": item["runId"],
-                "backend": item["backend"],
-                "source_status": item.get("sourceStatus", ""),
                 "source_origin": item.get("sourceOrigin", ""),
             }
         )
@@ -305,8 +401,17 @@ class ReviewHandler(SimpleHTTPRequestHandler):
         record_id = payload.get("id", "").strip()
         decision = payload.get("decision", "").strip()
         note = payload.get("note", "")
-        categories = payload.get("categories", SOURCE_LOOKUP.get(record_id, {}).get("categories", []))
-        confidence = payload.get("confidence", SOURCE_LOOKUP.get(record_id, {}).get("confidence", ""))
+        record_default = SOURCE_LOOKUP.get(record_id, {})
+
+        categories = payload.get("categories", record_default.get("categories", []))
+        confidence = payload.get("confidence", record_default.get("confidence", ""))
+        reasoning = payload.get("reasoning", record_default.get("reasoning", ""))
+        nq_reason = payload.get("nqReasonCategory", record_default.get("nqReasonCategory", "")) or ""
+
+        t = safe_int(payload.get("transmissionPct"))
+        d = safe_int(payload.get("distributionPct"))
+        s = safe_int(payload.get("substationPct"))
+        o = safe_int(payload.get("otherPct"))
 
         if record_id not in SOURCE_LOOKUP:
             self.send_error(HTTPStatus.BAD_REQUEST, "Unknown record id")
@@ -324,6 +429,24 @@ class ReviewHandler(SimpleHTTPRequestHandler):
             self.send_error(HTTPStatus.BAD_REQUEST, "Invalid confidence")
             return
 
+        if nq_reason not in VALID_NQ_REASONS:
+            self.send_error(HTTPStatus.BAD_REQUEST, "Invalid nq_reason_category")
+            return
+
+        # If any of the four pcts is set, ALL four must be set and they must sum to 100.
+        any_set = any(v is not None for v in (t, d, s, o))
+        all_set = all(v is not None for v in (t, d, s, o))
+        if any_set and not all_set:
+            # treat missing as 0 to preserve sum, but only if at least one is set
+            t = t if t is not None else 0
+            d = d if d is not None else 0
+            s = s if s is not None else 0
+            o = o if o is not None else 0
+            all_set = True
+        if all_set and t + d + s + o != 100:
+            self.send_error(HTTPStatus.BAD_REQUEST, "transmission+distribution+substation+other must equal 100")
+            return
+
         store = load_decisions()
         now = utc_now()
         store["updated_at"] = now
@@ -332,8 +455,15 @@ class ReviewHandler(SimpleHTTPRequestHandler):
             "note": note,
             "categories": categories,
             "confidence": confidence,
+            "reasoning": reasoning,
+            "transmissionPct": t,
+            "distributionPct": d,
+            "substationPct": s,
+            "otherPct": o,
+            "nqReasonCategory": nq_reason,
             "updated_at": now,
             "name": SOURCE_LOOKUP[record_id]["name"],
+            "hubspot_id": SOURCE_LOOKUP[record_id].get("hubspotId", record_id),
         }
         write_decisions(store)
         self.respond_json({"ok": True, "updatedAt": now})

@@ -924,3 +924,318 @@ kbd {
   .queue { max-height: 40vh; }
   .topbar-stats { display: none; }
 }
+
+/* ════════════════════════════════════════════════════════════
+   v2 additions — HubSpot ID, QA signals, % breakdown, NQ row,
+   editable reasoning, dup banner, queue mid-row, filter labels
+   ════════════════════════════════════════════════════════════ */
+
+/* HubSpot ID chip in detail header */
+.entity-id-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hubspot-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  color: var(--text-bright);
+  font-family: var(--font);
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 100ms;
+}
+
+.hubspot-chip:hover {
+  background: var(--bg-hover);
+  border-color: var(--border-focus);
+  color: var(--blue);
+}
+
+.hubspot-chip-label {
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+}
+
+.hubspot-chip-value {
+  font-weight: 600;
+}
+
+.hubspot-chip-copy {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Queue list — middle row for HubSpot ID + state */
+.record-row-mid {
+  display: flex;
+  gap: 6px;
+  padding-left: 28px;
+  margin: 2px 0;
+}
+
+.record-hubspot {
+  font-family: var(--font);
+  color: var(--text-muted);
+  font-size: 10px;
+  letter-spacing: 0.2px;
+}
+
+.pill-state {
+  background: rgba(110,160,255,0.08);
+  color: var(--text-muted);
+  font-size: 9px;
+}
+
+.pill-src-mr {
+  background: var(--amber-bg);
+  color: var(--amber);
+}
+
+.pill-dup {
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--amber);
+  border: 1px solid var(--amber-border);
+}
+
+/* Filter labels */
+.filter-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  padding: 0 4px 0 0;
+  align-self: center;
+}
+
+/* Dup banner */
+.dup-banner {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  margin-top: 4px;
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid var(--amber-border);
+  border-radius: var(--radius);
+  color: var(--amber);
+  font-size: 11px;
+}
+
+.dup-banner-icon { font-size: 13px; }
+.dup-banner-meta {
+  font-family: var(--font);
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+/* QA Signals panel */
+.qa-signals {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+}
+
+.qa-cell {
+  display: flex;
+  flex-direction: column;
+  padding: 6px 8px;
+  border-radius: var(--radius);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  min-height: 42px;
+}
+
+.qa-label {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--text-muted);
+}
+
+.qa-value {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin-top: 2px;
+}
+
+.qa-good { background: var(--green-bg); border-color: var(--green-border); }
+.qa-good .qa-value { color: var(--green); }
+.qa-warn { background: var(--amber-bg); border-color: var(--amber-border); }
+.qa-warn .qa-value { color: var(--amber); }
+.qa-bad { background: var(--red-bg); border-color: var(--red-border); }
+.qa-bad .qa-value { color: var(--red); }
+.qa-neutral { background: var(--bg-surface); }
+.qa-empty .qa-value { color: var(--text-dim); }
+
+/* % breakdown panel */
+.pct-panel {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 10px;
+}
+
+.pct-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pct-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.pct-label input {
+  width: 56px;
+  padding: 3px 6px;
+  font-family: var(--font);
+  font-size: 12px;
+  background: var(--bg-raised);
+  color: var(--text-bright);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.pct-label input:focus {
+  outline: none;
+  border-color: var(--border-focus);
+}
+
+.pct-sum {
+  font-family: var(--font);
+  font-size: 11px;
+  color: var(--text-muted);
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: var(--bg-raised);
+}
+
+.pct-sum.ok {
+  color: var(--green);
+  background: var(--green-bg);
+}
+
+.pct-sum.bad {
+  color: var(--red);
+  background: var(--red-bg);
+}
+
+/* NQ reason row */
+.nq-reason {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.nq-reason .label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--text-muted);
+}
+
+.nq-reason select {
+  background: var(--bg-raised);
+  color: var(--text-bright);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 3px 6px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+}
+
+.nq-reason select:focus {
+  outline: none;
+  border-color: var(--border-focus);
+}
+
+/* Editable reasoning textarea */
+.reasoning-input {
+  width: 100%;
+  min-height: 90px;
+  padding: 8px 10px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-bright);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.reasoning-input:focus {
+  outline: none;
+  border-color: var(--border-focus);
+  background: var(--bg-raised);
+}
+
+.internal-reasoning-wrap {
+  margin-top: 8px;
+}
+
+.internal-reasoning-wrap summary {
+  cursor: pointer;
+  padding: 4px 0;
+  font-size: 11px;
+}
+
+.internal-reasoning-wrap summary:hover {
+  color: var(--text);
+}
+
+.intel-evidence {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.link-pill {
+  display: inline-flex;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: var(--font);
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.link-pill:hover {
+  border-color: var(--border-focus);
+  color: var(--blue);
+}
+
+@media (max-width: 1100px) {
+  .qa-signals { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 800px) {
+  .qa-signals { grid-template-columns: repeat(2, 1fr); }
+}
+
