@@ -8,7 +8,7 @@ No frameworks, no npm install, no database. Just Python 3.9+ standard library an
 
 ---
 
-## Quick start (60 seconds)
+## Quick start (60 seconds, technical)
 
 ```bash
 git clone https://github.com/jzhang17/power-line-review-app.git
@@ -21,6 +21,97 @@ Open <http://127.0.0.1:8765> in your browser. The app loads `data/dataset.json` 
 To use your own data, replace `data/dataset.json` with a JSON array of entity records (schema below) and restart the server.
 
 That's the whole setup.
+
+---
+
+## Setup if you don't have git or Python (non-technical)
+
+You don't need a developer to run this. The whole thing is one folder + one Python command. Follow the steps for your operating system. Total time: ~5 minutes.
+
+### Step 1 — Download this folder (no `git` needed)
+
+1. Go to <https://github.com/jzhang17/power-line-review-app>.
+2. Click the green **`Code`** button → **`Download ZIP`**.
+3. Find the ZIP in your `Downloads/` folder, double-click to unzip.
+4. You should now have a folder called `power-line-review-app-main`. Move it somewhere easy, like your Desktop.
+
+### Step 2 — Install Python (skip if already installed)
+
+This app needs Python 3.9 or newer.
+
+**Mac:**
+1. Open the **Terminal** app (press <kbd>⌘ Space</kbd>, type "terminal", hit Enter).
+2. Type `python3 --version` and press Enter.
+   - If it prints something like `Python 3.11.0`, you're done with this step. Skip to Step 3.
+   - If it says "command not found" or a version older than 3.9, continue.
+3. Go to <https://www.python.org/downloads/> and click the big yellow **Download Python** button.
+4. Open the `.pkg` file from your Downloads folder. Click through the installer (defaults are fine).
+5. Re-open Terminal and run `python3 --version` again — you should see the new version number.
+
+**Windows:**
+1. Open the **Command Prompt** (press <kbd>⊞ Win</kbd>, type "cmd", hit Enter).
+2. Type `python --version` and press Enter.
+   - If it prints `Python 3.11.0` or similar, you're done. Skip to Step 3.
+   - If you see a Microsoft Store page or "not recognized", continue.
+3. Go to <https://www.python.org/downloads/> and click **Download Python**.
+4. Open the `.exe` installer. **Important:** check the box "Add Python to PATH" at the bottom of the first installer screen, *then* click "Install Now".
+5. Re-open Command Prompt and run `python --version` again.
+
+### Step 3 — Drop in your data file
+
+If we sent you a `dataset.json` file by email:
+
+1. Open the unzipped `power-line-review-app-main` folder.
+2. Inside, open the `data/` folder.
+3. **Replace** the existing `dataset.json` (the demo) with the one we sent. The filename must stay exactly `dataset.json`.
+
+If we didn't send a file, the demo data (100 records) will load automatically and you can use that to try the app.
+
+### Step 4 — Start the app
+
+**Mac:**
+1. Open Terminal.
+2. Type `cd ~/Desktop/power-line-review-app-main` and press Enter (adjust the path if you put the folder somewhere else).
+3. Type `python3 server.py` and press Enter.
+
+**Windows:**
+1. Open Command Prompt.
+2. Type `cd %USERPROFILE%\Desktop\power-line-review-app-main` and press Enter.
+3. Type `python server.py` and press Enter.
+
+You should see something like:
+```
+Review app running at http://127.0.0.1:8765
+Loaded 3184 record(s). Press Ctrl+C to stop.
+```
+
+### Step 5 — Open the app
+
+Open any web browser (Chrome, Safari, Firefox, Edge) and go to:
+
+> <http://127.0.0.1:8765>
+
+You'll land in the review interface. Click any record on the left, then use the **Qualified / Not Qualified / Maybe** buttons (or just press <kbd>Q</kbd> / <kbd>N</kbd> / <kbd>M</kbd>) to decide. Your decisions autosave on every click — there's no "save" button to remember.
+
+When you're done for the day, just close the browser tab. To stop the server entirely, click back into Terminal/Command Prompt and press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+
+### To resume the next day
+
+1. Open Terminal (Mac) or Command Prompt (Windows).
+2. `cd` into the folder again (same command as Step 4).
+3. Run `python3 server.py` (Mac) or `python server.py` (Windows).
+4. Open <http://127.0.0.1:8765>. All your previous decisions are still there.
+
+### To export your reviewed list
+
+In the top bar of the app, click **CSV** or **JSON** to download. The CSV's first column is the HubSpot ID — drop the file into Excel and it slots straight into your CRM.
+
+### Common snags
+
+- **"address already in use" or "port 8765 in use"**: another copy is already running. Close the other Terminal window, or run `PORT=8766 python3 server.py` to use a different port (then open `http://127.0.0.1:8766`).
+- **Browser shows "can't connect"**: the server isn't running. Check that the Terminal window says "Review app running at..." — if it doesn't, run the start command again.
+- **"python3: command not found" on Mac**: Step 2 didn't finish. Re-run the installer, then close and reopen Terminal.
+- **"python: not recognized" on Windows**: Step 2's "Add Python to PATH" checkbox was missed. Reinstall and check that box, or use `py server.py` instead.
 
 ---
 
