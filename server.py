@@ -299,52 +299,137 @@ def build_bootstrap() -> dict:
     }
 
 
-def export_rows() -> list[dict]:
+def _opt_int(v) -> int | str:
+    return v if isinstance(v, int) else ""
+
+
+def _join_list(v) -> str:
+    if isinstance(v, list):
+        return "; ".join(str(x) for x in v if x is not None and str(x) != "")
+    return v or ""
+
+
+# Single source of truth for the export shape. Each entry is
+# (csv_header, json_key, extractor). CSV gets human-readable headers; JSON gets
+# stable snake_case keys. Order here is the column order in both formats.
+EXPORT_COLUMNS: list[tuple[str, str, callable]] = [
+    ("HubSpot ID",                    "hubspot_id",              lambda i: i.get("hubspotId") or i.get("id") or ""),
+    ("Record ID",                     "record_id",               lambda i: i.get("id") or ""),
+    ("Reviewer Decision",             "reviewer_decision",       lambda i: i.get("decision") or "unreviewed"),
+    ("Reviewer Note",                 "reviewer_note",           lambda i: i.get("note") or ""),
+    ("Reviewer Updated At",           "reviewer_updated_at",     lambda i: i.get("updatedAt") or ""),
+    ("AI Recommendation",             "ai_recommendation",       lambda i: i.get("sourceStatus") or ""),
+    ("Company Name",                  "name",                    lambda i: i.get("name") or ""),
+    ("Domain",                        "domain",                  lambda i: i.get("domain") or ""),
+    ("Official Website URL",          "official_website_url",    lambda i: i.get("entityUrl") or ""),
+    ("HQ State",                      "hq_state",                lambda i: i.get("hqState") or ""),
+    ("Final Categories",              "final_categories",        lambda i: ", ".join(i.get("categories") or [])),
+    ("Final Confidence",              "final_confidence",        lambda i: i.get("confidence") or ""),
+    ("Final Transmission %",          "final_transmission_pct",  lambda i: _opt_int(i.get("transmissionPct"))),
+    ("Final Distribution %",          "final_distribution_pct",  lambda i: _opt_int(i.get("distributionPct"))),
+    ("Final Substation %",            "final_substation_pct",    lambda i: _opt_int(i.get("substationPct"))),
+    ("Final Other %",                 "final_other_pct",         lambda i: _opt_int(i.get("otherPct"))),
+    ("Final NQ Reason Category",      "final_nq_reason_category",lambda i: i.get("nqReasonCategory") or ""),
+    ("Final Reasoning",               "final_reasoning",         lambda i: i.get("reasoning") or ""),
+    ("AI Categories",                 "ai_categories",           lambda i: ", ".join(i.get("originalCategories") or [])),
+    ("AI Confidence",                 "ai_confidence",           lambda i: i.get("originalConfidence") or ""),
+    ("AI Transmission %",             "ai_transmission_pct",     lambda i: _opt_int(i.get("originalTransmissionPct"))),
+    ("AI Distribution %",             "ai_distribution_pct",     lambda i: _opt_int(i.get("originalDistributionPct"))),
+    ("AI Substation %",               "ai_substation_pct",       lambda i: _opt_int(i.get("originalSubstationPct"))),
+    ("AI Other %",                    "ai_other_pct",            lambda i: _opt_int(i.get("originalOtherPct"))),
+    ("AI NQ Reason Category",         "ai_nq_reason_category",   lambda i: i.get("originalNqReasonCategory") or ""),
+    ("AI Reasoning",                  "ai_reasoning",            lambda i: i.get("originalReasoning") or ""),
+    ("Original Input Name",           "original_input_name",     lambda i: i.get("originalName") or ""),
+    ("Service Fit",                   "service_fit",             lambda i: i.get("serviceFit") or ""),
+    ("Ownership Fit",                 "ownership_fit",           lambda i: i.get("ownershipFit") or ""),
+    ("Size Fit",                      "size_fit",                lambda i: i.get("sizeFit") or ""),
+    ("Viability",                     "viability",               lambda i: i.get("viability") or ""),
+    ("Website Confidence",            "website_confidence",      lambda i: i.get("websiteConfidence") or ""),
+    ("Owner Names",                   "owner_names",             lambda i: i.get("ownerNames") or ""),
+    ("Ownership Summary",             "ownership_summary",       lambda i: i.get("ownership") or ""),
+    ("Company Size",                  "company_size",            lambda i: i.get("companySize") or ""),
+    ("Aliases",                       "aliases",                 lambda i: _join_list(i.get("aliases"))),
+    ("Ownership Evidence URLs",       "ownership_evidence_urls", lambda i: _join_list(i.get("ownershipEvidenceUrls"))),
+    ("Identity Evidence URLs",        "identity_evidence_urls",  lambda i: _join_list(i.get("identityEvidenceUrls"))),
+    ("Pass 1 vs Pass 2 Diff",         "comparison_summary",      lambda i: i.get("comparisonSummary") or ""),
+    ("Duplicate Domain Cluster",      "duplicate_domain_cluster",lambda i: i.get("duplicateDomainCluster") or ""),
+    ("Source Origin",                 "source_origin",           lambda i: i.get("sourceOrigin") or ""),
+    ("Run ID",                        "run_id",                  lambda i: i.get("runId") or ""),
+    ("Queue Index",                   "queue_index",             lambda i: _opt_int(i.get("index"))),
+]
+
+
+def _excel_safe_id(value: str) -> str:
+    """
+    Wrap ID-like strings as Excel formula text so leading zeros and long
+    numeric strings don't get coerced to scientific notation. Excel renders
+    `="01234"` as the literal text `01234`. Other CSV consumers see the raw
+    `="01234"` and can strip it; that trade is worth it for the client.
+    """
+    if not value:
+        return ""
+    s = str(value)
+    # Only wrap if it's all digits or starts with a leading zero — pure text
+    # IDs (e.g. UUIDs) don't need the trick.
+    if s.isdigit() and (len(s) >= 10 or s.startswith("0")):
+        return f'="{s}"'
+    return s
+
+
+def export_csv_payload() -> bytes:
     bootstrap = build_bootstrap()
+    items = bootstrap["items"]
+    headers = [h for (h, _, _) in EXPORT_COLUMNS]
+
+    buffer = io.StringIO()
+    # Use QUOTE_ALL so embedded newlines, commas, and quotes in long reasoning
+    # strings can never corrupt the column structure when opened in Excel.
+    writer = csv.writer(buffer, quoting=csv.QUOTE_ALL, lineterminator="\r\n")
+    writer.writerow(headers)
+    for item in items:
+        row = []
+        for header, _key, extract in EXPORT_COLUMNS:
+            v = extract(item)
+            if header in ("HubSpot ID", "Record ID"):
+                v = _excel_safe_id(v)
+            elif v == "" or v is None:
+                v = ""
+            row.append(v)
+        writer.writerow(row)
+    text = buffer.getvalue()
+    # UTF-8 BOM so Excel auto-detects the encoding and renders accented company
+    # names correctly (otherwise it falls back to the system default).
+    return ("﻿" + text).encode("utf-8")
+
+
+def export_json_payload() -> bytes:
+    bootstrap = build_bootstrap()
+    items = bootstrap["items"]
+
     rows = []
-    for item in bootstrap["items"]:
-        rows.append(
-            {
-                "hubspot_id": item["hubspotId"],
-                "record_id": item["id"],
-                "index": item["index"],
-                "name": item["name"],
-                "original_name": item.get("originalName", ""),
-                "domain": item.get("domain", ""),
-                "official_website_url": item["entityUrl"],
-                "hq_state": item.get("hqState", ""),
-                "decision": item["decision"],
-                "master_status": item.get("sourceStatus", ""),
-                "categories": ",".join(item["categories"]),
-                "confidence": item["confidence"],
-                "transmission_pct": item.get("transmissionPct") if item.get("transmissionPct") is not None else "",
-                "distribution_pct": item.get("distributionPct") if item.get("distributionPct") is not None else "",
-                "substation_pct": item.get("substationPct") if item.get("substationPct") is not None else "",
-                "other_pct": item.get("otherPct") if item.get("otherPct") is not None else "",
-                "nq_reason_category": item.get("nqReasonCategory", ""),
-                "service_fit": item.get("serviceFit", ""),
-                "ownership_fit": item.get("ownershipFit", ""),
-                "size_fit": item.get("sizeFit", ""),
-                "viability": item.get("viability", ""),
-                "website_confidence": item.get("websiteConfidence", ""),
-                "owner_names": item.get("ownerNames", ""),
-                "ownership": item.get("ownership", ""),
-                "company_size": item.get("companySize", ""),
-                "aliases": "; ".join(item.get("aliases") or []),
-                "ownership_evidence_urls": "; ".join(item.get("ownershipEvidenceUrls") or []),
-                "identity_evidence_urls": "; ".join(item.get("identityEvidenceUrls") or []),
-                "reasoning": item["reasoning"],
-                "comparison_summary": item.get("comparisonSummary", ""),
-                "duplicate_domain_cluster": item.get("duplicateDomainCluster", ""),
-                "original_categories": ",".join(item["originalCategories"]),
-                "original_confidence": item["originalConfidence"],
-                "note": item["note"],
-                "updated_at": item["updatedAt"],
-                "run_id": item["runId"],
-                "source_origin": item.get("sourceOrigin", ""),
-            }
-        )
-    return rows
+    for item in items:
+        row = {}
+        for _header, key, extract in EXPORT_COLUMNS:
+            v = extract(item)
+            # JSON keeps integers and empty strings as-is; we don't apply the
+            # Excel text-formula trick here.
+            row[key] = v
+        rows.append(row)
+
+    decided = sum(1 for r in rows if r["reviewer_decision"] not in ("", "unreviewed"))
+    payload = {
+        "exported_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "source_dataset": DATASET_FILE.name,
+        "total_records": len(rows),
+        "reviewer_decided_count": decided,
+        "items": rows,
+    }
+    return json.dumps(payload, indent=2, ensure_ascii=False).encode("utf-8")
+
+
+def _export_filename(ext: str) -> str:
+    today = datetime.now().strftime("%Y-%m-%d")
+    return f"power-line-review-{today}.{ext}"
 
 
 class ReviewHandler(SimpleHTTPRequestHandler):
@@ -360,21 +445,27 @@ class ReviewHandler(SimpleHTTPRequestHandler):
             return
 
         if self.path == "/api/export.json":
-            self.respond_json(export_rows())
+            payload = export_json_payload()
+            self.send_response(HTTPStatus.OK)
+            self.send_header("Content-Type", "application/json; charset=utf-8")
+            self.send_header("Content-Length", str(len(payload)))
+            self.send_header(
+                "Content-Disposition",
+                f'attachment; filename="{_export_filename("json")}"',
+            )
+            self.end_headers()
+            self.wfile.write(payload)
             return
 
         if self.path == "/api/export.csv":
-            rows = export_rows()
-            buffer = io.StringIO()
-            writer = csv.DictWriter(buffer, fieldnames=list(rows[0].keys()) if rows else [])
-            if rows:
-                writer.writeheader()
-                writer.writerows(rows)
-            payload = buffer.getvalue().encode("utf-8")
+            payload = export_csv_payload()
             self.send_response(HTTPStatus.OK)
             self.send_header("Content-Type", "text/csv; charset=utf-8")
             self.send_header("Content-Length", str(len(payload)))
-            self.send_header("Content-Disposition", 'attachment; filename="review-export.csv"')
+            self.send_header(
+                "Content-Disposition",
+                f'attachment; filename="{_export_filename("csv")}"',
+            )
             self.end_headers()
             self.wfile.write(payload)
             return

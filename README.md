@@ -340,14 +340,55 @@ Example:
 
 ## Exporting results
 
-From the top bar, click **CSV** or **JSON** — or hit the endpoints directly:
+Two buttons in the top bar:
+
+- **Download CSV** — the recommended path. Opens cleanly in Excel, Google Sheets, or any spreadsheet tool. This is what you send to non-technical stakeholders.
+- **JSON** — a machine-readable backup with the same data plus an `exported_at` timestamp and source-dataset metadata.
+
+Both downloads pull from the live state of the app, so you can re-export at any time and the file always reflects the latest decisions.
+
+### What the CSV contains
+
+The CSV is structured for non-technical readers and for direct CRM upload:
+
+- **Column A is the HubSpot ID**, formatted as text so leading zeros and 11-digit IDs aren't mangled into scientific notation by Excel.
+- **Column B is the Record ID** (the dataset's stable key — usually identical to the HubSpot ID, but separate so it survives if you ever swap CRMs).
+- **Column C is the Reviewer Decision** (qualified / not_qualified / maybe / unreviewed) — your final call.
+- **Column D is the Reviewer Note** — anything you typed in the notes field.
+- **Column E is the Reviewer Updated At** timestamp.
+- **Column F is the AI Recommendation** — what the qualification pipeline initially suggested. Use this column to spot the records you overrode.
+- The **Final** columns (`Final Categories`, `Final Confidence`, `Final Reasoning`, `Final Transmission %`, …) hold the values currently shown in the app, including any reviewer overrides.
+- The **AI** columns (`AI Categories`, `AI Confidence`, `AI Reasoning`, `AI Transmission %`, …) hold the original AI-suggested values, untouched. Compare AI vs Final to audit overrides.
+- Rich-context columns follow: company website, HQ state, ownership notes, owner names, evidence URLs, duplicate-domain cluster, etc.
+
+### Robustness details
+
+- **UTF-8 BOM** at the start of the file so Excel auto-detects encoding — accented characters, em dashes, and non-ASCII company names render correctly.
+- **All cells quoted** so embedded commas, quotes, and newlines in long reasoning text never break the column structure.
+- **HubSpot IDs and Record IDs wrapped as `="…"`** — Excel renders them as text and preserves leading zeros. Other CSV consumers see the literal `="…"` and can strip the wrapper if needed.
+- **CRLF line endings** — Excel's native default; opens cleanly on Windows and Mac.
+- **Empty cells stay truly empty** — never the strings `null`, `None`, or `0` for missing values.
+- **List fields joined with `; `** (semicolon + space) — readable in Excel, easy to split with a formula.
+- **Filename includes today's date** — `power-line-review-2026-05-06.csv` — so multiple exports across days don't overwrite each other in your Downloads folder.
+
+### Direct API access (if you want to script against it)
 
 ```bash
 curl -O http://127.0.0.1:8765/api/export.csv
 curl -O http://127.0.0.1:8765/api/export.json
 ```
 
-Each row contains the original suggestion (`original_categories`, `original_confidence`) alongside the reviewer's final call (`categories`, `confidence`, `decision`, `note`).
+The JSON export is wrapped:
+
+```json
+{
+  "exported_at": "2026-05-06T18:45:12+00:00",
+  "source_dataset": "dataset.json",
+  "total_records": 3184,
+  "reviewer_decided_count": 412,
+  "items": [ /* one record per row, same fields as CSV with snake_case keys */ ]
+}
+```
 
 ---
 
