@@ -6,6 +6,21 @@ Drop in a JSON file of candidate companies, run one Python command, and get a fa
 
 No frameworks, no npm install, no database. Just Python 3.9+ standard library and three static files.
 
+### How it works at a glance
+
+```
+  dataset.json  ─▶  python3 server.py  ─▶  http://127.0.0.1:8765
+   (your data)        (one command)         (review in browser)
+                            │
+                            ▼
+                  data/review_decisions.json  ─▶  CSV / JSON export
+                  (autosaved on every click)
+```
+
+### Privacy: nothing leaves your machine
+
+This app runs **entirely on your computer**. The server only listens on `127.0.0.1` (your own loopback address) — it is not reachable from the internet, your network, or anyone else's browser. Your dataset and decisions never touch a cloud service. If you turn off Wi-Fi, the app still works. Nothing is uploaded, tracked, or analytics-collected.
+
 ---
 
 ## Quick start (60 seconds, technical)
@@ -112,10 +127,51 @@ In the top bar of the app, click **CSV** or **JSON** to download. The CSV's firs
 - **Browser shows "can't connect"**: the server isn't running. Check that the Terminal window says "Review app running at..." — if it doesn't, run the start command again.
 - **"python3: command not found" on Mac**: Step 2 didn't finish. Re-run the installer, then close and reopen Terminal.
 - **"python: not recognized" on Windows**: Step 2's "Add Python to PATH" checkbox was missed. Reinstall and check that box, or use `py server.py` instead.
+- **macOS "cannot be opened because the developer cannot be verified"**: this app does not ship a binary — only Python files — so this warning shouldn't appear when running `python3 server.py`. If it appears for `Python.pkg` itself during install, right-click the installer and choose **Open**, then **Open** again on the warning dialog.
+- **Windows SmartScreen "Microsoft Defender prevented an unrecognized app"**: this is the official `python.exe` installer signed by the Python Software Foundation. Click **More info** → **Run anyway**.
+- **Mac/Windows firewall popup ("allow Python to accept incoming connections?")**: you can click **Deny** safely. The app only uses `127.0.0.1` (your own machine), so it doesn't need any network permission.
+- **Filename shows up as `dataset.json.txt` on Windows**: Windows hides file extensions by default. In File Explorer, click the **View** menu → check **File name extensions**, then rename to remove the trailing `.txt`. The filename must be exactly `dataset.json`.
+- **Browser opens but says "0 records" or shows nothing in the queue**: your `dataset.json` is empty or malformed. Open it in a text editor — the first character should be `[` and the last should be `]`. If you got a `dataset.json.gz` from us, you need to **unzip it first** (double-click on Mac, or use 7-Zip on Windows).
+- **You closed Terminal/Command Prompt and the browser stopped working**: that's expected — closing the terminal stops the server. To resume, just re-run the start command.
+- **Decisions disappeared after a re-download**: see "Re-downloading without losing your work" below.
+
+### Backing up your work
+
+Your reviews are stored in **one file**: `data/review_decisions.json` inside the app folder. To back up:
+
+1. Open the app folder.
+2. Open the `data/` subfolder.
+3. Copy `review_decisions.json` somewhere safe — Dropbox, Desktop, email it to yourself, whatever you'd do for a Word doc.
+
+That single file is the entire record of your work. To restore: copy it back into `data/` (replacing whatever's there) and restart the app.
+
+### Re-downloading without losing your work
+
+If you ever re-download the app ZIP from GitHub (or we send you an updated copy), the new download will **not** know about your prior decisions. Before throwing away the old folder:
+
+1. From the **old** folder, copy `data/review_decisions.json`.
+2. Paste it into the **new** folder's `data/` directory (replace the file already there).
+3. Then start the app from the new folder. All your prior decisions are back.
+
+The dataset (`dataset.json`) and your decisions (`review_decisions.json`) are independent — you can update one without losing the other.
 
 ---
 
-## What's in the demo dataset
+## Glossary
+
+A few terms you'll see in the app:
+
+| Term | What it means |
+|------|---------------|
+| **Qualified / Not Qualified / Maybe** | Your decision per record. Qualified = good fit for outreach. Not Qualified = explicitly rejected. Maybe = needs a second look. |
+| **HubSpot ID** | The record's primary key in your CRM. Surfaced as a copy chip in the detail header (press <kbd>C</kbd>) and the **first column** in CSV export. |
+| **Categories** (T / D / S / V / CI) | The kind of utility electrical work the company performs. T = Transmission, D = Distribution, S = Substation, V = Vegetation management, CI = Commercial & Industrial (typically out-of-scope). |
+| **Confidence** (high / medium / low) | How sure the qualification pipeline was about its initial verdict. You can override per record. |
+| **% breakdown** | Estimated split of the company's work across T / D / S / Other (sums to 100). Sourced from the company's own website where evidence supports it. |
+| **QA Signals** | Five quick chips in the detail pane summarizing the underlying gates: service fit, ownership fit, size fit, viability, website confidence. Hover for the literal value. |
+| **NQ reason category** | When a record is Not Qualified, this tags *why* — services unrelated to grid work, ownership misfit (PE/public/ESOP), size misfit (too large), defunct, non-US, or evidence insufficient. Use this to sort the rejections. |
+| **Duplicate domain cluster** | Multiple input records share a single website domain. They all carry the same cluster label and the detail pane shows a "next sibling" link to jump between them. |
+| **Source / src pill** | The pipeline's initial recommendation (`src:q`, `src:nq`, `src:mr`). Always shown alongside your decision so you can see when you overrode the AI. |
 
 `data/dataset.json` ships with 100 real records sampled from a live power-line / T&D contractor sourcing run. Each record has a real company name, working website, category tags, confidence rating, ownership notes, and ~1,000 chars of reasoning narrative with embedded source links.
 
